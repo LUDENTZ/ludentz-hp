@@ -1,0 +1,237 @@
+/* =========================================================
+   LUDENTZ — Design System v1
+   Foundations: Color + Type + Spacing + Radius + Shadow
+   Monochrome only. No chroma. Warm off-white paper.
+   ========================================================= */
+
+/* ---------- FONTS (Google Fonts CDN) ----------
+   NOTE: The original spec references Red Hat Display, Inter,
+   Zen Kaku Gothic New, Zen Old Mincho, and JetBrains Mono.
+   All five are first-party Google Fonts — no substitution.
+---------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;0,900;1,700;1,900&family=Inter:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ------------------------------------------------------
+     COLOR — Mono neutral scale only.
+     ink-0 = darkest ink · ink-10 = paper/page bg
+     Do NOT introduce chromatic hues.
+  ------------------------------------------------------ */
+  --ink-0:  #0A0A0A;  /* Primary ink / logo */
+  --ink-1:  #1A1A1A;  /* Heavy text */
+  --ink-2:  #2E2E2E;  /* Body text */
+  --ink-3:  #4A4A4A;  /* Secondary text */
+  --ink-4:  #6B6B6B;  /* Muted / captions */
+  --ink-5:  #8F8F8F;  /* Placeholder */
+  --ink-6:  #B3B3B3;  /* Disabled */
+  --ink-7:  #D4D4D4;  /* Borders strong */
+  --ink-8:  #E8E8E7;  /* Borders subtle / dividers */
+  --ink-9:  #F2F1EF;  /* Surface raised */
+  --ink-10: #FAFAF8;  /* Paper / page background — warm off-white */
+
+  /* Semantic aliases — use these in product code */
+  --paper:        var(--ink-10);
+  --surface:      var(--ink-9);
+  --border-subtle:var(--ink-8);
+  --border-strong:var(--ink-7);
+  --fg-disabled:  var(--ink-6);
+  --fg-placeholder:var(--ink-5);
+  --fg-muted:     var(--ink-4);
+  --fg-secondary: var(--ink-3);
+  --fg-body:      var(--ink-2);
+  --fg-strong:    var(--ink-1);
+  --fg-primary:   var(--ink-0);
+
+  /* Accent is OPTIONAL and defaults to ink-0. If ever needed,
+     tweak a single hue here — never in components. */
+  --accent: var(--ink-0);
+
+  /* ------------------------------------------------------
+     TYPE — Families
+  ------------------------------------------------------ */
+  --font-display: 'Red Hat Display', 'Zen Old Mincho', serif;   /* Display only. Black Italic. */
+  --font-sans:    'Inter', 'Zen Kaku Gothic New', system-ui, -apple-system, sans-serif;
+  --font-ja:      'Zen Kaku Gothic New', 'Inter', sans-serif;
+  --font-ja-mincho:'Zen Old Mincho', 'Noto Serif JP', serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ------------------------------------------------------
+     TYPE SCALE — 9 steps.
+     Display uses Red Hat Display Black Italic.
+     Heading LG is the boundary — below it, Inter only.
+  ------------------------------------------------------ */
+  --fs-display-xl: 128px;  --lh-display-xl: 0.90;
+  --fs-display-lg:  88px;  --lh-display-lg: 0.92;
+  --fs-display-md:  56px;  --lh-display-md: 0.95;
+  --fs-heading-lg:  40px;  --lh-heading-lg: 1.05;
+  --fs-heading-md:  28px;  --lh-heading-md: 1.15;
+  --fs-heading-sm:  20px;  --lh-heading-sm: 1.25;
+  --fs-body-lg:     18px;  --lh-body-lg:    1.55;
+  --fs-body-md:     15px;  --lh-body-md:    1.60;
+  --fs-mono-label:  11px;  --lh-mono-label: 1.40; /* uppercase, 0.08em tracking */
+
+  /* ------------------------------------------------------
+     SPACING — 4px baseline
+  ------------------------------------------------------ */
+  --s-0:   0px;
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  24px;
+  --s-6:  32px;
+  --s-7:  48px;
+  --s-8:  64px;
+  --s-9:  96px;
+  --s-10:128px;
+
+  /* ------------------------------------------------------
+     RADIUS — Sharp is default. Full only for pill & avatar.
+  ------------------------------------------------------ */
+  --r-0: 0px;
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-3: 8px;
+  --r-4: 16px;
+  --r-full: 9999px;
+
+  /* ------------------------------------------------------
+     SHADOW — Almost flat. Never dark drop shadows.
+  ------------------------------------------------------ */
+  --shadow-0: none;
+  --shadow-1: 0 1px 0 rgba(10,10,10,0.04), 0 0 0 1px rgba(10,10,10,0.04);
+  --shadow-2: 0 1px 2px rgba(10,10,10,0.05), 0 2px 8px rgba(10,10,10,0.04);
+  --shadow-3: 0 4px 12px rgba(10,10,10,0.08), 0 16px 40px rgba(10,10,10,0.08);
+
+  /* Motion — quiet, short, ease-out. Never bouncy. */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 360ms;
+}
+
+/* =========================================================
+   BASE STYLES
+   ========================================================= */
+html, body {
+  background: var(--paper);
+  color: var(--fg-body);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body-md);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================================
+   SEMANTIC TYPE CLASSES
+   Use .display-xl / .heading-md / .body-lg etc directly.
+   ========================================================= */
+.display-xl, .display-lg, .display-md {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  color: var(--fg-primary);
+}
+.display-xl { font-size: var(--fs-display-xl); line-height: var(--lh-display-xl); letter-spacing: -0.035em; }
+.display-lg { font-size: var(--fs-display-lg); line-height: var(--lh-display-lg); letter-spacing: -0.03em; }
+.display-md { font-size: var(--fs-display-md); line-height: var(--lh-display-md); letter-spacing: -0.02em; }
+
+.heading-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--fs-heading-lg);
+  line-height: var(--lh-heading-lg);
+  letter-spacing: -0.01em;
+  color: var(--fg-primary);
+}
+.heading-md {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-heading-md);
+  line-height: var(--lh-heading-md);
+  letter-spacing: -0.01em;
+  color: var(--fg-strong);
+}
+.heading-sm {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-heading-sm);
+  line-height: var(--lh-heading-sm);
+  color: var(--fg-strong);
+}
+.body-lg {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-body-lg);
+  color: var(--fg-body);
+}
+.body-md {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body-md);
+  color: var(--fg-body);
+}
+.mono-label {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--fs-mono-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* Japanese variants */
+.ja-display { font-family: var(--font-ja-mincho); font-weight: 900; }
+.ja-heading { font-family: var(--font-ja); font-weight: 700; }
+.ja-body    { font-family: var(--font-ja); font-weight: 400; }
+
+/* =========================================================
+   COMPONENTS — primitives
+   ========================================================= */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--s-2);
+  padding: 10px 16px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-md);
+  font-weight: 500;
+  line-height: 1;
+  border: 1px solid var(--ink-0);
+  border-radius: var(--r-1);
+  background: var(--ink-0);
+  color: var(--paper);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.btn:hover { background: var(--ink-2); }
+.btn:active { transform: translateY(1px); }
+.btn--ghost { background: transparent; color: var(--ink-0); }
+.btn--ghost:hover { background: var(--ink-9); }
+.btn--pill { border-radius: var(--r-full); padding: 10px 18px; }
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-md);
+  background: var(--paper);
+  color: var(--fg-primary);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-1);
+  outline: none;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.input::placeholder { color: var(--fg-placeholder); }
+.input:focus { border-color: var(--ink-0); }
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-1);
+  padding: var(--s-5);
+}
+.hr { height: 1px; background: var(--border-subtle); border: 0; }
