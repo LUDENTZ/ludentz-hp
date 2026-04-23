@@ -464,7 +464,8 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .hero-lede-ja { display: none; }
   .hero-scroll { display: none; }
   .section { padding: 48px 16px; }
-  .section-head { margin-bottom: 32px; gap: 12px; }
+  .section-head { margin-bottom: 16px; gap: 8px; }
+  .section-kicker { margin-bottom: 8px; }
   .section-title { font-size: clamp(36px, 10vw, 56px); line-height: 1; }
   body[data-lang="ja"] .section-kicker { font-size: 20px; }
   .pillars { gap: 16px; }
