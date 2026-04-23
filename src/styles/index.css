@@ -463,8 +463,8 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .hero-lede { font-size: 13px; }
   .hero-lede-ja { display: none; }
   .hero-scroll { display: none; }
-  .section { padding: 64px 16px; }
-  .section-head { margin-bottom: 40px; gap: 12px; }
+  .section { padding: 48px 16px; }
+  .section-head { margin-bottom: 32px; gap: 12px; }
   .section-title { font-size: clamp(36px, 10vw, 56px); line-height: 1; }
   body[data-lang="ja"] .section-kicker { font-size: 20px; }
   .pillars { gap: 16px; }
@@ -473,14 +473,14 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .pillar-ja { font-size: 13px; }
   .teaser-box { min-height: 140px; padding: 20px 12px; }
   .pillar--teaser .teaser-box .teaser-stamp { font-size: 34px; }
-  .manifesto { padding: 64px 16px; }
+  .manifesto { padding: 56px 16px 48px; }
   .manifesto-bg .big { font-size: clamp(80px, 26vw, 180px); }
   .manifesto-quote { font-size: clamp(28px, 7vw, 42px); }
-  .cta { padding: 72px 16px 64px; }
+  .cta { padding: 64px 16px 56px; }
   .cta-title.hero-title { font-size: clamp(44px, 13vw, 80px); line-height: 0.95; }
   .footer { padding: 40px 16px 20px; }
-  .footer-cols { grid-template-columns: 1fr; gap: 28px; }
-  .footer-wordmark { font-size: clamp(80px, 28vw, 140px); margin-top: 40px; }
+  .footer-cols { grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
+  .footer-wordmark { font-size: clamp(56px, 14vw, 80px); margin-top: 28px; line-height: 0.9; }
   .footer-bottom { font-size: 9px; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 20px; }
   .modal { padding: 28px 20px; max-height: 90vh; overflow-y: auto; }
   .modal h3 { font-size: 28px; }
