@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="LUDENTZ — Build the next industry.">
+  <defs>
+    <style>
+      .sans { font-family: 'Liberation Sans', 'DejaVu Sans', 'Helvetica Neue', Arial, sans-serif; fill: #0A0A0A; }
+      .jp { font-family: 'IPAPGothic', 'Noto Sans CJK JP', 'WenQuanYi Zen Hei', sans-serif; fill: #2E2E2E; }
+      .mono { font-family: 'DejaVu Sans Mono', 'Liberation Mono', monospace; fill: #4A4A4A; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="#FAFAF8"/>
+
+  <!-- top-left mark: solid L -->
+  <rect x="80" y="80" width="40" height="40" rx="6" fill="#0A0A0A"/>
+  <path d="M91 90 H99 V108 H111 V116 H91 Z" fill="#FAFAF8"/>
+
+  <!-- top-right meta -->
+  <text x="1120" y="108" text-anchor="end" class="mono" font-size="18" letter-spacing="2">TOKYO · STUDIO</text>
+
+  <!-- headline -->
+  <text x="80" y="310" class="sans" font-size="112" font-weight="900" letter-spacing="-3">Build the next</text>
+  <text x="80" y="422" class="sans" font-size="112" font-weight="900" font-style="italic" letter-spacing="-3">industry.</text>
+
+  <!-- subtitle JP -->
+  <text x="80" y="490" class="jp" font-size="26" font-weight="500" letter-spacing="1">新規事業開発・AXコンサルティング・自社事業。</text>
+
+  <!-- bottom-left wordmark -->
+  <text x="80" y="575" class="sans" font-size="30" font-weight="900" letter-spacing="6">LUDENTZ</text>
+
+  <!-- bottom-right url -->
+  <text x="1120" y="575" text-anchor="end" class="mono" font-size="18" letter-spacing="1">ludentz.net</text>
+
+  <!-- hairline divider -->
+  <line x1="80" y1="540" x2="1120" y2="540" stroke="#0A0A0A" stroke-width="1"/>
+</svg>
