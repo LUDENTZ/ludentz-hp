@@ -400,39 +400,6 @@ body.dark .cta-title.hero-title .char.the { color: var(--fg-primary) !important;
 .cursor.hover { width: 40px; height: 40px; background: var(--ink-0); }
 @media (hover: none), (max-width: 900px) { .cursor { display: none; } }
 
-/* ---------- TWEAKS PANEL ---------- */
-.tweaks {
-  position: fixed; bottom: 24px; right: 24px; z-index: 150;
-  width: 280px; background: var(--paper);
-  border: 1px solid var(--border-strong); box-shadow: var(--shadow-3);
-  border-radius: 2px; padding: 18px; font-family: var(--font-sans);
-  transform: translateY(8px); opacity: 0; pointer-events: none;
-  transition: opacity var(--dur-base) var(--ease), transform var(--dur-base) var(--ease);
-}
-.tweaks.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
-.tweaks-toggle {
-  position: fixed; bottom: 24px; right: 24px; z-index: 149;
-  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-  padding: 8px 12px; background: var(--paper); color: var(--fg-muted);
-  border: 1px solid var(--border-strong); border-radius: 2px;
-  cursor: pointer; transition: all var(--dur-fast) var(--ease);
-}
-.tweaks-toggle:hover { color: var(--fg-primary); }
-.tweaks-toggle.hidden { opacity: 0; pointer-events: none; }
-.tweaks-h { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle); }
-.tweaks-h .t { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-muted); }
-.tweaks-h .close { cursor: pointer; color: var(--fg-muted); font-family: var(--font-mono); font-size: 14px; }
-.tweaks-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border-subtle); gap: 12px; }
-.tweaks-row:last-child { border-bottom: 0; }
-.tweaks-row .lbl { font-size: 12px; color: var(--fg-secondary); }
-.tweaks-seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 2px; overflow: hidden; }
-.tweaks-seg button {
-  padding: 6px 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
-  background: var(--paper); color: var(--fg-secondary); border: 0; border-right: 1px solid var(--border-strong); cursor: pointer;
-}
-.tweaks-seg button:last-child { border-right: 0; }
-.tweaks-seg button.on { background: var(--ink-0); color: var(--paper); }
-
 /* ---------- DARK MODE ---------- */
 body.dark {
   --paper: #0A0A0A; --ink-0: #FAFAF8; --ink-1: #F2F1EF; --ink-2: #E8E8E7; --ink-3: #D4D4D4;
@@ -487,12 +454,12 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .nav-ticker { display: none; }
   .nav-btn { padding: 8px 12px; font-size: 11px; gap: 6px; }
   .nav-btn svg { width: 9px; height: 9px; }
-  .hero { padding: 40px 16px 72px; min-height: auto; }
-  .hero-body { margin-top: 16px !important; }
+  .hero { padding: 24px 16px 56px; min-height: auto; }
+  .hero-body { margin-top: 8px; }
   .hero-title { font-size: clamp(44px, 14vw, 72px); letter-spacing: -0.03em; }
-  .hero-jp { font-size: 18px; margin-top: 20px; line-height: 1.6; }
-  .hero-footmeta { margin-top: 32px !important; display: block; }
-  .hero-footmeta > * { margin-top: 24px; }
+  .hero-jp { font-size: 18px; margin-top: 14px; line-height: 1.6; }
+  .hero-footmeta { margin-top: 20px; display: block; }
+  .hero-footmeta > * { margin-top: 16px; }
   .hero-lede { font-size: 13px; }
   .hero-lede-ja { display: none; }
   .hero-scroll { display: none; }
@@ -515,8 +482,6 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .footer-cols { grid-template-columns: 1fr; gap: 28px; }
   .footer-wordmark { font-size: clamp(80px, 28vw, 140px); margin-top: 40px; }
   .footer-bottom { font-size: 9px; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 20px; }
-  .tweaks { right: 12px; bottom: 12px; left: 12px; width: auto; max-width: none; }
-  .tweaks-toggle { right: 12px; bottom: 12px; }
   .modal { padding: 28px 20px; max-height: 90vh; overflow-y: auto; }
   .modal h3 { font-size: 28px; }
 }

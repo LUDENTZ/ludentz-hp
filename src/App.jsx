@@ -7,7 +7,6 @@ import Company from './components/Company';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
-import Tweaks from './components/Tweaks';
 
 const DEFAULTS = { lang: 'ja', theme: 'light', intensity: 'normal', cursor: 'on' };
 
@@ -66,16 +65,12 @@ function useReveal() {
 
 export default function App() {
   const [modal, setModal] = useState(false);
-  const [state, setState] = useState(DEFAULTS);
-
-  const setKey = (k, v) => setState(s => ({ ...s, [k]: v }));
 
   useEffect(() => {
-    document.body.dataset.lang = state.lang;
-    document.body.classList.toggle('dark', state.theme === 'dark');
-    document.body.classList.remove('intensity-quiet', 'intensity-normal', 'intensity-loud');
-    document.body.classList.add('intensity-' + state.intensity);
-  }, [state]);
+    document.body.dataset.lang = DEFAULTS.lang;
+    document.body.classList.toggle('dark', DEFAULTS.theme === 'dark');
+    document.body.classList.add('intensity-' + DEFAULTS.intensity);
+  }, []);
 
   useReveal();
 
@@ -100,8 +95,7 @@ export default function App() {
       </main>
       <Footer />
       <ContactModal open={modal} onClose={() => setModal(false)} />
-      <Cursor enabled={state.cursor === 'on'} />
-      <Tweaks state={state} setKey={setKey} />
+      <Cursor enabled={DEFAULTS.cursor === 'on'} />
     </div>
   );
 }

@@ -34,8 +34,8 @@ export default function Hero({ onContact, onScrollTo }) {
   );
 
   return (
-    <section className="hero" id="top" style={{ paddingTop: 72, paddingBottom: 96 }}>
-      <div className="hero-body" style={{ marginTop: 40 }}>
+    <section className="hero" id="top">
+      <div className="hero-body">
         <h1 className="hero-title" ref={ref}>
           {renderLine(line1)}
           {renderLine(line2, true)}
@@ -46,7 +46,7 @@ export default function Hero({ onContact, onScrollTo }) {
         </div>
       </div>
 
-      <div className="hero-footmeta" style={{ marginTop: 6 }}>
+      <div className="hero-footmeta">
         <p className="hero-lede">
           <span className="show-en">LUDENTZ is a Tokyo studio operating across three axes — business development, AX consulting, and in-house products. We partner with operators and founders to turn raw intent into products that ship.</span>
           <span className="show-ja">LUDENTZは、東京を拠点とするスタジオです。新規事業開発・AXコンサルティング・自社事業の三つの軸で、先端を走ります。</span>
