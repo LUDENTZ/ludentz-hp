@@ -53,8 +53,8 @@ export default function ContactModal({ open, onClose }) {
           <>
             <h3>Received.</h3>
             <div className="sub">
-              <span className="show-en">Thank you. A person — not a form — reads every submission. We reply from Tokyo within two working days.</span>
-              <span className="show-ja">ありがとうございます。すべての問い合わせは人が読みます。東京より二営業日以内に返信します。</span>
+              <span className="show-en">Thank you for your message. We reply within one working day.</span>
+              <span className="show-ja">お問い合わせありがとうございました。1営業日以内に返信します。</span>
             </div>
             <div className="modal-actions" style={{ justifyContent: 'flex-end' }}>
               <button className="nav-btn" onClick={onClose}>Close</button>
