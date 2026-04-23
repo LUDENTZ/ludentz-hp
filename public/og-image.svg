@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="LUDENTZ — Build the next industry.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="LUDENTZ — Let's shape what's next">
   <defs>
     <style>
       .sans { font-family: 'Liberation Sans', 'DejaVu Sans', 'Helvetica Neue', Arial, sans-serif; fill: #0A0A0A; }
@@ -16,12 +16,13 @@
   <!-- top-right meta -->
   <text x="1120" y="108" text-anchor="end" class="mono" font-size="18" letter-spacing="2">TOKYO · STUDIO</text>
 
-  <!-- headline -->
-  <text x="80" y="310" class="sans" font-size="112" font-weight="900" letter-spacing="-3">Build the next</text>
-  <text x="80" y="422" class="sans" font-size="112" font-weight="900" font-style="italic" letter-spacing="-3">industry.</text>
+  <!-- headline line 1 -->
+  <text x="80" y="310" class="sans" font-size="112" font-weight="900" letter-spacing="-3">Let's shape</text>
+  <!-- headline line 2 italic -->
+  <text x="80" y="422" class="sans" font-size="112" font-weight="900" font-style="italic" letter-spacing="-3">what's next</text>
 
   <!-- subtitle JP -->
-  <text x="80" y="490" class="jp" font-size="26" font-weight="500" letter-spacing="1">新規事業開発・AXコンサルティング・自社事業。</text>
+  <text x="80" y="490" class="jp" font-size="26" font-weight="500" letter-spacing="1">遊びの中に、次の産業がある。</text>
 
   <!-- bottom-left wordmark -->
   <text x="80" y="575" class="sans" font-size="30" font-weight="900" letter-spacing="6">LUDENTZ</text>
