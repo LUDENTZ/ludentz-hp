@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="LUDENTZ — Let's shape what's next">
   <defs>
     <style>
-      .sans { font-family: 'Liberation Sans', 'DejaVu Sans', 'Helvetica Neue', Arial, sans-serif; fill: #0A0A0A; }
-      .jp { font-family: 'IPAPGothic', 'Noto Sans CJK JP', 'WenQuanYi Zen Hei', sans-serif; fill: #2E2E2E; }
+      .sans { font-family: 'Red Hat Display', 'Liberation Sans', sans-serif; fill: #0A0A0A; }
+      .jp { font-family: 'WenQuanYi Zen Hei', 'IPAPGothic', sans-serif; fill: #2E2E2E; }
       .mono { font-family: 'DejaVu Sans Mono', 'Liberation Mono', monospace; fill: #4A4A4A; }
     </style>
   </defs>
 
   <rect width="1200" height="630" fill="#FAFAF8"/>
 
-  <!-- top-left mark: solid L -->
+  <!-- top-left mark -->
   <rect x="80" y="80" width="40" height="40" rx="6" fill="#0A0A0A"/>
   <path d="M91 90 H99 V108 H111 V116 H91 Z" fill="#FAFAF8"/>
 
