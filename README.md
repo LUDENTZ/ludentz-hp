@@ -1,25 +1,67 @@
-# CODING AGENTS: READ THIS FIRST
+# LUDENTZ HP
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Vite + React で構築した LUDENTZ のコーポレートサイト。
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+## 開発
 
-## What you should do — IMPORTANT
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build
+npm run preview
+```
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+## デプロイ（Vercel + Resend）
 
-**Read `project/LUDENTZ.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+お問い合わせフォームは `/api/send` (Vercel Serverless Function) から **Resend** で
+`aoi.ohira@ludentz.net` と `yudai.kobayashi@ludentz.net` に送信します。
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+### 初回セットアップ
 
-## About the design files
+セットアップはほぼスクリプト任せ。DNS設定だけ手作業です。
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+```bash
+./setup.sh
+```
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+これで以下が自動で走ります:
 
-## Bundle contents
+1. npm install
+2. Vercel CLI のログイン（ブラウザが開く・初回のみ）
+3. Vercel プロジェクトのリンク（既存選択 or 新規作成）
+4. 環境変数 (`RESEND_API_KEY` / `CONTACT_FROM_EMAIL` / `CONTACT_TO_EMAILS`) の登録
+5. プレビュー環境へデプロイ
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `LUDENTZ_HP` project files (HTML prototypes, assets, components)
+スクリプト実行後、表示される案内に従って **Resendダッシュボードでドメイン (`ludentz.net`) を追加** →
+表示されたDNSレコードを **DNS管理画面** で登録 → **Resendで検証** します。
+
+Verified ✓ になったら:
+
+```bash
+./setup.sh prod       # 本番デプロイ
+./setup.sh test       # /api/send にテストPOST
+```
+
+### 必要な入力
+
+スクリプトは Resend API キーを聞いてきます（プロンプトで入力・非表示）。事前に用意しておくと楽:
+
+- Resend API key: https://resend.com/api-keys
+
+Vercel のログインは CLI がブラウザを開いて OAuth で完結します。
+
+### 環境変数
+
+`.env` に書いておけば `./setup.sh` が自動で読みます (`.env.example` 参照)。
+
+| 変数                  | 内容                                        |
+| --------------------- | ------------------------------------------- |
+| `RESEND_API_KEY`      | Resend APIキー                              |
+| `CONTACT_FROM_EMAIL`  | 送信元アドレス（Resendで検証済みドメイン） |
+| `CONTACT_TO_EMAILS`   | 受信者リスト（カンマ区切り）                |
+
+### 受信メールの仕様
+
+- 件名: `[LUDENTZ LP] {名前} — {問い合わせ内容の冒頭60字}`
+- Reply-To: 送信者のメール（返信でそのまま問い合わせ主へ）
+- honeypot フィールドでボット送信を弾く
