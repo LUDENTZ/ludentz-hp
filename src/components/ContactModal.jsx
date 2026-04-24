@@ -68,7 +68,7 @@ export default function ContactModal({ open, onClose }) {
             </h3>
             <div className="sub">
               <span className="show-en">Tell us the intent. A person — not a form — reads every submission.</span>
-              <span className="show-ja">フォームではなく人が読みます。</span>
+              <span className="show-ja">AIではなく、人が読みます。</span>
             </div>
 
             <div className="field">
