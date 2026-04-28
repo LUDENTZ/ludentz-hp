@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
+import ContactForm from './ContactForm';
 
-export default function CTA({ onContact }) {
+export default function CTA() {
   const ref = useRef(null);
   useEffect(() => {
     const el = ref.current;
@@ -45,15 +46,11 @@ export default function CTA({ onContact }) {
           {renderLine('intent?', true)}
         </span>
         <span className="show-ja">
-          {renderLine('突破 しましょう')}
+          {renderLine('まずは ヒアリングから ご一緒しましょう')}
         </span>
       </h2>
-      <div className="cta-row">
-        <button className="btn-inv" onClick={onContact}>
-          <span className="show-en">Start a project</span>
-          <span className="show-ja">ご相談はコチラから</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 6h8M7 2l4 4-4 4"/></svg>
-        </button>
+      <div className="cta-form-panel">
+        <ContactForm />
       </div>
     </section>
   );

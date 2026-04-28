@@ -7,6 +7,7 @@ export default function Pillars() {
       tag: 'Active',
       body_en: 'Zero-to-one with operators and founders. We ship first prototypes within six weeks — concept, interface, and a working product surface.',
       body_ja: '新規事業開発に関して、戦略立案〜具体の事業企画及びサービス開発から事業グロースまでを一気通貫支援しています。',
+      link: '/service/business-development',
     },
     {
       n: '002',
@@ -54,10 +55,18 @@ export default function Pillars() {
                   <div className="teaser-stamp">Coming<br />soon.</div>
                 </div>
               ) : (
-                <p className="pillar-body">
-                  <span className="show-en">{it.body_en}</span>
-                  <span className="show-ja">{it.body_ja}</span>
-                </p>
+                <>
+                  <p className="pillar-body">
+                    <span className="show-en">{it.body_en}</span>
+                    <span className="show-ja">{it.body_ja}</span>
+                  </p>
+                  {it.link ? (
+                    <a className="pillar-link" href={it.link}>
+                      <span className="show-en">View details</span>
+                      <span className="show-ja">詳細を見る</span>
+                    </a>
+                  ) : null}
+                </>
               )}
             </div>
           );

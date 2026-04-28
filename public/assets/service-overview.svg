@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">サービス全体像</title>
+  <desc id="desc">1次ヒアリング、事業方針とアイデア提案から、伴走型と事業譲渡型へ分岐し、伴走型は事業運営と希望時のアドバイザリーへ進む流れ。</desc>
+  <defs>
+    <style>
+      .label { fill: #0A0A0A; font-family: "Zen Old Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 31px; font-weight: 800; letter-spacing: 0.03em; }
+      .label-small { fill: #0A0A0A; font-family: "Zen Old Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 26px; font-weight: 800; letter-spacing: 0.03em; }
+      .sub { fill: rgba(10,10,10,0.7); font-family: "Zen Old Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 21px; font-weight: 800; letter-spacing: 0.03em; }
+      .body { fill: rgba(10,10,10,0.62); font-family: "Zen Old Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 17px; font-weight: 700; letter-spacing: 0.03em; }
+      .note { fill: rgba(10,10,10,0.56); font-family: "Zen Old Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 17px; font-weight: 700; letter-spacing: 0.03em; }
+      .num { fill: #0A0A0A; font-family: "Zen Old Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 26px; font-weight: 800; }
+      .line { fill: none; stroke: #0A0A0A; stroke-width: 2.4; stroke-linecap: square; stroke-linejoin: miter; }
+      .muted-line { fill: none; stroke: rgba(10,10,10,0.16); stroke-width: 1.2; }
+      .soft-line { fill: none; stroke: rgba(10,10,10,0.34); stroke-width: 1.6; }
+      .panel { fill: none; stroke: rgba(10,10,10,0.18); stroke-width: 1.2; }
+    </style>
+  </defs>
+
+  <g transform="translate(180 70)">
+    <rect class="panel" x="0" y="0" width="1240" height="820" rx="0"/>
+    <line class="muted-line" x1="80" y1="168" x2="1160" y2="168"/>
+    <line class="muted-line" x1="80" y1="392" x2="1160" y2="392"/>
+
+    <g transform="translate(120 78)">
+      <text class="num" x="0" y="30">01</text>
+      <text class="label" x="64" y="32">1次ヒアリング</text>
+      <text class="sub" x="382" y="32">無料・1時間</text>
+      <text class="body" x="64" y="76">
+        <tspan x="64" dy="0">事前フォームをもとに、既存事業の強み・弱み、技術アセット、</tspan>
+        <tspan x="64" dy="30">販売チャネル、人的リソースを確認します。</tspan>
+      </text>
+    </g>
+
+    <g transform="translate(584 178)">
+      <line class="soft-line" x1="0" y1="0" x2="0" y2="48"/>
+      <text class="note" x="30" y="34">1〜2週間</text>
+    </g>
+
+    <g transform="translate(120 274)">
+      <text class="num" x="0" y="30">02</text>
+      <text class="label" x="64" y="32">事業方針 + アイデア提案</text>
+      <text class="sub" x="520" y="32">無料・1時間</text>
+      <text class="body" x="64" y="76">
+        <tspan x="64" dy="0">既存領域と周辺領域を調査し、事業アイデア3案を提示します。ここまで無料です。</tspan>
+        <tspan x="64" dy="30">事業化に向けて取り組み可能とご判断の場合、有償の伴走支援をご提案。</tspan>
+      </text>
+    </g>
+
+    <line class="line" x1="620" y1="418" x2="620" y2="474"/>
+    <path class="line" d="M300 474 H940"/>
+    <line class="line" x1="300" y1="474" x2="300" y2="524"/>
+    <line class="line" x1="940" y1="474" x2="940" y2="524"/>
+
+    <g transform="translate(120 574)">
+      <text class="num" x="0" y="30">03</text>
+      <text class="label" x="64" y="32">伴走型</text>
+      <text class="sub" x="210" y="32">8か月</text>
+      <text class="label-small" x="64" y="84">3プラン</text>
+      <text class="body" x="64" y="126">支援内容を具体化し、LUDENTZがチームの一員として前に進めます。</text>
+    </g>
+
+    <g transform="translate(780 574)">
+      <text class="num" x="0" y="30">03</text>
+      <text class="label" x="64" y="32">事業譲渡型</text>
+      <text class="note" x="64" y="82">※対象となる企業は限定されます（後述）</text>
+    </g>
+
+    <line class="soft-line" x1="300" y1="736" x2="300" y2="782"/>
+    <g transform="translate(188 820)">
+      <text class="num" x="0" y="30">04</text>
+      <text class="label-small" x="64" y="32">事業運営</text>
+      <text class="sub" x="224" y="32">クライアント</text>
+    </g>
+
+    <g transform="translate(190 890)">
+      <text class="note" x="0" y="0">希望時</text>
+      <text class="label-small" x="108" y="0">アドバイザリー</text>
+    </g>
+  </g>
+</svg>
