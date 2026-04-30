@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const INITIAL = { name: '', email: '', phone: '', intent: '', hp: '' };
+const INITIAL = { company: '', name: '', email: '', phone: '', intent: '', hp: '' };
 
 export default function ContactForm({ onCancel, resetKey = 0, showCancel = false }) {
   const [form, setForm] = useState(INITIAL);
@@ -16,8 +16,8 @@ export default function ContactForm({ onCancel, resetKey = 0, showCancel = false
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
   const submit = async () => {
-    if (!form.name || !form.email || !form.intent) {
-      setErrorMsg('Name / Email / Intent は必須です。');
+    if (!form.company || !form.name || !form.email || !form.intent) {
+      setErrorMsg('Company / Name / Email / Intent は必須です。');
       setStatus('error');
       return;
     }
@@ -71,26 +71,30 @@ export default function ContactForm({ onCancel, resetKey = 0, showCancel = false
       </div>
 
       <div className="field">
+        <label>Company · 社名</label>
+        <input value={form.company || ''} onChange={set('company')} placeholder="LUDENTZ株式会社" disabled={sending} />
+      </div>
+      <div className="field">
         <label>Name · お名前</label>
-        <input value={form.name} onChange={set('name')} placeholder="Yamada Taro / 山田太郎" disabled={sending} />
+        <input value={form.name || ''} onChange={set('name')} placeholder="Yamada Taro / 山田太郎" disabled={sending} />
       </div>
       <div className="field">
         <label>Email · メール</label>
-        <input type="email" value={form.email} onChange={set('email')} placeholder="you@company.co" disabled={sending} />
+        <input type="email" value={form.email || ''} onChange={set('email')} placeholder="you@company.co" disabled={sending} />
       </div>
       <div className="field">
         <label>Phone · 電話番号</label>
-        <input type="tel" value={form.phone} onChange={set('phone')} placeholder="03-0000-0000" disabled={sending} />
+        <input type="tel" value={form.phone || ''} onChange={set('phone')} placeholder="03-0000-0000" disabled={sending} />
       </div>
       <div className="field">
         <label>Intent · お問い合わせ内容</label>
-        <textarea rows="3" value={form.intent} onChange={set('intent')} disabled={sending} />
+        <textarea rows="3" value={form.intent || ''} onChange={set('intent')} disabled={sending} />
       </div>
 
       <input
         type="text"
         name="company_website"
-        value={form.hp}
+        value={form.hp || ''}
         onChange={set('hp')}
         tabIndex="-1"
         autoComplete="off"

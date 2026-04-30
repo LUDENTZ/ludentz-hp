@@ -144,6 +144,7 @@ const competitorRows = [
 
 export default function BusinessDevelopmentPage() {
   const [modal, setModal] = useState(false);
+  const [serviceMode, setServiceMode] = useState('support');
 
   useEffect(() => {
     document.body.dataset.lang = DEFAULTS.lang;
@@ -365,136 +366,178 @@ export default function BusinessDevelopmentPage() {
           </div>
         </section>
 
-        <section className="business-band business-support">
+        <section className="business-band business-service-options">
           <div className="business-section-head">
-            <h2>伴走支援型</h2>
-            <p className="business-section-copy">事業検証から初期顧客獲得まで、LUDENTZがチームの一員として一緒に進める支援です。</p>
+            <p className="business-kicker">SERVICE MENU</p>
+            <h2>支援方法</h2>
+            <p className="business-section-copy">伴走して一緒に立ち上げるか、LUDENTZが先に事業を作って譲渡するか。状況に合わせて2つの進め方から選べます。</p>
           </div>
 
-          <div className="business-support-block business-support-flow">
-            <div className="business-subsection-head">
-              <h3>事業検証フロー</h3>
-              <p>記載内容は目安です。個別PJの状況に合わせて機動的に判断します。</p>
-            </div>
-            <ol className="business-phases">
-              {phases.map(([name, term, body], index) => (
-                <li key={name}>
-                  <span className="business-phase-num">{String(index + 1).padStart(2, '0')}</span>
-                  <h3>{name}</h3>
-                  <strong>{term}</strong>
-                  <p>{body}</p>
-                </li>
-              ))}
-            </ol>
+          <div className="business-service-tabs" role="tablist" aria-label="支援方法">
+            <button
+              type="button"
+              className={'business-service-tab' + (serviceMode === 'support' ? ' is-active' : '')}
+              role="tab"
+              aria-selected={serviceMode === 'support'}
+              aria-controls="support-panel"
+              id="support-tab"
+              onClick={() => setServiceMode('support')}
+            >
+              <span>01</span>
+              <strong>伴走支援型</strong>
+              <small>8か月 / 3プラン</small>
+            </button>
+            <button
+              type="button"
+              className={'business-service-tab' + (serviceMode === 'transfer' ? ' is-active' : '')}
+              role="tab"
+              aria-selected={serviceMode === 'transfer'}
+              aria-controls="transfer-panel"
+              id="transfer-tab"
+              onClick={() => setServiceMode('transfer')}
+            >
+              <span>02</span>
+              <strong>事業譲渡型</strong>
+              <small>選考制 / 顧客つき事業譲渡</small>
+            </button>
           </div>
 
-          <div className="business-support-block business-service-menu">
-            <div className="business-subsection-head">
-              <h3>料金プラン</h3>
-              <p>まずはアドバイザリーから開始し、実行リソース不足等、推進力不足のタイミングで上位プランに切り替える等も可能です。</p>
+          {serviceMode === 'support' ? (
+            <div
+              className="business-tab-panel business-support"
+              role="tabpanel"
+              id="support-panel"
+              aria-labelledby="support-tab"
+            >
+              <p className="business-tab-lead">事業検証から初期顧客獲得まで、LUDENTZがチームの一員として一緒に進める支援です。</p>
+
+              <div className="business-support-block business-support-flow">
+                <div className="business-subsection-head">
+                  <h3>事業検証フロー</h3>
+                  <p>記載内容は目安です。個別PJの状況に合わせて機動的に判断します。</p>
+                </div>
+                <ol className="business-phases">
+                  {phases.map(([name, term, body], index) => (
+                    <li key={name}>
+                      <span className="business-phase-num">{String(index + 1).padStart(2, '0')}</span>
+                      <h3>{name}</h3>
+                      <strong>{term}</strong>
+                      <p>{body}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div className="business-support-block business-service-menu">
+                <div className="business-subsection-head">
+                  <h3>料金プラン</h3>
+                  <p>まずはアドバイザリーから開始し、実行リソース不足等、推進力不足のタイミングで上位プランに切り替える等も可能です。</p>
+                </div>
+                <div className="business-plan-cards">
+                  {supportPlans.map((plan) => (
+                    <article className="business-plan-card" key={plan.name}>
+                      <span>{plan.label}</span>
+                      <h4>{plan.name}</h4>
+                      <strong>{plan.price}</strong>
+                      <p>{plan.case}</p>
+                      <dl>
+                        <dt>8か月総額目安</dt>
+                        <dd>{plan.total}</dd>
+                      </dl>
+                    </article>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="business-plan-cards">
-              {supportPlans.map((plan) => (
-                <article className="business-plan-card" key={plan.name}>
-                  <span>{plan.label}</span>
-                  <h4>{plan.name}</h4>
-                  <strong>{plan.price}</strong>
-                  <p>{plan.case}</p>
-                  <dl>
-                    <dt>8か月総額目安</dt>
-                    <dd>{plan.total}</dd>
-                  </dl>
+          ) : (
+            <div
+              className="business-tab-panel business-transfer"
+              role="tabpanel"
+              id="transfer-panel"
+              aria-labelledby="transfer-tab"
+            >
+              <p className="business-tab-lead business-transfer-lead">
+                <span>LUDENTZがリスクを取ってAIプロダクト事業を作り、有償顧客がついた状態で譲渡する支援メニューです。</span>
+                <span>LUDENTZ側のリスクが大きいため、対象領域・市場規模・クライアントの事業資産との相性を総合判断の上でご提案します（選考制）。</span>
+              </p>
+
+              <div className="business-transfer-grid">
+                <article className="business-transfer-card">
+                  <span>対象領域</span>
+                  <h3>バーティカル × AIエージェント領域</h3>
+                  <p>領域例：不動産、広告、人材、小売、M&amp;Aなど</p>
+                  <small>※ AI・LUDENTZのドメイン知識を活かせる領域に限定</small>
                 </article>
-              ))}
+                <article className="business-transfer-card">
+                  <span>除外領域</span>
+                  <ul>
+                    <li>金融・医療など規制が強い領域</li>
+                    <li>R&amp;D（基礎研究・特許取得）が必要な領域</li>
+                    <li>ハードウェア・物販</li>
+                  </ul>
+                </article>
+              </div>
+
+              <div className="business-transfer-panel">
+                <span>検証フロー</span>
+                <h3>基本構造は伴走型と同一</h3>
+                <ol className="business-transfer-flow">
+                  <li>課題検証</li>
+                  <li>MVP</li>
+                  <li>無償PoC</li>
+                  <li>有償PoC</li>
+                </ol>
+                <ul className="business-transfer-list">
+                  <li>検証期間中のクライアント負担はゼロ（LUDENTZが自己投資）</li>
+                  <li>成功時に事業を丸ごと譲渡</li>
+                </ul>
+              </div>
+
+              <div className="business-transfer-panel business-transfer-gate">
+                <span>譲渡ゲート</span>
+                <h3 className="business-transfer-gate-title">
+                  <span>以下を満たした状態を</span>
+                  <span>8か月以内に実現したうえで売却</span>
+                </h3>
+                <ul className="business-transfer-gate-list">
+                  <li><strong>有償顧客3社以上</strong><small>想定単価：月額3〜50万円のBtoB SaaS課金水準</small></li>
+                  <li><strong>2か月以上継続利用中</strong></li>
+                  <li><strong>「使い続けたい」という<br />継続意向</strong></li>
+                </ul>
+              </div>
+
+              <div className="business-transfer-grid">
+                <article className="business-transfer-card">
+                  <span>譲渡内容</span>
+                  <ul>
+                    <li>プロダクト・システム一式（著作権なども含む）</li>
+                    <li>顧客との契約・関係性</li>
+                    <li>運営マニュアル・ノウハウ一式</li>
+                    <li>LUDENTZ担当者による引継ぎサポート（標準3か月）</li>
+                  </ul>
+                </article>
+                <article className="business-transfer-card">
+                  <span>譲渡ゲート未達時</span>
+                  <ul>
+                    <li>契約終了、クライアント負担ゼロ</li>
+                    <li>希望があれば伴走型への切替・再挑戦を提案</li>
+                  </ul>
+                </article>
+              </div>
+
+              <div className="business-transfer-panel">
+                <span>譲渡金額 想定レンジ</span>
+                <h3>3,000万〜8,000万円</h3>
+                <p>PMF達成度・ARR水準・シナジー度合いに応じて、協議の上決定しましょう。</p>
+                <div className="business-transfer-ranges">
+                  <div><strong>3,000〜4,000万円</strong><p>有償顧客3社・ARR300万円前後</p></div>
+                  <div><strong>4,000〜6,000万円</strong><p>有償顧客5社・ARR500万円以上</p></div>
+                  <div><strong>6,000〜8,000万円</strong><p>ARR1,000万円超・高継続率</p></div>
+                </div>
+                <p className="business-transfer-rationale">同等の事業をゼロから立ち上げる場合、通常1〜2年・5,000万〜1億円の投資と機会損失を要します。譲渡型はこの期間とリスクをLUDENTZが引き受け、完成品の事業としてお渡しするものです。</p>
+              </div>
             </div>
-          </div>
-        </section>
-
-        <section className="business-band business-transfer">
-          <div className="business-section-head">
-            <h2>事業譲渡型</h2>
-            <p className="business-section-copy business-transfer-lead">
-              <span>LUDENTZがリスクを取ってAIプロダクト事業を作り、有償顧客がついた状態で譲渡する、伴走支援とは別の支援メニューです。</span>
-              <span>LUDENTZ側のリスクが大きいため、対象領域・市場規模・クライアントの事業資産との相性を総合判断の上でご提案します（選考制）。</span>
-            </p>
-          </div>
-          <div className="business-transfer-grid">
-            <article className="business-transfer-card">
-              <span>対象領域</span>
-              <h3>バーティカル × AIエージェント領域</h3>
-              <p>領域例：不動産、広告、人材、小売、M&amp;Aなど</p>
-              <small>※ AI・LUDENTZのドメイン知識を活かせる領域に限定</small>
-            </article>
-            <article className="business-transfer-card">
-              <span>除外領域</span>
-              <ul>
-                <li>金融・医療など規制が強い領域</li>
-                <li>R&amp;D（基礎研究・特許取得）が必要な領域</li>
-                <li>ハードウェア・物販</li>
-              </ul>
-              <small>※ LUDENTZの知見が薄いため</small>
-            </article>
-          </div>
-
-          <div className="business-transfer-panel">
-            <span>検証フロー</span>
-            <h3>基本構造は伴走型と同一</h3>
-            <ol className="business-transfer-flow">
-              <li>課題検証</li>
-              <li>MVP</li>
-              <li>無償PoC</li>
-              <li>有償PoC</li>
-            </ol>
-            <ul className="business-transfer-list">
-              <li>検証期間中のクライアント負担はゼロ（LUDENTZが自己投資）</li>
-              <li>成功時に事業を丸ごと譲渡</li>
-            </ul>
-          </div>
-
-          <div className="business-transfer-panel business-transfer-gate">
-            <span>譲渡ゲート</span>
-            <h3 className="business-transfer-gate-title">
-              <span>以下を満たした状態を</span>
-              <span>8か月以内に実現したうえで売却</span>
-            </h3>
-            <ul className="business-transfer-gate-list">
-              <li><strong>有償顧客3社以上</strong><small>想定単価：月額3〜50万円のBtoB SaaS課金水準</small></li>
-              <li><strong>2か月以上継続利用中</strong></li>
-              <li><strong>「使い続けたい」という<br />継続意向</strong></li>
-            </ul>
-          </div>
-
-          <div className="business-transfer-grid">
-            <article className="business-transfer-card">
-              <span>譲渡内容</span>
-              <ul>
-                <li>プロダクト・システム一式（著作権なども含む）</li>
-                <li>顧客との契約・関係性</li>
-                <li>運営マニュアル・ノウハウ一式</li>
-                <li>LUDENTZ担当者による引継ぎサポート（標準3か月）</li>
-              </ul>
-            </article>
-            <article className="business-transfer-card">
-              <span>譲渡ゲート未達時</span>
-              <ul>
-                <li>契約終了、クライアント負担ゼロ</li>
-                <li>希望があれば伴走型への切替・再挑戦を提案</li>
-              </ul>
-            </article>
-          </div>
-
-          <div className="business-transfer-panel">
-            <span>譲渡金額 想定レンジ</span>
-            <h3>3,000万〜8,000万円</h3>
-            <p>PMF達成度・ARR水準・シナジー度合いに応じて、協議の上決定しましょう。</p>
-            <div className="business-transfer-ranges">
-              <div><strong>3,000〜4,000万円</strong><p>有償顧客3社・ARR300万円前後</p></div>
-              <div><strong>4,000〜6,000万円</strong><p>有償顧客5社・ARR500万円以上</p></div>
-              <div><strong>6,000〜8,000万円</strong><p>ARR1,000万円超・高継続率</p></div>
-            </div>
-            <p className="business-transfer-rationale">同等の事業をゼロから立ち上げる場合、通常1〜2年・5,000万〜1億円の投資と機会損失を要します。譲渡型はこの期間とリスクをLUDENTZが引き受け、完成品の事業としてお渡しするものです。</p>
-          </div>
-
+          )}
         </section>
 
         <section className="business-band business-competitor">

@@ -17,12 +17,12 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, phone, intent, hp } = req.body || {};
+  const { company, name, email, phone, intent, hp } = req.body || {};
 
   // honeypot — real users leave this empty
   if (hp) return res.status(200).json({ ok: true });
 
-  if (!name || !email || !intent) {
+  if (!company || !name || !email || !intent) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
   if (!ok(email)) {
@@ -40,8 +40,9 @@ export default async function handler(req, res) {
 
   const to = CONTACT_TO_EMAILS.split(',').map((s) => s.trim()).filter(Boolean);
 
-  const subject = `[LUDENTZ LP] ${name} — ${String(intent).slice(0, 60).replace(/\s+/g, ' ')}`;
+  const subject = `[LUDENTZ LP] ${company} / ${name} — ${String(intent).slice(0, 60).replace(/\s+/g, ' ')}`;
   const text = [
+    `Company: ${company}`,
     `Name:   ${name}`,
     `Email:  ${email}`,
     `Phone:  ${phone || '(none)'}`,
@@ -51,6 +52,7 @@ export default async function handler(req, res) {
   ].join('\n');
   const html = `
     <table style="font-family: -apple-system, sans-serif; font-size: 14px; line-height: 1.6; color: #0A0A0A;">
+      <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Company</td><td>${escapeHtml(company)}</td></tr>
       <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Name</td><td>${escapeHtml(name)}</td></tr>
       <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Email</td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
       <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Phone</td><td>${escapeHtml(phone || '(none)')}</td></tr>
