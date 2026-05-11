@@ -719,20 +719,21 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
 }
 .business-track-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid var(--border-subtle);
 }
 .business-track-list article {
   position: relative;
   min-height: 92px;
-  padding: 18px 56px 18px 0;
+  padding: 18px 56px 18px 20px;
+  border-right: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
-.business-track-list article:nth-child(odd) {
-  border-right: 1px solid var(--border-subtle);
+.business-track-list article:nth-child(3n + 1) {
+  padding-left: 0;
 }
-.business-track-list article:nth-child(even) {
-  padding-left: 20px;
+.business-track-list article:nth-child(3n) {
+  border-right: 0;
 }
 .business-track-list h4 {
   margin: 0 0 6px;

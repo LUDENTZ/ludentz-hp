@@ -329,7 +329,7 @@ export default function BusinessDevelopmentPage() {
                 <div><strong>8</strong><span>か月</span><small>標準伴走期間</small></div>
               </div>
               <div className="business-track-list">
-                <article><h4>JR東日本</h4><p>農業領域の新規事業開発</p><span>上場</span></article>
+                <article><h4>交通インフラ会社</h4><p>農業領域の新規事業開発</p><span>上場</span></article>
                 <article><h4>リース会社</h4><p>既存顧客網を活用した新サービス開発</p><span>上場</span><span>AI</span></article>
                 <article><h4>情報セキュリティ会社</h4><p>AI時代における決済インフラ関連事業開発</p><span>上場</span><span>AI</span></article>
                 <article><h4>電子機器メーカー</h4><p>自社製品を活かした新サービス開発</p><span>上場</span><span>AI</span></article>
@@ -337,7 +337,7 @@ export default function BusinessDevelopmentPage() {
                 <article><h4>不動産デベロッパー</h4><p>個人投資家向け収益管理ツール開発</p><span>中堅</span><span>AI</span></article>
                 <article><h4>顧客接点インフラ企業</h4><p>既存サービスを統合した新サービス開発</p><span>上場</span><span>AI</span></article>
                 <article><h4>航空会社</h4><p>ウェルビーイング領域の事業開発</p><span>上場</span></article>
-                <article><h4>pafema</h4><p>接客特化スキマバイトサービス開発</p><span>中堅</span></article>
+                <article><h4>人材会社</h4><p>接客特化スキマバイトサービス開発</p><span>中堅</span></article>
               </div>
             </section>
           </div>
