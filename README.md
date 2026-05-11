@@ -59,6 +59,22 @@ Vercel のログインは CLI がブラウザを開いて OAuth で完結しま�
 | `RESEND_API_KEY`      | Resend APIキー                              |
 | `CONTACT_FROM_EMAIL`  | 送信元アドレス（Resendで検証済みドメイン） |
 | `CONTACT_TO_EMAILS`   | 受信者リスト（カンマ区切り）                |
+| `VITE_GA_MEASUREMENT_ID` | Google Analytics 4 の測定ID（例: `G-XXXXXXXXXX`） |
+| `VITE_CLARITY_PROJECT_ID` | Microsoft Clarity のプロジェクトID |
+
+### アクセス解析
+
+GA4 と Microsoft Clarity は全ページ共通で読み込みます。環境変数が未設定の場合は読み込まれません。
+
+GA4 には以下のイベントも送信します:
+
+- `contact_click`: CTA / ナビからの問い合わせ導線クリック
+- `contact_form_submit_attempt`: フォーム送信試行
+- `contact_form_submit_success`: フォーム送信成功
+- `contact_form_submit_error`: フォーム送信失敗
+- `contact_form_validation_error`: 必須項目不足
+- `business_service_tab_click`: 新規事業開発LPの支援方法タブ切り替え
+- `business_plan_detail_toggle`: 新規事業開発LPの料金プラン詳細開閉
 
 ### 受信メールの仕様
 

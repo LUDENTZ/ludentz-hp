@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { trackEvent } from '../lib/analytics';
 
 const INITIAL = { company: '', name: '', email: '', phone: '', intent: '', hp: '' };
 
@@ -16,7 +17,16 @@ export default function ContactForm({ onCancel, resetKey = 0, showCancel = false
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
   const submit = async () => {
+    trackEvent('contact_form_submit_attempt', {
+      page_path: window.location.pathname,
+      form_location: showCancel ? 'modal' : 'page',
+    });
+
     if (!form.company || !form.name || !form.email || !form.intent) {
+      trackEvent('contact_form_validation_error', {
+        page_path: window.location.pathname,
+        form_location: showCancel ? 'modal' : 'page',
+      });
       setErrorMsg('Company / Name / Email / Intent は必須です。');
       setStatus('error');
       return;
@@ -33,8 +43,16 @@ export default function ContactForm({ onCancel, resetKey = 0, showCancel = false
         const data = await r.json().catch(() => ({}));
         throw new Error(data.error || `HTTP ${r.status}`);
       }
+      trackEvent('contact_form_submit_success', {
+        page_path: window.location.pathname,
+        form_location: showCancel ? 'modal' : 'page',
+      });
       setStatus('sent');
     } catch (err) {
+      trackEvent('contact_form_submit_error', {
+        page_path: window.location.pathname,
+        form_location: showCancel ? 'modal' : 'page',
+      });
       setErrorMsg(err.message || 'Send failed.');
       setStatus('error');
     }

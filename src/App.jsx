@@ -7,6 +7,7 @@ import Company from './components/Company';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
+import { trackEvent } from './lib/analytics';
 
 const DEFAULTS = { lang: 'ja', theme: 'light', intensity: 'normal', cursor: 'on' };
 
@@ -83,15 +84,23 @@ export default function App() {
     }
   };
 
+  const openContact = (source) => {
+    trackEvent('contact_click', {
+      page_path: window.location.pathname,
+      source,
+    });
+    setModal(true);
+  };
+
   return (
     <div className="app">
-      <Nav onContact={() => setModal(true)} onScrollTo={scrollTo} />
+      <Nav onContact={() => openContact('nav')} onScrollTo={scrollTo} />
       <main>
-        <Hero onContact={() => setModal(true)} onScrollTo={scrollTo} />
+        <Hero onContact={() => openContact('hero')} onScrollTo={scrollTo} />
         <Pillars />
         <Manifesto />
         <Company />
-        <CTA onContact={() => setModal(true)} />
+        <CTA onContact={() => openContact('cta')} />
       </main>
       <Footer />
       <ContactModal open={modal} onClose={() => setModal(false)} />

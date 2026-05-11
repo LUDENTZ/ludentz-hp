@@ -3,6 +3,7 @@ import Nav from '../components/Nav';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
+import { trackEvent } from '../lib/analytics';
 
 const DEFAULTS = { lang: 'ja', theme: 'light', intensity: 'normal' };
 
@@ -207,9 +208,35 @@ export default function BusinessDevelopmentPage() {
     }
   };
 
+  const openContact = (source) => {
+    trackEvent('contact_click', {
+      page_path: window.location.pathname,
+      source,
+    });
+    setModal(true);
+  };
+
+  const selectServiceMode = (mode) => {
+    trackEvent('business_service_tab_click', {
+      page_path: window.location.pathname,
+      service_mode: mode,
+    });
+    setServiceMode(mode);
+  };
+
+  const togglePlan = (planName) => {
+    const nextOpen = openPlan === planName ? '' : planName;
+    trackEvent('business_plan_detail_toggle', {
+      page_path: window.location.pathname,
+      plan_name: planName,
+      open: Boolean(nextOpen),
+    });
+    setOpenPlan(nextOpen);
+  };
+
   return (
     <div className="business-page">
-      <Nav onContact={() => setModal(true)} onScrollTo={scrollTo} />
+      <Nav onContact={() => openContact('nav')} onScrollTo={scrollTo} />
 
       <main>
         <section className="business-hero" id="top">
@@ -460,7 +487,7 @@ export default function BusinessDevelopmentPage() {
               aria-selected={serviceMode === 'support'}
               aria-controls="support-panel"
               id="support-tab"
-              onClick={() => setServiceMode('support')}
+              onClick={() => selectServiceMode('support')}
             >
               <span>01</span>
               <strong>伴走支援型</strong>
@@ -473,7 +500,7 @@ export default function BusinessDevelopmentPage() {
               aria-selected={serviceMode === 'transfer'}
               aria-controls="transfer-panel"
               id="transfer-tab"
-              onClick={() => setServiceMode('transfer')}
+              onClick={() => selectServiceMode('transfer')}
             >
               <span>02</span>
               <strong>事業譲渡型</strong>
@@ -538,7 +565,7 @@ export default function BusinessDevelopmentPage() {
                         className="business-plan-card-toggle"
                         aria-expanded={openPlan === plan.name}
                         aria-controls={`plan-detail-${index}`}
-                        onClick={() => setOpenPlan((current) => (current === plan.name ? '' : plan.name))}
+                        onClick={() => togglePlan(plan.name)}
                       >
                         {plan.name === 'スタンダード' && <em>Recommended</em>}
                         <span>{plan.label}</span>
@@ -747,7 +774,7 @@ export default function BusinessDevelopmentPage() {
           </div>
         </section>
 
-        <CTA onContact={() => setModal(true)} />
+        <CTA onContact={() => openContact('cta')} />
       </main>
 
       <Footer />
