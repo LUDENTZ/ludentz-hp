@@ -30,12 +30,54 @@ const supportPlans = [
   },
 ];
 
+const supportPlanRows = [
+  ['LUDENTZ稼働', '週1h（MTGのみ）', '週20〜30h', '週30〜40h'],
+  ['クライアントの実働', '主体的に実行', '担当者1名・週8〜16h', '意思決定のみ（実働ほぼ不要）'],
+  ['体制', 'アドバイザー1名', 'PM＋エンジニア＋デザイナー', '専任チーム（複数名・PM主導）'],
+  ['提供範囲', '戦略助言・壁打ち', '検証設計・MVP実装・初期GTM', '一気通貫'],
+  ['主な成果物', '議事録・推奨アクション', '検証レポート／MVP／GTM資料', '全成果物'],
+  ['コミュニケーション', '週1回 / 1h', '週1回・1hの定例＋Slack常時', '週1〜2回・1hの定例＋Slack常時'],
+  ['推奨ステージ', 'アイデア段階', 'CPF〜PMF', '最短でのCPF〜PMF'],
+  ['こんな方に', '自社で動ける体制がある', '専属人材を持たない', '本業を止めずに最速で立ち上げたい'],
+  ['8か月総額目安', '240万円', '800万円', '1,600万円'],
+];
+
 const phases = [
-  ['課題検証（CPF）', '〜1.5か月', 'ICP定義、仮説設計、20〜30件の顧客インタビュー。5社中4社以上が導入したいと答える課題を探します。'],
-  ['MVP構築（SPF）', '〜2.5か月', 'AIスタックを含む技術選定、UX/UI設計、熟練エンジニアによるMVP開発と動作検証。'],
-  ['テストマーケティング', '並行実施', 'LP・営業資料・広告・ターゲットリストを用意し、PoC候補3〜5社の獲得を目指します。'],
-  ['無償PoC', '〜2か月', '3〜5社で導入支援、利用状況計測、定期ヒアリング、改善、有償化提案を行います。'],
-  ['有償PoC / PMF検証', '〜2か月', '有償顧客3社以上・2か月以上継続を目安に、KPI・運用・拡大ロードマップを整えます。'],
+  {
+    name: '課題検証（CPF）',
+    term: '〜1.5か月',
+    activities: ['ICP定義・仮説設計', 'インタビュー20〜30名のリクルーティング', 'シナリオ設計・顧客インタビュー実施', '課題×解決策の仮説ブラッシュアップ'],
+    gate: '5社中4社以上が「導入したい」と答える顧客×課題×解決策の特定',
+    deliverables: ['検証レポート', '顧客課題マップ', 'ICP定義書'],
+  },
+  {
+    name: 'MVP構築（SPF）',
+    term: '〜2.5か月',
+    activities: ['要件定義・仕様策定', '技術選定（AIスタック含む）', 'UXフロー作成・UI設計', 'AIコーディング＋熟練エンジニアによるMVP開発', '動作検証・改善'],
+    gate: 'テストユーザーが実際に操作できる状態',
+    deliverables: ['MVPプロダクト', '技術ドキュメント', '運用マニュアル（初版）'],
+  },
+  {
+    name: 'テストマーケ',
+    term: '並行実施',
+    activities: ['営業資料・提案書作成', 'LP・サービスサイト制作', '運用型広告の出稿＆検証', 'ターゲットリスト作成', '商談獲得（テストユーザー確保）'],
+    gate: 'PoC候補3〜5社の確保',
+    deliverables: ['LP・広告クリエイティブ', '営業パイプライン'],
+  },
+  {
+    name: '無償PoC',
+    term: '〜2か月',
+    activities: ['3〜5社での導入サポート', 'オンボーディング設計', '利用状況計測・定期ヒアリング', '課題抽出・プロダクト改善', '有償化ヒアリング・提案'],
+    gate: '無償PoC参加者の50%以上を有償PoCへ転換',
+    deliverables: ['PoC実施レポート', '改善ロードマップ', '有償提案資料'],
+  },
+  {
+    name: '有償PoC / PMF検証',
+    term: '〜2か月',
+    activities: ['有償契約クロージング', '継続利用モニタリング', 'ユニットエコノミクス検証（単価・継続率・CAC）', 'KPIダッシュボード構築', '拡大ロードマップ策定'],
+    gate: '有償顧客3社以上・2か月以上継続',
+    deliverables: ['有償契約書・顧客リスト', 'KPIダッシュボード', 'オペレーションマニュアル', '事業拡大ロードマップ'],
+  },
 ];
 
 const fitCompanies = [
@@ -145,6 +187,7 @@ const competitorRows = [
 export default function BusinessDevelopmentPage() {
   const [modal, setModal] = useState(false);
   const [serviceMode, setServiceMode] = useState('support');
+  const [openPlan, setOpenPlan] = useState('スタンダード');
 
   useEffect(() => {
     document.body.dataset.lang = DEFAULTS.lang;
@@ -243,24 +286,60 @@ export default function BusinessDevelopmentPage() {
           <div className="business-section-head">
             <p className="business-kicker">はじめに</p>
             <h2 className="business-target-title">
-              <span>新規事業を何度も立ち上げた人は少ない。</span>
-              <span>だからこそ、経験ある専門家と始めるのが近道です。</span>
+              <span>次の柱は、社内の延長線上だけでは作れない。</span>
             </h2>
+            <p className="business-section-copy business-target-lead">中小企業の新規事業は、能力ではなく「構造」で止まります。社長一人で背負うほど、止まる確率は上がります。</p>
           </div>
           <div className="business-split">
             <div className="business-problem-body">
               <div className="business-problem-copy">
-                <strong>「このままだと既存事業だけでは不安」</strong>
-                <strong>「AIで何か新しいことをしないと」</strong>
-                <span>そんな不安から、新規事業プロジェクトを組成しても、以下の理由で失敗しやすいです。</span>
-                <ul className="business-problem-list">
-                  <li>自社に優位性のない事業をやろうとしている</li>
-                  <li>リソースが無く、検証アクションが回らない</li>
-                  <li>壁にぶつかった時、適切に方向転換できずに停滞する</li>
-                </ul>
-                <span><strong className="business-inline-strong">新規事業は、正しい順番で検証を進めるだけでも成功確率が変わります。</strong>一方で、どの仮説を捨て、どこに賭けるべきかは、立ち上げ経験がないと判断しにくいものです。だからこそ、初期段階から経験ある専門家を入れることで、遠回りを減らし、事業化までのスピードを上げられます。</span>
+                <span>本業を回しながら次の柱を立ち上げるとき、ほぼ同じ理由で歩みが止まります。</span>
+                <div className="business-issue-grid">
+                  <article>
+                    <span>01</span>
+                    <h3>本業に追われ、社長自身が新規事業に時間を割けない。</h3>
+                    <p>検証が月単位で滞り、機会も資金も静かに溶けていく。</p>
+                  </article>
+                  <article>
+                    <span>02</span>
+                    <h3>社内に経験者がおらず、相談相手も判断軸も無い。</h3>
+                    <p>仮説のまま意思決定が遅れ、走りきる前に熱量が冷める。</p>
+                  </article>
+                  <article>
+                    <span>03</span>
+                    <h3>採用や育成では間に合わず、撤退判断もできない。</h3>
+                    <p>投じた人件費と時間が回収できず、塩漬け事業が増える。</p>
+                  </article>
+                </div>
+                <div className="business-problem-statement">
+                  <strong>これは経営者の能力ではなく、中小企業ならではの「構造」の問題です。</strong>
+                  <p>LUDENTZは新規事業に特化した社外チームとして、検証順序・撤退基準・ピボット設計までを仕組みで提供。社長一人では越えられない壁を、伴走で超えます。</p>
+                </div>
               </div>
             </div>
+            <section className="business-track-record" aria-label="累計支援実績">
+              <div className="business-track-head">
+                <span>TRACK RECORD</span>
+                <h3>上場企業を中心に、新規事業の立ち上げを伴走してきました。</h3>
+                <p>業種・領域を問わず、新規事業の0→1立ち上げを支援しています。</p>
+              </div>
+              <div className="business-track-stats">
+                <div><strong>9</strong><span>社</span><small>累計伴走実績</small></div>
+                <div><strong>7</strong><span>社</span><small>うち上場企業</small></div>
+                <div><strong>8</strong><span>か月</span><small>標準伴走期間</small></div>
+              </div>
+              <div className="business-track-list">
+                <article><h4>JR東日本</h4><p>農業領域の新規事業開発</p><span>上場</span></article>
+                <article><h4>リース会社</h4><p>既存顧客網を活用した新サービス開発</p><span>上場</span><span>AI</span></article>
+                <article><h4>情報セキュリティ会社</h4><p>AI時代における決済インフラ関連事業開発</p><span>上場</span><span>AI</span></article>
+                <article><h4>電子機器メーカー</h4><p>自社製品を活かした新サービス開発</p><span>上場</span><span>AI</span></article>
+                <article><h4>食品メーカー</h4><p>子育て世帯向け食育支援事業開発</p><span>上場</span></article>
+                <article><h4>不動産デベロッパー</h4><p>個人投資家向け収益管理ツール開発</p><span>中堅</span><span>AI</span></article>
+                <article><h4>顧客接点インフラ企業</h4><p>既存サービスを統合した新サービス開発</p><span>上場</span><span>AI</span></article>
+                <article><h4>航空会社</h4><p>ウェルビーイング領域の事業開発</p><span>上場</span></article>
+                <article><h4>pafema</h4><p>接客特化スキマバイトサービス開発</p><span>中堅</span></article>
+              </div>
+            </section>
           </div>
         </section>
 
@@ -320,7 +399,7 @@ export default function BusinessDevelopmentPage() {
               </div>
             </article>
 
-            <div className="business-overview-period">1〜2週間</div>
+            <div className="business-overview-period">2〜3週間</div>
 
             <article className="business-overview-card business-overview-card--wide">
               <span className="business-overview-num">02</span>
@@ -417,12 +496,30 @@ export default function BusinessDevelopmentPage() {
                   <p>記載内容は目安です。個別PJの状況に合わせて機動的に判断します。</p>
                 </div>
                 <ol className="business-phases">
-                  {phases.map(([name, term, body], index) => (
-                    <li key={name}>
+                  {phases.map((phase, index) => (
+                    <li key={phase.name}>
                       <span className="business-phase-num">{String(index + 1).padStart(2, '0')}</span>
-                      <h3>{name}</h3>
-                      <strong>{term}</strong>
-                      <p>{body}</p>
+                      <div className="business-phase-title">
+                        <h3>{phase.name}</h3>
+                        <strong>{phase.term}</strong>
+                      </div>
+                      <ul className="business-phase-activities" aria-label={`${phase.name}の活動`}>
+                        {phase.activities.map((activity) => (
+                          <li key={activity}>{activity}</li>
+                        ))}
+                      </ul>
+                      <div className="business-phase-gate">
+                        <span>完了条件</span>
+                        <p>{phase.gate}</p>
+                      </div>
+                      <div className="business-phase-deliverables">
+                        <span>成果物</span>
+                        <ul>
+                          {phase.deliverables.map((deliverable) => (
+                            <li key={deliverable}>{deliverable}</li>
+                          ))}
+                        </ul>
+                      </div>
                     </li>
                   ))}
                 </ol>
@@ -434,18 +531,70 @@ export default function BusinessDevelopmentPage() {
                   <p>まずはアドバイザリーから開始し、実行リソース不足等、推進力不足のタイミングで上位プランに切り替える等も可能です。</p>
                 </div>
                 <div className="business-plan-cards">
-                  {supportPlans.map((plan) => (
-                    <article className="business-plan-card" key={plan.name}>
-                      <span>{plan.label}</span>
-                      <h4>{plan.name}</h4>
-                      <strong>{plan.price}</strong>
-                      <p>{plan.case}</p>
-                      <dl>
-                        <dt>8か月総額目安</dt>
-                        <dd>{plan.total}</dd>
-                      </dl>
+                  {supportPlans.map((plan, index) => (
+                    <article className={'business-plan-card' + (plan.name === 'スタンダード' ? ' is-recommended' : '')} key={plan.name}>
+                      <button
+                        type="button"
+                        className="business-plan-card-toggle"
+                        aria-expanded={openPlan === plan.name}
+                        aria-controls={`plan-detail-${index}`}
+                        onClick={() => setOpenPlan((current) => (current === plan.name ? '' : plan.name))}
+                      >
+                        {plan.name === 'スタンダード' && <em>Recommended</em>}
+                        <span>{plan.label}</span>
+                        <h4>{plan.name}</h4>
+                        <strong>{plan.price}</strong>
+                        <p>{plan.case}</p>
+                        <small>{openPlan === plan.name ? 'Close' : 'Detail'}</small>
+                      </button>
+                      <div
+                        className="business-plan-card-detail"
+                        id={`plan-detail-${index}`}
+                        hidden={openPlan !== plan.name}
+                      >
+                        <dl>
+                          {supportPlanRows.map((row) => (
+                            <div key={row[0]} className={row[0] === '8か月総額目安' ? 'is-total' : ''}>
+                              <dt>{row[0]}</dt>
+                              <dd>{row[index + 1]}</dd>
+                            </div>
+                          ))}
+                        </dl>
+                      </div>
                     </article>
                   ))}
+                </div>
+                <div className="business-plan-table-wrap" aria-label="伴走支援プラン比較">
+                  <table className="business-plan-table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>
+                          <span>アドバイザリー</span>
+                          <small>30万円 / 月</small>
+                        </th>
+                        <th className="is-recommended">
+                          <em>Recommended</em>
+                          <span>スタンダード</span>
+                          <small>100万円 / 月</small>
+                        </th>
+                        <th>
+                          <span>プレミアム</span>
+                          <small>200万円 / 月</small>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {supportPlanRows.map(([label, advisory, standard, premium]) => (
+                        <tr key={label} className={label === '8か月総額目安' ? 'is-total' : ''}>
+                          <th>{label}</th>
+                          <td>{advisory}</td>
+                          <td>{standard}</td>
+                          <td>{premium}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -466,7 +615,7 @@ export default function BusinessDevelopmentPage() {
                   <span>対象領域</span>
                   <h3>バーティカル × AIエージェント領域</h3>
                   <p>領域例：不動産、広告、人材、小売、M&amp;Aなど</p>
-                  <small>※ AI・LUDENTZのドメイン知識を活かせる領域に限定</small>
+                  <small>※ LUDENTZのドメイン知識、もしくは、クライアントのドメイン知識を活かせる領域に限定</small>
                 </article>
                 <article className="business-transfer-card">
                   <span>除外領域</span>

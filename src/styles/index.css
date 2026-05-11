@@ -524,7 +524,7 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
   gap: 24px 8px;
 }
 .business-problem-body {
-  grid-column: 4 / span 6;
+  grid-column: 1 / -1;
   display: grid;
   gap: 28px;
 }
@@ -544,7 +544,7 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
 }
 .business-problem-copy {
   display: grid;
-  gap: 8px;
+  gap: 24px;
 }
 .business-problem-copy strong {
   display: block;
@@ -564,6 +564,218 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
 .business-problem-copy span {
   display: block;
   margin-top: 8px;
+}
+.business-target-lead {
+  max-width: 720px;
+}
+.business-issue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.business-issue-grid article {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 220px;
+  padding: 24px 28px 24px 0;
+  border-right: 1px solid var(--border-subtle);
+}
+.business-issue-grid article + article {
+  padding-left: 28px;
+}
+.business-issue-grid article:last-child {
+  border-right: 0;
+}
+.business-issue-grid article > span,
+.business-track-head > span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--fg-muted);
+}
+.business-issue-grid article > span {
+  margin-top: 0;
+}
+.business-issue-grid h3 {
+  margin: 0;
+  font-family: var(--font-ja-mincho);
+  font-size: clamp(19px, 1.6vw, 25px);
+  font-weight: 900;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+.business-issue-grid p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--fg-muted);
+}
+.business-problem-statement {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px 8px;
+  align-items: start;
+  padding: 44px 40px 36px;
+  background: var(--fg-primary);
+  color: var(--paper);
+  border: 1px solid var(--fg-primary);
+}
+.business-problem-statement::before {
+  content: 'STRUCTURAL ISSUE';
+  grid-column: 1 / span 3;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--fg-disabled);
+}
+.business-problem-statement strong {
+  grid-column: 4 / span 5;
+  max-width: 520px;
+  color: var(--paper);
+}
+.business-problem-statement p {
+  grid-column: 9 / -1;
+}
+.business-problem-statement p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--border-strong);
+}
+.business-track-record {
+  grid-column: 1 / -1;
+  display: grid;
+  align-content: start;
+  gap: 24px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-strong);
+}
+.business-track-head {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: start;
+}
+.business-track-head > span {
+  grid-column: 1 / span 3;
+  padding-top: 8px;
+}
+.business-track-head h3 {
+  grid-column: 4 / span 6;
+  margin: 0;
+  font-family: var(--font-ja-mincho);
+  font-size: clamp(24px, 2.4vw, 36px);
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.business-track-head p {
+  grid-column: 4 / span 6;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--fg-muted);
+}
+.business-track-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+}
+.business-track-stats div {
+  min-width: 0;
+  padding: 18px 12px 16px 0;
+  border-right: 1px solid var(--border-subtle);
+}
+.business-track-stats div + div {
+  padding-left: 14px;
+}
+.business-track-stats div:last-child {
+  border-right: 0;
+}
+.business-track-stats strong {
+  display: inline-block;
+  margin-right: 4px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.business-track-stats span {
+  font-size: 13px;
+  font-weight: 700;
+}
+.business-track-stats small {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+}
+.business-track-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--border-subtle);
+}
+.business-track-list article {
+  position: relative;
+  min-height: 92px;
+  padding: 18px 56px 18px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.business-track-list article:nth-child(odd) {
+  border-right: 1px solid var(--border-subtle);
+}
+.business-track-list article:nth-child(even) {
+  padding-left: 20px;
+}
+.business-track-list h4 {
+  margin: 0 0 6px;
+  font-family: var(--font-ja-mincho);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.business-track-list p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--fg-muted);
+}
+.business-track-list article > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 20px;
+  margin: 0 0 0 4px;
+  padding: 0 7px;
+  border: 1px solid var(--fg-primary);
+  background: var(--fg-primary);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+.business-track-list article > span:nth-of-type(1) {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+}
+.business-track-list article > span:nth-of-type(2) {
+  position: absolute;
+  top: 42px;
+  right: 12px;
+  background: var(--paper);
+  color: var(--fg-primary);
+  border-color: var(--border-strong);
 }
 .business-problem-list {
   display: grid;
@@ -1043,12 +1255,29 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
   gap: 18px;
 }
 .business-plan-card {
-  display: flex;
-  flex-direction: column;
-  min-height: 320px;
-  padding: 26px 24px 22px;
+  min-height: 260px;
   border: 1px solid var(--border-strong);
   background: var(--paper);
+}
+.business-plan-card.is-recommended {
+  border-color: var(--fg-primary);
+}
+.business-plan-card-toggle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 258px;
+  padding: 26px 24px 22px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: default;
+}
+.business-plan-card-toggle em {
+  display: none;
+}
+.business-plan-card-toggle small {
+  display: none;
 }
 .business-plan-card span,
 .business-plan-card dt {
@@ -1065,7 +1294,7 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
   line-height: 1.28;
   color: var(--fg-primary);
 }
-.business-plan-card > strong {
+.business-plan-card-toggle > strong {
   display: block;
   margin: 0 0 24px;
   font-family: var(--font-display);
@@ -1080,18 +1309,11 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
   line-height: 1.85;
   color: var(--fg-secondary);
 }
-.business-plan-card dl {
-  margin: auto 0 0;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-subtle);
-}
-.business-plan-card dd {
-  margin: 8px 0 0;
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--fg-primary);
+.business-plan-card-detail {
+  display: none;
 }
 .business-plan-table-wrap {
+  margin-top: 28px;
   overflow-x: auto;
   border-top: 1px solid var(--ink-0);
 }
@@ -1102,39 +1324,82 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
 }
 .business-plan-table th,
 .business-plan-table td {
-  padding: 22px 20px;
+  padding: 14px 20px;
   border-bottom: 1px solid var(--border-strong);
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
   font-size: 14px;
   line-height: 1.7;
   color: var(--fg-secondary);
 }
 .business-plan-table thead th {
+  padding-top: 26px;
+  padding-bottom: 16px;
   font-family: var(--font-ja);
-  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.02em;
   color: var(--fg-primary);
+  vertical-align: bottom;
+}
+.business-plan-table thead th span {
+  display: block;
+  font-family: var(--font-ja-mincho);
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.business-plan-table thead th small {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.business-plan-table thead th em {
+  display: inline-flex;
+  margin-bottom: 6px;
+  padding: 4px 9px;
+  background: var(--fg-primary);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 .business-plan-table tbody th {
-  width: 20%;
+  width: 16%;
   font-family: var(--font-ja-mincho);
-  font-size: 28px;
+  font-size: 16px;
+  font-weight: 900;
   line-height: 1.35;
   color: var(--fg-primary);
 }
-.business-plan-table td:nth-child(2),
-.business-plan-table td:nth-child(4) {
-  width: 18%;
-  white-space: nowrap;
+.business-plan-table thead th:nth-child(3),
+.business-plan-table tbody td:nth-child(3) {
+  background: var(--surface);
+  color: var(--fg-primary);
+  font-weight: 700;
 }
-.business-plan-table strong {
+.business-plan-table tbody td:nth-child(2),
+.business-plan-table tbody td:nth-child(4) {
+  width: 28%;
+}
+.business-plan-table tbody td:nth-child(3) {
+  width: 28%;
+}
+.business-plan-table tbody tr.is-total th,
+.business-plan-table tbody tr.is-total td {
+  border-top: 2px solid var(--fg-primary);
+  border-bottom: 0;
+  padding-top: 18px;
+  font-weight: 900;
+  color: var(--fg-primary);
+}
+.business-plan-table tbody tr.is-total td {
   font-family: var(--font-display);
-  font-size: clamp(28px, 3.1vw, 44px);
+  font-size: clamp(24px, 2.4vw, 34px);
   line-height: 1;
   font-style: italic;
-  color: var(--fg-primary);
 }
 .business-menu-top {
   display: flex;
@@ -1152,37 +1417,112 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
   letter-spacing: -0.02em;
 }
 .business-phases {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   margin: 0;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--ink-0);
-}
-.business-phases li {
-  display: grid;
-  grid-template-columns: 64px 2fr 140px 4fr;
-  gap: 18px;
-  padding: 24px 0;
   border-bottom: 1px solid var(--border-strong);
+}
+.business-phases > li {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  min-height: 520px;
+  padding: 24px 14px 28px;
+  border-right: 1px solid var(--border-subtle);
   align-items: start;
 }
-.business-phases h3 {
+.business-phases > li:last-child {
+  border-right: 0;
+}
+.business-phases > li h3 {
   margin: 0;
   font-family: var(--font-ja-mincho);
-  font-size: 22px;
+  font-size: clamp(19px, 1.35vw, 23px);
   line-height: 1.35;
 }
-.business-phases strong {
+.business-phases > li > .business-phase-title strong {
+  display: block;
+  margin-top: 4px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fg-muted);
 }
-.business-phases p {
+.business-phase-title {
+  min-height: 70px;
+}
+.business-phase-activities,
+.business-phase-deliverables ul {
+  display: grid;
+  gap: 6px;
   margin: 0;
-  font-size: 14px;
-  line-height: 1.85;
+  padding: 0;
+  list-style: none;
+}
+.business-phase-activities li {
+  position: relative;
+  min-height: 0;
+  padding: 0 0 0 13px;
+  border-right: 0;
+  font-size: 12px;
+  line-height: 1.65;
   color: var(--fg-secondary);
+}
+.business-phase-activities li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.82em;
+  width: 8px;
+  height: 1px;
+  background: var(--fg-muted);
+}
+.business-phase-gate {
+  display: grid;
+  gap: 8px;
+  padding: 12px 0 12px 12px;
+  border-left: 3px solid var(--fg-primary);
+}
+.business-phase-gate span,
+.business-phase-deliverables > span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+}
+.business-phase-gate span::before {
+  content: '✓';
+  margin-right: 6px;
+  color: var(--fg-primary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+}
+.business-phase-gate p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.65;
+  font-weight: 700;
+  color: var(--fg-primary);
+}
+.business-phase-deliverables {
+  display: grid;
+  gap: 8px;
+  align-self: end;
+  padding-top: 4px;
+}
+.business-phase-deliverables li {
+  min-height: 0;
+  padding: 7px 9px;
+  border-right: 0;
+  background: var(--surface);
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--fg-primary);
 }
 .business-transfer {
   background: var(--paper);
@@ -1757,8 +2097,39 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .business-subsection-head h3,
   .business-subsection-head p,
   .business-problem-body,
+  .business-track-record,
   .business-split > p,
   .business-definition { grid-column: 1 / -1; }
+  .business-track-record {
+    margin-top: 36px;
+    padding-top: 32px;
+    padding-left: 0;
+    border-left: 0;
+  }
+  .business-track-head {
+    grid-template-columns: 1fr;
+  }
+  .business-track-head > span,
+  .business-track-head h3,
+  .business-track-head p {
+    grid-column: 1 / -1;
+  }
+  .business-track-head > span {
+    padding-top: 0;
+  }
+  .business-issue-grid {
+    grid-template-columns: 1fr;
+  }
+  .business-issue-grid article,
+  .business-issue-grid article + article {
+    min-height: 0;
+    padding: 22px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .business-issue-grid article:last-child {
+    border-bottom: 0;
+  }
   .business-band { padding: 80px 24px; }
   .business-support-block { margin-top: 64px; }
   .business-service-menu { padding-top: 56px; }
@@ -1857,9 +2228,17 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .business-overview-card--operation {
     width: 100%;
   }
-  .business-phases li { grid-template-columns: 56px 1fr; }
-  .business-phases strong,
-  .business-phases p { grid-column: 2 / -1; }
+  .business-phases {
+    grid-template-columns: 1fr;
+  }
+  .business-phases > li {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .business-phases > li:last-child {
+    border-bottom: 0;
+  }
   .hero { padding: 64px 24px 80px; }
   .section { padding: 80px 24px; }
   .manifesto { padding: 96px 24px; }
@@ -1974,6 +2353,9 @@ body[data-lang="ja"] .show-en { display: none !important; }
     width: auto;
     max-width: none;
   }
+  .business-target-lead {
+    max-width: none;
+  }
   .business-section-copy {
     margin-top: 8px;
     font-size: 14px;
@@ -2026,6 +2408,50 @@ body[data-lang="ja"] .show-en { display: none !important; }
     font-weight: 700;
   }
   .business-problem-copy span { margin-top: 0; }
+  .business-issue-grid h3 {
+    font-size: clamp(18px, 5.4vw, 23px);
+  }
+  .business-problem-statement {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 24px 20px;
+  }
+  .business-problem-statement::before,
+  .business-problem-statement strong,
+  .business-problem-statement p {
+    grid-column: 1 / -1;
+  }
+  .business-problem-statement strong {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .business-problem-statement p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .business-track-head h3 {
+    font-size: clamp(22px, 6.4vw, 30px);
+  }
+  .business-track-stats {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .business-track-stats div {
+    padding: 14px 10px 12px 0;
+  }
+  .business-track-stats div + div {
+    padding-left: 10px;
+  }
+  .business-track-stats strong {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+  .business-track-list {
+    grid-template-columns: 1fr;
+  }
+  .business-track-list article,
+  .business-track-list article:nth-child(even) {
+    padding: 16px 54px 16px 0;
+    border-right: 0;
+  }
   .business-problem-list {
     margin: 8px 0;
   }
@@ -2046,11 +2472,85 @@ body[data-lang="ja"] .show-en { display: none !important; }
     min-height: 30px;
     font-size: 11px;
   }
-  .business-plan-table { min-width: 760px; }
-  .business-plan-table th,
-  .business-plan-table td { padding: 18px 14px; }
+  .business-plan-table-wrap {
+    display: none;
+  }
   .business-plan-card {
     min-height: auto;
+  }
+  .business-plan-card-toggle {
+    min-height: 0;
+    padding: 22px 18px;
+    cursor: pointer;
+  }
+  .business-plan-card.is-recommended {
+    background: var(--surface);
+  }
+  .business-plan-card-toggle em {
+    display: inline-flex;
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 4px 9px;
+    background: var(--fg-primary);
+    color: var(--paper);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .business-plan-card-toggle small {
+    display: inline-flex;
+    align-self: flex-start;
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--fg-muted);
+    text-transform: uppercase;
+  }
+  .business-plan-card-toggle small::after {
+    content: '+';
+    margin-left: 10px;
+    color: var(--fg-primary);
+  }
+  .business-plan-card-toggle[aria-expanded="true"] small::after {
+    content: '-';
+  }
+  .business-plan-card-detail {
+    display: block;
+    padding: 0 18px 22px;
+  }
+  .business-plan-card-detail[hidden] {
+    display: none;
+  }
+  .business-plan-card-detail dl {
+    display: grid;
+    margin: 0;
+  }
+  .business-plan-card-detail dl div {
+    display: grid;
+    gap: 5px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .business-plan-card-detail dd {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--fg-primary);
+  }
+  .business-plan-card-detail dl div.is-total {
+    border-top: 2px solid var(--fg-primary);
+  }
+  .business-plan-card-detail dl div.is-total dd {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-style: italic;
+    line-height: 1;
+    font-weight: 900;
   }
   .business-flow,
   .business-menus,
@@ -2091,9 +2591,13 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .business-menu h3,
   .business-gate strong { font-size: 19px; }
   .business-price { font-size: 28px; }
-  .business-phases li { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
-  .business-phases strong,
-  .business-phases p { grid-column: auto; }
+  .business-phases > li {
+    gap: 14px;
+    padding: 20px 0;
+  }
+  .business-phase-title {
+    min-height: 0;
+  }
   .business-transfer-card span,
   .business-transfer-panel > span {
     font-size: clamp(23px, 7vw, 31px);
