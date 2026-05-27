@@ -6,7 +6,15 @@ import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
 import { initAnalytics } from './lib/analytics';
 
 const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
-const Page = pathname === '/service/business-development' ? BusinessDevelopmentPage : App;
+const isBusinessDevelopmentPage = pathname === '/service/business-development';
+const Page = isBusinessDevelopmentPage ? BusinessDevelopmentPage : App;
+
+if (isBusinessDevelopmentPage) {
+  const robotsMeta = document.querySelector('meta[name="robots"]') ?? document.createElement('meta');
+  robotsMeta.setAttribute('name', 'robots');
+  robotsMeta.setAttribute('content', 'noindex, nofollow');
+  document.head.appendChild(robotsMeta);
+}
 
 initAnalytics();
 
