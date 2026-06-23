@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 
 export default function Nav({ onContact, onScrollTo }) {
-  const [time, setTime] = useState(() => new Date());
+  const [time, setTime] = useState(null);
   useEffect(() => {
+    setTime(new Date());
     const id = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(id);
   }, []);
-  const jst = time.toLocaleTimeString('en-GB', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const jst = time
+    ? time.toLocaleTimeString('en-GB', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit', second: '2-digit' })
+    : '--:--:--';
 
   return (
     <nav className="nav">

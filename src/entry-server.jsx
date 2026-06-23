@@ -1,6 +1,7 @@
 import { renderToString } from 'react-dom/server';
 import App from './App';
 import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
+import BusinessGrowthPage from './pages/BusinessGrowthPage';
 import SitePage from './SitePage';
 
 export const routes = [
@@ -13,6 +14,11 @@ export const routes = [
     path: '/service/business-development',
     component: BusinessDevelopmentPage,
     file: 'service/business-development/index.html',
+  },
+  {
+    path: '/service/business-growth',
+    component: BusinessGrowthPage,
+    file: 'service/business-growth/index.html',
   },
 ];
 

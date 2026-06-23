@@ -65,7 +65,13 @@ export default function Company() {
       </div>
 
       <div className="company-wrap">
-        <dl className="company-dl reveal">
+        <figure className="company-photo">
+          <img src="/assets/office-harajuku.webp" alt="LUDENTZ office interior" loading="lazy" />
+          <figcaption>
+            <span>Tokyo office</span>
+          </figcaption>
+        </figure>
+        <dl className="company-dl">
           {rows.map((r) => (
             <Fragment key={r.k_en}>
               <dt>
