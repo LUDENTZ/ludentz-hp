@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Pillars from './components/Pillars';
@@ -9,44 +9,7 @@ import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
 import { trackEvent } from './lib/analytics';
 
-const DEFAULTS = { lang: 'ja', theme: 'light', intensity: 'normal', cursor: 'on' };
-
-function Cursor({ enabled }) {
-  const ref = useRef(null);
-  useEffect(() => {
-    if (!enabled) return;
-    const el = ref.current;
-    if (!el) return;
-    let rx = window.innerWidth / 2, ry = window.innerHeight / 2;
-    let x = rx, y = ry;
-    const onMove = (e) => { rx = e.clientX; ry = e.clientY; };
-    const onOver = (e) => {
-      const t = e.target;
-      if (t.closest && t.closest('a, button, .process-row, .pillar-link, .chip, .nav-logo')) {
-        el.classList.add('hover');
-      } else {
-        el.classList.remove('hover');
-      }
-    };
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('mouseover', onOver);
-    let raf;
-    const loop = () => {
-      x += (rx - x) * 0.22;
-      y += (ry - y) * 0.22;
-      el.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
-      raf = requestAnimationFrame(loop);
-    };
-    loop();
-    return () => {
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('mouseover', onOver);
-      cancelAnimationFrame(raf);
-    };
-  }, [enabled]);
-  if (!enabled) return null;
-  return <div className="cursor" ref={ref} />;
-}
+const DEFAULTS = { lang: 'ja', theme: 'light', intensity: 'normal' };
 
 function useReveal() {
   useEffect(() => {
@@ -104,7 +67,6 @@ export default function App() {
       </main>
       <Footer />
       <ContactModal open={modal} onClose={() => setModal(false)} />
-      <Cursor enabled={DEFAULTS.cursor === 'on'} />
     </div>
   );
 }
