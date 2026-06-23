@@ -324,8 +324,8 @@ export default function BusinessGrowthPage() {
             ))}
           </div>
           <div className="business-problem-statement growth-statement">
-            <strong>1→10支援では、PMF後の拡大ではなく、PMFに近づくための実行サイクルを一緒に回します。</strong>
-            <p>ターゲット、訴求、営業、マーケティング、プロダクト改善、KPIを分断せず、週次で検証しながら勝ち筋を作ります。</p>
+            <strong>売上が伸びない原因は、営業・マーケティング・プロダクト改善が分断されていることです。</strong>
+            <p>1→10支援では、ターゲット、訴求、営業、マーケティング、プロダクト改善、KPIを分断せず、週次で検証しながらPMFに近づく実行サイクルを一緒に回します。</p>
           </div>
         </section>
 
