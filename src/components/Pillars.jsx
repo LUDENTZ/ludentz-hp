@@ -4,14 +4,14 @@ export default function Pillars() {
     en: <>AX<br />Consulting</>,
     ja: 'AX支援',
     tag: 'Active',
-    body_en: 'AI-native business process re-engineering. We rebuild the workflow itself — not just add a tool — and forward deployed engineers stay on-site until it ships and sticks.',
-    body_ja: '最新AI技術を前提に、業務プロセスそのものを作り変えるAI BPR。診断や資料で終わらせず、現場に入る専任エンジニア（FDE）が、実装から組織定着までを担います。',
+    body_en: 'Adding AI as a tool only gets you so far. We rebuild the business process itself on an AI-native premise.',
+    body_ja: 'AIをツールとして足すだけでは、成果は頭打ちになる。業務プロセスそのものを、AI前提に作り変えます。',
     links: [
       {
         href: '/service/ax-consulting',
         number: '',
         label: 'AI BPR｜業務プロセスをAI前提に再設計',
-        body: '業務を棚卸しし、インパクトの大きい領域からAI前提へ。FDE（現場に入る専任エンジニア）が実装・定着まで一気通貫で担う。',
+        body: '業務を棚卸しし、インパクトの大きい領域から着手。FDE（現場に入る専任エンジニア）が、実装から組織定着まで担う。',
       },
     ],
   };
