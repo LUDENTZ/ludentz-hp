@@ -2,6 +2,7 @@ import { renderToString } from 'react-dom/server';
 import App from './App';
 import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
 import BusinessGrowthPage from './pages/BusinessGrowthPage';
+import AxConsultingPage from './pages/AxConsultingPage';
 import SitePage from './SitePage';
 
 export const routes = [
@@ -19,6 +20,11 @@ export const routes = [
     path: '/service/business-growth',
     component: BusinessGrowthPage,
     file: 'service/business-growth/index.html',
+  },
+  {
+    path: '/service/ax-consulting',
+    component: AxConsultingPage,
+    file: 'service/ax-consulting/index.html',
   },
 ];
 

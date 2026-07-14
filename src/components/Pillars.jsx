@@ -28,6 +28,7 @@ export default function Pillars() {
       en: <>AX<br />Consulting</>,
       ja: 'AX支援',
       tag: 'Active',
+      href: '/service/ax-consulting',
       body_en: 'Architecture across the business — information, organisation, product. We re-draw the structure first, and let the surface follow.',
       body_ja: '最新AI技術を前提に、既存の事業構造から見直す本質的なAXプランを提案。組織定着まで伴走します。',
     },
@@ -104,6 +105,13 @@ export default function Pillars() {
                     <span className="show-en">{it.body_en}</span>
                     <span className="show-ja">{it.body_ja}</span>
                   </p>
+                  {it.href && (
+                    <a className="pillar-secondary-link" href={it.href}>
+                      <span className="show-en">View details</span>
+                      <span className="show-ja">詳細を見る</span>
+                      <span className="pillar-service-arrow" aria-hidden="true">→</span>
+                    </a>
+                  )}
                 </>
               )}
             </article>

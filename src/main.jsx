@@ -5,15 +5,23 @@ import './styles/index.css';
 import App from './App';
 import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
 import BusinessGrowthPage from './pages/BusinessGrowthPage';
+import AxConsultingPage from './pages/AxConsultingPage';
 import SitePage from './SitePage';
 import { initAnalytics } from './lib/analytics';
 
 const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
 const isBusinessDevelopmentPage = pathname === '/service/business-development';
 const isBusinessGrowthPage = pathname === '/service/business-growth';
-const Page = isBusinessDevelopmentPage ? BusinessDevelopmentPage : isBusinessGrowthPage ? BusinessGrowthPage : App;
+const isAxConsultingPage = pathname === '/service/ax-consulting';
+const Page = isBusinessDevelopmentPage
+  ? BusinessDevelopmentPage
+  : isBusinessGrowthPage
+    ? BusinessGrowthPage
+    : isAxConsultingPage
+      ? AxConsultingPage
+      : App;
 
-if (isBusinessDevelopmentPage || isBusinessGrowthPage) {
+if (isBusinessDevelopmentPage || isBusinessGrowthPage || isAxConsultingPage) {
   const robotsMeta = document.querySelector('meta[name="robots"]') ?? document.createElement('meta');
   robotsMeta.setAttribute('name', 'robots');
   robotsMeta.setAttribute('content', 'noindex, nofollow');
