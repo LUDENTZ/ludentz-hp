@@ -4,20 +4,14 @@ export default function Pillars() {
     en: <>AX<br />Consulting</>,
     ja: 'AX支援',
     tag: 'Active',
-    body_en: 'AI-native business process re-engineering, delivered by forward deployed engineers. We rebuild the workflow itself — not just add a tool — and stay until it sticks.',
-    body_ja: '最新AI技術を前提に、既存の業務プロセスから見直す本質的なAX。ツール導入で終わらせず、専任チームが現場に入り、組織に定着するまで伴走します。',
+    body_en: 'AI-native business process re-engineering. We rebuild the workflow itself — not just add a tool — and forward deployed engineers stay on-site until it ships and sticks.',
+    body_ja: '最新AI技術を前提に、業務プロセスそのものを作り変えるAI BPR。診断や資料で終わらせず、現場に入る専任エンジニア（FDE）が、実装から組織定着までを担います。',
     links: [
       {
         href: '/service/ax-consulting',
-        number: '01',
+        number: '',
         label: 'AI BPR｜業務プロセスをAI前提に再設計',
-        body: '業務を棚卸しし、インパクトの大きい領域からAI前提の業務プロセスへ作り変える。',
-      },
-      {
-        href: '/service/ax-consulting',
-        number: '02',
-        label: 'FDE｜Forward Deployed Engineer',
-        body: '専任エンジニアが現場に入り、AIの実装から定着まで伴走する。',
+        body: '業務を棚卸しし、インパクトの大きい領域からAI前提へ。FDE（現場に入る専任エンジニア）が実装・定着まで一気通貫で担う。',
       },
     ],
   };
