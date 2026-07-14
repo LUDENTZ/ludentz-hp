@@ -253,48 +253,27 @@ export default function BusinessDevelopmentPage() {
               <p className="business-lead">
                 LUDENTZは、中小企業の既存事業資産をもとに、AI × バーティカル（特定領域特化）の新規事業を設計・開発・検証します。
               </p>
-              <div className="business-choice">
-                <span>ご支援方法は2通り</span>
-                <p className="business-choice-copy">
-                  <span>伴走して一緒に立ち上げる。</span>
-                  <span>または、LUDENTZが事業を作り、</span>
-                  <span>顧客ごと譲渡する。</span>
-                </p>
-              </div>
             </div>
 
-            <div className="business-hero-people" aria-label="LUDENTZ project members">
-              <article className="business-hero-person business-hero-person--k">
-                <img className="business-hero-photo" src="/assets/person-k.png" alt="" />
-                <div className="business-hero-name">
-                  <img className="business-name-img business-name-img--o" src="/assets/person-o-name.png" alt="" />
-                  <span>新規事業コンサルタント</span>
-                </div>
-                <div className="business-hero-profile">
-                  <p>上場企業十数社の新規事業開発プロジェクトを支援。自身で起業したPR会社を14期運営し、売却した経験を持ち、戦略立案からAIエージェント開発、運用型広告まで一気通貫で支援します。</p>
-                  <ul>
-                    <li>新規事業戦略・AIプロダクト企画</li>
-                    <li>AIエージェント開発・MVP構築</li>
-                    <li>運用型広告・グロース検証</li>
-                  </ul>
-                </div>
-              </article>
-              <article className="business-hero-person business-hero-person--o">
-                <img className="business-hero-photo" src="/assets/person-o.png" alt="" />
-                <div className="business-hero-name">
-                  <img className="business-name-img business-name-img--k" src="/assets/person-k-name.png" alt="" />
-                  <span>新規事業コンサルタント</span>
-                </div>
-                <div className="business-hero-profile">
-                  <p>上場企業十数社の新規事業開発プロジェクトを支援。自ら人材・不動産・M&amp;A仲介の3事業を立ち上げた経験を持ち、顧客インタビューからピボットまでの泥臭いプロセスを一気通貫で支援します。</p>
-                  <ul>
-                    <li>新規事業開発プログラム運営</li>
-                    <li>事業仮説・顧客検証レビュー</li>
-                    <li>営業戦略・営業体制構築</li>
-                  </ul>
-                </div>
-              </article>
-            </div>
+            <aside className="business-hero-panel" aria-label="ご支援方法">
+              <span className="business-hero-panel-label">ご支援方法は2通り</span>
+              <ul className="business-hero-paths">
+                <li className="business-hero-path">
+                  <span className="business-hero-path-num">01</span>
+                  <div className="business-hero-path-body">
+                    <strong>伴走支援型</strong>
+                    <p>チームの一員として、一緒に立ち上げる。</p>
+                  </div>
+                </li>
+                <li className="business-hero-path">
+                  <span className="business-hero-path-num">02</span>
+                  <div className="business-hero-path-body">
+                    <strong>事業譲渡型</strong>
+                    <p>LUDENTZが事業を作り、顧客ごと譲渡する。</p>
+                  </div>
+                </li>
+              </ul>
+            </aside>
           </div>
 
           <div className="business-marquee">
