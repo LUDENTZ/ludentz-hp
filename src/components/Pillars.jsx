@@ -1,23 +1,23 @@
 export default function Pillars() {
   const primary = {
     n: '001',
-    en: <>Business<br />Development</>,
-    ja: '新規事業開発',
+    en: <>AX<br />Consulting</>,
+    ja: 'AX支援',
     tag: 'Active',
-    body_en: 'Zero-to-one with operators and founders. We ship first prototypes within six weeks — concept, interface, and a working product surface.',
-    body_ja: '戦略立案から具体の事業企画、サービス開発、事業グロースまで。LUDENTZの中核領域として、0→1と1→10の両方を一気通貫で支援しています。',
+    body_en: 'AI-native business process re-engineering, delivered by forward deployed engineers. We rebuild the workflow itself — not just add a tool — and stay until it sticks.',
+    body_ja: '最新AI技術を前提に、既存の業務プロセスから見直す本質的なAX。ツール導入で終わらせず、専任チームが現場に入り、組織に定着するまで伴走します。',
     links: [
       {
-        href: '/service/business-development',
+        href: '/service/ax-consulting',
         number: '01',
-        label: '0→1 新規事業開発支援',
-        body: '構想・仮説検証・MVP・初期顧客獲得まで、次の柱をゼロから形にする。',
+        label: 'AI BPR｜業務プロセスをAI前提に再設計',
+        body: '業務を棚卸しし、インパクトの大きい領域からAI前提の業務プロセスへ作り変える。',
       },
       {
-        href: '/service/business-growth',
+        href: '/service/ax-consulting',
         number: '02',
-        label: '1→10 グロース支援',
-        body: '立ち上がった新規事業を、GTM・営業・改善運用で売上成長の軌道に乗せる。',
+        label: 'FDE｜Forward Deployed Engineer',
+        body: '専任エンジニアが現場に入り、AIの実装から定着まで伴走する。',
       },
     ],
   };
@@ -25,12 +25,12 @@ export default function Pillars() {
   const secondary = [
     {
       n: '002',
-      en: <>AX<br />Consulting</>,
-      ja: 'AX支援',
+      en: <>Business<br />Development</>,
+      ja: '新規事業開発',
       tag: 'Active',
-      href: '/service/ax-consulting',
-      body_en: 'Architecture across the business — information, organisation, product. We re-draw the structure first, and let the surface follow.',
-      body_ja: '最新AI技術を前提に、既存の事業構造から見直す本質的なAXプランを提案。組織定着まで伴走します。',
+      href: '/service/business-development',
+      body_en: 'Zero-to-one with operators and founders. Concept, validation, MVP, and first customers — we ship the next pillar from scratch.',
+      body_ja: '構想・仮説検証・MVP・初期顧客獲得まで。AIプロダクトで、次の柱をゼロから形にする0→1支援。',
     },
     {
       n: '003',
