@@ -173,16 +173,16 @@ export default function AxConsultingPage() {
           <div className="ax-principle-compare">
             <article className="ax-principle-card ax-principle-card--good">
               <span className="ax-principle-mark" aria-hidden="true">○</span>
-              <h3>純正の仕組みにそのまま乗る</h3>
-              <p>領収書をチャットに投げる → AIが会計SaaSの公式連携（MCP）経由で記帳。<strong>作り込みはゼロ</strong>。モデルが賢くなるほど、精度は勝手に上がります。</p>
+              <h3>手元のAIで、そのまま完結させる</h3>
+              <p>AIが広告APIから直接データを取得し、異常検知・コメント生成・Slack配信まで実行。<strong>作り込みはゼロ</strong>。モデルが賢くなるほど、示唆の質は勝手に上がります。</p>
             </article>
             <article className="ax-principle-card ax-principle-card--bad">
               <span className="ax-principle-mark" aria-hidden="true">×</span>
-              <h3>「AIラッパー」を自社開発する</h3>
-              <p>専用画面を作り、裏でOCR・LLMのAPIを叩く独自パイプラインを組む。<strong>実現する価値は同じ</strong>なのに、開発費・保守費・改修待ちを抱え込むだけです。</p>
+              <h3>「AIレポートSaaS」を自社開発する</h3>
+              <p>ダッシュボードを作り、裏で各媒体のスクレイピング・集計・LLMのパイプラインを組んで保守し続ける。<strong>出てくるレポートは同じ</strong>なのに、開発費・保守費・改修待ちを抱え込むだけです。</p>
             </article>
           </div>
-          <p className="ax-principle-caption">同じ「領収書が記帳される」という価値の比較です。自社レイヤーを1枚挟むほど、システムは逆に脆くなります。</p>
+          <p className="ax-principle-caption">同じ「週次レポートが届く」という価値の比較です。自社レイヤーを1枚挟むほど、システムは逆に脆くなります。</p>
           <p className="ax-principle-statement">自社システムを挟んだ瞬間、会社のAI能力の上限が「自社システムの保守速度」に律速される。</p>
           <div className="ax-principle-exception">
             <span>例外 — 薄く挟むべきレイヤー</span>
