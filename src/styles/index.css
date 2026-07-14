@@ -4013,3 +4013,91 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .ax-plan { padding: 24px 22px 26px; }
   .ax-usecase-grid { grid-template-columns: 1fr; }
 }
+
+/* ── AX · design principle ─────────────────────────────── */
+.ax-principle-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.ax-principle-card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 28px 30px 30px;
+  background: var(--paper);
+  border: 1px solid var(--border-subtle);
+}
+.ax-principle-card--bad { background: var(--surface); }
+.ax-principle-mark {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 1;
+}
+.ax-principle-card--good .ax-principle-mark { color: var(--fg-primary); }
+.ax-principle-card--bad .ax-principle-mark { color: var(--fg-muted); }
+.ax-principle-card h3 {
+  margin: 0;
+  font-family: var(--font-ja-mincho);
+  font-weight: 900;
+  font-size: clamp(19px, 1.7vw, 24px);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.ax-principle-card--bad h3 { color: var(--fg-secondary); }
+.ax-principle-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--fg-body);
+}
+.ax-principle-card--bad p { color: var(--fg-muted); }
+.ax-principle-card strong { font-weight: 700; color: var(--fg-primary); }
+.ax-principle-card--bad strong { color: var(--fg-secondary); }
+.ax-principle-caption {
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--fg-muted);
+}
+.ax-principle-statement {
+  margin: 34px 0 0;
+  padding: 30px 34px;
+  background: var(--ink-0);
+  color: var(--paper);
+  font-family: var(--font-ja-mincho);
+  font-weight: 900;
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+.ax-principle-exception {
+  margin-top: 24px;
+  display: grid;
+  gap: 10px;
+  padding: 24px 30px;
+  border: 1px solid var(--border-subtle);
+  border-left: 2px solid var(--ink-0);
+}
+.ax-principle-exception > span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.ax-principle-exception p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--fg-body);
+}
+.ax-principle-exception strong { font-weight: 700; color: var(--fg-primary); }
+
+@media (max-width: 640px) {
+  .ax-principle-compare { grid-template-columns: 1fr; gap: 14px; }
+  .ax-principle-card { padding: 22px 22px 24px; }
+  .ax-principle-statement { padding: 22px 20px; }
+  .ax-principle-exception { padding: 20px 22px; }
+}

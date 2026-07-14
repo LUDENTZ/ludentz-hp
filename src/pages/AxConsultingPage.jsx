@@ -164,6 +164,32 @@ export default function AxConsultingPage() {
           </div>
         </section>
 
+        <section className="business-band ax-principle">
+          <div className="business-section-head">
+            <p className="business-kicker">DESIGN PRINCIPLE</p>
+            <h2>AIと業務の間に、自社システムを挟まない。</h2>
+            <p className="business-section-copy">「手元のAIの直接利用」と「純正機能での自動化」を設計の中心に置きます。作り込むほど、AXはむしろ脆くなります。</p>
+          </div>
+          <div className="ax-principle-compare">
+            <article className="ax-principle-card ax-principle-card--good">
+              <span className="ax-principle-mark" aria-hidden="true">○</span>
+              <h3>純正の仕組みにそのまま乗る</h3>
+              <p>領収書をチャットに投げる → AIが会計SaaSの公式連携（MCP）経由で記帳。<strong>作り込みはゼロ</strong>。モデルが賢くなるほど、精度は勝手に上がります。</p>
+            </article>
+            <article className="ax-principle-card ax-principle-card--bad">
+              <span className="ax-principle-mark" aria-hidden="true">×</span>
+              <h3>「AIラッパー」を自社開発する</h3>
+              <p>専用画面を作り、裏でOCR・LLMのAPIを叩く独自パイプラインを組む。<strong>実現する価値は同じ</strong>なのに、開発費・保守費・改修待ちを抱え込むだけです。</p>
+            </article>
+          </div>
+          <p className="ax-principle-caption">同じ「領収書が記帳される」という価値の比較です。自社レイヤーを1枚挟むほど、システムは逆に脆くなります。</p>
+          <p className="ax-principle-statement">自社システムを挟んだ瞬間、会社のAI能力の上限が「自社システムの保守速度」に律速される。</p>
+          <div className="ax-principle-exception">
+            <span>例外 — 薄く挟むべきレイヤー</span>
+            <p>統制・決定性・独自データが要るところだけ、薄く挟みます。挟むのは「純正機能の再実装」ではなく、<strong>AIに任せきれない判断</strong>（権限・承認・監査、数値の決定的な検証）だけ。<strong>再実装は挟まず、統制と決定性は挟む</strong>——これがLUDENTZの線引きです。</p>
+          </div>
+        </section>
+
         <section className="business-band ax-pricing">
           <div className="business-section-head">
             <p className="business-kicker">PRICING</p>
