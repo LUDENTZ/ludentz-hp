@@ -61,6 +61,7 @@ const marketingUseCases = [
   { number: '05', title: '動画生成', before: '数日〜数週間', after: '1時間以内', badge: '※検証フェーズ推奨' },
   { number: '06', title: '入稿・構築', before: '約8〜16時間', after: '2〜3時間', badge: '工数 約75%削減' },
   { number: '07', title: '運用改善', before: '約2〜3時間', after: '週30分', badge: '工数 約80%削減' },
+  { number: '08', title: '事例記事作成', before: '約8〜12時間', after: '1〜2時間', badge: '工数 約85%削減' },
 ];
 
 export default function AxConsultingPage() {
@@ -212,7 +213,7 @@ export default function AxConsultingPage() {
           <div className="business-section-head">
             <p className="business-kicker">USE CASE</p>
             <h2>事例：広告運用 × AIエージェント。</h2>
-            <p className="business-section-copy">マーケAX支援では、広告運用の実務を7領域×工程レベルに分解し、AIエージェント化。人はレビューと承認に集中できる体制に変えていきます。</p>
+            <p className="business-section-copy">マーケAX支援では、広告運用まわりの実務を8領域×工程レベルに分解し、AIエージェント化。人はレビューと承認に集中できる体制に変えていきます。</p>
           </div>
           <div className="ax-usecase-grid">
             {marketingUseCases.map((useCase) => (
