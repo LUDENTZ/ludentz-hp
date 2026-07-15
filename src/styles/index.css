@@ -145,7 +145,6 @@ html.dark .hero-title .char.the, body.dark .hero-title .char.the { color: #FAFAF
   align-items: end;
 }
 .hero-lede { grid-column: 1 / span 6; font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: var(--fg-body); max-width: 52ch; }
-.hero-lede-ja { grid-column: 7 / span 4; font-family: var(--font-ja); font-size: 14px; line-height: 1.85; color: var(--fg-secondary); }
 .hero-scroll {
   grid-column: 11 / span 2; justify-self: end;
   display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -3740,7 +3739,6 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .hero-footmeta { margin-top: 20px; display: block; }
   .hero-footmeta > * { margin-top: 16px; }
   .hero-lede { font-size: 13px; }
-  .hero-lede-ja { display: none; }
   .hero-scroll { display: none; }
   .section { padding: 48px 16px; }
   .section-head { margin-bottom: 16px; gap: 8px; }
