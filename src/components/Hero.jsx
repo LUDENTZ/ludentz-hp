@@ -49,10 +49,11 @@ export default function Hero({ onContact, onScrollTo }) {
       <div className="hero-footmeta">
         <p className="hero-lede">
           <span className="show-en">LUDENTZ is a Tokyo studio operating across three axes — business development, AX consulting, and in-house products. We partner with operators and founders to turn raw intent into products that ship.</span>
-          <span className="show-ja">LUDENTZは、東京を拠点とするスタジオです。新規事業開発・AXコンサルティング・自社事業の三つの軸で、先端を走ります。</span>
+          <span className="show-ja">LUDENTZは、東京を拠点とするスタジオです。AI BPR・新規事業開発・自社事業の三つの軸で、先端を走ります。</span>
         </p>
         <div className="hero-lede-ja">
           <span className="show-en">三つの軸を<br />一つの秩序で束ねる。</span>
+          <span className="show-ja">遊びの中に、<br />次の産業がある。</span>
         </div>
         <div className="hero-scroll" onClick={() => onScrollTo('work')} style={{ cursor: 'pointer' }}>
           <span>Scroll</span>
