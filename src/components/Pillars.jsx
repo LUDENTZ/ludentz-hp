@@ -4,8 +4,8 @@ export default function Pillars() {
     en: <>AI<br />BPR</>,
     ja: '業務プロセスをAI前提に再設計',
     tag: 'Active',
-    body_en: 'Adding AI as a tool only gets you so far. We rebuild the business process itself on an AI-native premise — and forward deployed engineers stay on-site until it sticks.',
-    body_ja: 'AIをツールとして足すだけでは、成果は頭打ちになる。業務プロセスそのものをAI前提に作り変え、現場に入る専任エンジニア（FDE）が実装から組織定着まで担います。',
+    body_en: 'Adding AI as a tool only gets you so far. We rebuild the business process itself on an AI-native premise, and stay with the team until it sticks.',
+    body_ja: 'AIをツールとして足すだけでは、成果は頭打ちになる。業務プロセスそのものをAI前提に作り変え、組織に定着するまで伴走します。',
     links: [
       {
         href: '/service/ax-consulting',
