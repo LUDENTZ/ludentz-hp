@@ -26,14 +26,6 @@ export default function Pillars() {
       body_en: 'Zero-to-one with operators and founders. Concept, validation, MVP, and first customers — we ship the next pillar from scratch.',
       body_ja: '構想・仮説検証・MVP・初期顧客獲得まで。AIプロダクトで、次の柱をゼロから形にする0→1支援。',
     },
-    {
-      n: '003',
-      en: <>Cross-border<br />E-commerce</>,
-      ja: '越境EC',
-      tag: 'Coming soon',
-      body_en: 'Our own cross-border commerce venture. Small, deliberate, long-horizon. Currently in closed development — announcing later this year.',
-      body_ja: '自社で運営する越境ECの事業。小さく、意図的で、長期視点。現在クローズドで開発中、年内に告知予定。',
-    },
   ];
 
   return (

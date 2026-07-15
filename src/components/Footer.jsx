@@ -20,9 +20,8 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <div className="h">Work</div>
-            <a onClick={() => scrollTo('work')}>Business Development</a>
             <a onClick={() => scrollTo('work')}>Marketing AX</a>
-            <a onClick={() => scrollTo('work')}>In-house · Soon</a>
+            <a onClick={() => scrollTo('work')}>Business Development</a>
           </div>
         </div>
         <div
