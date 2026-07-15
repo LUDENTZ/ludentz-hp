@@ -243,7 +243,7 @@ export default function BusinessDevelopmentPage() {
           <div className="business-hero-layout">
             <div className="business-hero-copy">
               <div className="business-hero-meta">
-                <span>001</span>
+                <span>002</span>
                 <span>新規事業開発</span>
                 <span>AI × Vertical</span>
               </div>

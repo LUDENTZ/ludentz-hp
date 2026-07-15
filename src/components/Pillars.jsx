@@ -1,7 +1,7 @@
 export default function Pillars() {
   const primary = {
     n: '001',
-    en: <>AI<br />BPR</>,
+    en: <>AI BPR</>,
     ja: '業務プロセスをAI前提に再設計',
     tag: 'Active',
     body_en: 'Adding AI as a tool only gets you so far. We rebuild the business process itself on an AI-native premise, and stay with the team until it sticks.',

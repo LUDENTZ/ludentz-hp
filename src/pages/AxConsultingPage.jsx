@@ -43,7 +43,7 @@ const plans = [
     name: '助言のみ',
     label: 'ADVISORY',
     price: '月20万円〜',
-    body: 'AX方針の助言・壁打ちを中心としたプラン（実働なし）。',
+    body: 'AI活用方針の助言・壁打ちを中心としたプラン（実働なし）。',
   },
   {
     name: '伴走支援',
@@ -102,15 +102,15 @@ export default function AxConsultingPage() {
           <div className="business-hero-layout">
             <div className="business-hero-copy">
               <div className="business-hero-meta">
-                <span>002</span>
-                <span>AX支援</span>
-                <span>AI Transformation</span>
+                <span>001</span>
+                <span>AI BPR</span>
+                <span>Marketing Focus</span>
               </div>
               <h1 className="business-title">
-                <span className="nowrap">AIを前提に、</span><span className="nowrap">事業を変える。</span>
+                <span className="nowrap">業務プロセスを、</span><span className="nowrap">AI前提に再設計。</span>
               </h1>
               <p className="business-lead">
-                ツールの導入で終わらせません。既存業務を棚卸しし、インパクトの大きい領域からAI前提の業務プロセスへ。組織に定着するAX（AI Transformation）を伴走で設計・実装します。
+                ツールの導入で終わらせません。既存業務を棚卸しし、インパクトの大きい領域からAI前提の業務プロセスへ。組織に定着するまで、設計から実装まで伴走します。
               </p>
             </div>
 
@@ -152,7 +152,7 @@ export default function AxConsultingPage() {
           <div className="business-section-head">
             <p className="business-kicker">SOLUTION</p>
             <h2>棚卸しから始め、インパクトの大きい業務から変える。</h2>
-            <p className="business-section-copy">いきなりの全社改革ではなく、効果の見える領域から着実にAX化します。</p>
+            <p className="business-section-copy">いきなりの全社改革ではなく、効果の見える領域から着実にAI前提へ作り変えます。</p>
           </div>
           <div className="ax-step-grid">
             {approachSteps.map((step) => (
@@ -169,7 +169,7 @@ export default function AxConsultingPage() {
           <div className="business-section-head">
             <p className="business-kicker">DESIGN PRINCIPLE</p>
             <h2>AIと業務の間に、自社システムを挟まない。</h2>
-            <p className="business-section-copy">「手元のAIの直接利用」と「純正機能での自動化」を設計の中心に置きます。作り込むほど、AXはむしろ脆くなります。</p>
+            <p className="business-section-copy">「手元のAIの直接利用」と「純正機能での自動化」を設計の中心に置きます。作り込むほど、システムはむしろ脆くなります。</p>
           </div>
           <div className="ax-principle-compare">
             <article className="ax-principle-card ax-principle-card--good">
@@ -213,7 +213,7 @@ export default function AxConsultingPage() {
           <div className="business-section-head">
             <p className="business-kicker">USE CASE</p>
             <h2>事例：広告運用 × AIエージェント。</h2>
-            <p className="business-section-copy">マーケAX支援では、広告運用まわりの実務を8領域×工程レベルに分解し、AIエージェント化。人はレビューと承認に集中できる体制に変えていきます。</p>
+            <p className="business-section-copy">マーケ領域特化AI BPRでは、広告運用まわりの実務を8領域×工程レベルに分解し、AIエージェント化。人はレビューと承認に集中できる体制に変えていきます。</p>
           </div>
           <div className="ax-usecase-grid">
             {marketingUseCases.map((useCase) => (

@@ -65,15 +65,15 @@ export default function Hero({ onContact, onScrollTo }) {
           <span>Let's shape what's next</span>
           <span>探索から構造へ</span>
           <span>新規事業開発</span>
-          <span>AX Consulting</span>
+          <span>AI BPR</span>
           <span>自社事業 — Coming soon</span>
-          <span>Ventures · AX · In-house</span>
+          <span>AI BPR · Ventures · In-house</span>
           <span>Let's shape what's next</span>
           <span>探索から構造へ</span>
           <span>新規事業開発</span>
-          <span>AX Consulting</span>
+          <span>AI BPR</span>
           <span>自社事業 — Coming soon</span>
-          <span>Ventures · AX · In-house</span>
+          <span>AI BPR · Ventures · In-house</span>
         </div>
       </div>
     </section>
