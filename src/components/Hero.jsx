@@ -42,14 +42,14 @@ export default function Hero({ onContact, onScrollTo }) {
         </h1>
         <div className="hero-jp">
           <span className="show-en">遊びの中に、次の産業がある。</span>
-          <span className="show-ja">マーケの業務プロセスを、AI前提に作り変える。</span>
+          <span className="show-ja">会社そのものが、AI前提でできている。</span>
         </div>
       </div>
 
       <div className="hero-footmeta">
         <p className="hero-lede">
-          <span className="show-en">LUDENTZ is an AI-native marketing studio in Tokyo. We run our own work on AI agents — and transplant that playbook into your marketing organisation.</span>
-          <span className="show-ja">LUDENTZは、AIを「使う」のではなく、AI前提で働くMarketing AXスタジオです。自分たちの実務で磨いた型を、クライアントのマーケ組織に移植します。</span>
+          <span className="show-en">LUDENTZ is an AI-native studio in Tokyo. We run our own work on AI agents — and transplant that playbook into your organisation.</span>
+          <span className="show-ja">LUDENTZは、AIを「使う」のではなく、AI前提で働くスタジオです。自分たちの実務で磨いた型を、クライアントの組織に移植します。</span>
         </p>
         <div className="hero-scroll" onClick={() => onScrollTo('work')} style={{ cursor: 'pointer' }}>
           <span>Scroll</span>
