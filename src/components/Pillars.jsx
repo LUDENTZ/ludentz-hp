@@ -1,17 +1,17 @@
 export default function Pillars() {
   const primary = {
     n: '001',
-    en: <>AX<br />Consulting</>,
-    ja: 'AX支援',
+    en: <>AI<br />BPR</>,
+    ja: '業務プロセスをAI前提に再設計',
     tag: 'Active',
-    body_en: 'Adding AI as a tool only gets you so far. We rebuild the business process itself on an AI-native premise.',
-    body_ja: 'AIをツールとして足すだけでは、成果は頭打ちになる。業務プロセスそのものを、AI前提に作り変えます。',
+    body_en: 'Adding AI as a tool only gets you so far. We rebuild the business process itself on an AI-native premise — and forward deployed engineers stay on-site until it sticks.',
+    body_ja: 'AIをツールとして足すだけでは、成果は頭打ちになる。業務プロセスそのものをAI前提に作り変え、現場に入る専任エンジニア（FDE）が実装から組織定着まで担います。',
     links: [
       {
         href: '/service/ax-consulting',
         number: '',
-        label: 'AI BPR｜業務プロセスをAI前提に再設計',
-        body: '業務を棚卸しし、インパクトの大きい領域から着手。FDE（現場に入る専任エンジニア）が、実装から組織定着まで担う。',
+        label: 'マーケ領域特化AI BPR',
+        body: '広告運用まわりの実務を工程レベルで分解し、AIエージェント化。提案資料・レポーティング・入稿・運用改善までを自動化する。',
       },
     ],
   };
