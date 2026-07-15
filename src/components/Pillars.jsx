@@ -1,7 +1,7 @@
 export default function Pillars() {
   const primary = {
     n: '001',
-    en: <>マーケティングAX</>,
+    en: <>Marketing AX</>,
     ja: 'マーケの業務プロセスをAI前提に再設計',
     tag: 'Active',
     body_en: 'Adding AI as a tool only gets you so far. We rebuild the business process itself on an AI-native premise, and stay with the team until it sticks.',
@@ -56,7 +56,7 @@ export default function Pillars() {
           </div>
           <div className="pillar-primary-layout">
             <div className="pillar-primary-copy">
-              <h3 className="pillar-en pillar-en--ja">{primary.en}</h3>
+              <h3 className="pillar-en">{primary.en}</h3>
               <div className="pillar-ja">{primary.ja}</div>
             </div>
             <p className="pillar-body pillar-primary-body">

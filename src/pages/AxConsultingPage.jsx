@@ -103,8 +103,8 @@ export default function AxConsultingPage() {
             <div className="business-hero-copy">
               <div className="business-hero-meta">
                 <span>001</span>
-                <span>マーケティングAX</span>
                 <span>Marketing AX</span>
+                <span>AI × Marketing</span>
               </div>
               <h1 className="business-title business-title--long">
                 <span className="nowrap">マーケの業務プロセスを、</span><span className="nowrap">AI前提に再設計。</span>
