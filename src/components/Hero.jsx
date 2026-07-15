@@ -7,8 +7,8 @@ export default function Hero({ onContact, onScrollTo }) {
     return () => clearTimeout(t);
   }, []);
 
-  const line1 = "Let's shape";
-  const line2 = "what's next";
+  const line1 = 'We are';
+  const line2 = 'AI-native.';
   let idx = 0;
 
   const renderLine = (text, italic = false) => (
@@ -42,14 +42,14 @@ export default function Hero({ onContact, onScrollTo }) {
         </h1>
         <div className="hero-jp">
           <span className="show-en">遊びの中に、次の産業がある。</span>
-          <span className="show-ja">探索から構造へ。</span>
+          <span className="show-ja">マーケの業務プロセスを、AI前提に作り変える。</span>
         </div>
       </div>
 
       <div className="hero-footmeta">
         <p className="hero-lede">
-          <span className="show-en">LUDENTZ is a Tokyo studio operating across two axes — marketing AX and business development. We partner with operators and founders to turn raw intent into products that ship.</span>
-          <span className="show-ja">LUDENTZは、東京を拠点とするスタジオです。Marketing AX・新規事業開発の二つの軸で、先端を走ります。</span>
+          <span className="show-en">LUDENTZ is an AI-native marketing studio in Tokyo. We run our own work on AI agents — and transplant that playbook into your marketing organisation.</span>
+          <span className="show-ja">LUDENTZは、AIを「使う」のではなく、AI前提で働くMarketing AXスタジオです。自分たちの実務で磨いた型を、クライアントのマーケ組織に移植します。</span>
         </p>
         <div className="hero-scroll" onClick={() => onScrollTo('work')} style={{ cursor: 'pointer' }}>
           <span>Scroll</span>
@@ -59,11 +59,11 @@ export default function Hero({ onContact, onScrollTo }) {
 
       <div className="hero-marquee">
         <div className="track">
-          <span>Let's shape what's next</span>
+          <span>We are AI-native</span>
           <span>探索から構造へ</span>
           <span>新規事業開発</span>
           <span>Marketing AX</span>
-          <span>Let's shape what's next</span>
+          <span>We are AI-native</span>
           <span>探索から構造へ</span>
           <span>新規事業開発</span>
           <span>Marketing AX</span>
