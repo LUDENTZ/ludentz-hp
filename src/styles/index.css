@@ -246,6 +246,13 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
   font-size: clamp(56px, 7vw, 104px);
   line-height: 0.9;
 }
+.pillar--primary .pillar-en--ja {
+  font-family: var(--font-ja-mincho);
+  font-style: normal;
+  font-size: clamp(38px, 4.6vw, 68px);
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+}
 .pillar--primary .pillar-ja {
   font-size: clamp(24px, 3vw, 36px);
 }
@@ -1231,6 +1238,10 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
   text-wrap: balance;
 }
 .nowrap { white-space: nowrap; }
+.business-title--long {
+  font-size: clamp(34px, 4vw, 66px);
+  line-height: 1.14;
+}
 .business-lead {
   margin: 0;
   max-width: 62ch;
@@ -3293,6 +3304,10 @@ body[data-lang="ja"] .show-en { display: none !important; }
     margin: 16px 0 16px;
     line-height: 1.1;
   }
+  .business-title--long {
+    font-size: clamp(22px, 7.2vw, 30px);
+    line-height: 1.22;
+  }
   .growth-title {
     font-size: clamp(38px, 12vw, 58px);
     margin: 18px 0 18px;
@@ -3752,6 +3767,7 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .pillar-secondary-stack { grid-template-columns: 1fr; gap: 16px; }
   .pillar-en { font-size: 28px; }
   .pillar--primary .pillar-en { font-size: clamp(44px, 14vw, 64px); }
+  .pillar--primary .pillar-en--ja { font-size: clamp(28px, 8.6vw, 40px); }
   .pillar-ja { font-size: 13px; }
   .pillar--primary .pillar-ja { font-size: 22px; }
   .pillar--primary .pillar-body { font-size: 14px; }

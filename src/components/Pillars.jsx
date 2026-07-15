@@ -1,8 +1,8 @@
 export default function Pillars() {
   const primary = {
     n: '001',
-    en: <>AI BPR</>,
-    ja: '業務プロセスをAI前提に再設計',
+    en: <>マーケティングAX</>,
+    ja: 'マーケの業務プロセスをAI前提に再設計',
     tag: 'Active',
     body_en: 'Adding AI as a tool only gets you so far. We rebuild the business process itself on an AI-native premise, and stay with the team until it sticks.',
     body_ja: 'AIをツールとして足すだけでは、成果は頭打ちになる。業務プロセスそのものをAI前提に作り変え、組織に定着するまで伴走します。',
@@ -10,7 +10,7 @@ export default function Pillars() {
       {
         href: '/service/ax-consulting',
         number: '',
-        label: 'マーケ領域特化AI BPR',
+        label: '広告運用AX',
         body: '広告運用まわりの実務を工程レベルで分解し、AIエージェント化。提案資料・レポーティング・入稿・運用改善までを自動化する。',
       },
     ],
@@ -56,7 +56,7 @@ export default function Pillars() {
           </div>
           <div className="pillar-primary-layout">
             <div className="pillar-primary-copy">
-              <h3 className="pillar-en">{primary.en}</h3>
+              <h3 className="pillar-en pillar-en--ja">{primary.en}</h3>
               <div className="pillar-ja">{primary.ja}</div>
             </div>
             <p className="pillar-body pillar-primary-body">

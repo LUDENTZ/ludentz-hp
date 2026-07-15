@@ -103,11 +103,11 @@ export default function AxConsultingPage() {
             <div className="business-hero-copy">
               <div className="business-hero-meta">
                 <span>001</span>
-                <span>AI BPR</span>
-                <span>Marketing Focus</span>
+                <span>マーケティングAX</span>
+                <span>Marketing AX</span>
               </div>
-              <h1 className="business-title">
-                <span className="nowrap">業務プロセスを、</span><span className="nowrap">AI前提に再設計。</span>
+              <h1 className="business-title business-title--long">
+                <span className="nowrap">マーケの業務プロセスを、</span><span className="nowrap">AI前提に再設計。</span>
               </h1>
               <p className="business-lead">
                 ツールの導入で終わらせません。既存業務を棚卸しし、インパクトの大きい領域からAI前提の業務プロセスへ。組織に定着するまで、設計から実装まで伴走します。
@@ -213,7 +213,7 @@ export default function AxConsultingPage() {
           <div className="business-section-head">
             <p className="business-kicker">USE CASE</p>
             <h2>事例：広告運用 × AIエージェント。</h2>
-            <p className="business-section-copy">マーケ領域特化AI BPRでは、広告運用まわりの実務を8領域×工程レベルに分解し、AIエージェント化。人はレビューと承認に集中できる体制に変えていきます。</p>
+            <p className="business-section-copy">広告運用AXでは、広告運用まわりの実務を8領域×工程レベルに分解し、AIエージェント化。人はレビューと承認に集中できる体制に変えていきます。</p>
           </div>
           <div className="ax-usecase-grid">
             {marketingUseCases.map((useCase) => (
