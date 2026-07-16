@@ -146,7 +146,7 @@ export default function AxConsultingPage() {
           </div>
           <div className="ax-adoption">
             <div className="ax-adoption-lead">
-              <h3>実装して終わり、にしない。</h3>
+              <h3>定着は、現場と作る。</h3>
               <p>AXが失敗する典型は、課題解決として「正しいシステム」を作り、現場に渡して終わること。現場は「今のやり方を否定された」と感じ、使われないまま形骸化します。否定すべきは、現場のやり方ではなく、AXの進め方の方です。LUDENTZは、まず現場の強みと専門性を起点に設計し、小さな成功を積み上げて合意を作りながら、業務に溶け込ませます。</p>
             </div>
             <ul className="ax-adoption-points">
