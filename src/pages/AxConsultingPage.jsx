@@ -4,6 +4,7 @@ import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import AxServiceModel from '../components/AxServiceModel';
+import AxStack from '../components/AxStack';
 import AxPricing from '../components/AxPricing';
 import { trackEvent } from '../lib/analytics';
 
@@ -192,6 +193,8 @@ export default function AxConsultingPage() {
             <p>統制・決定性・独自データが要るところだけ、薄く挟みます。挟むのは「純正機能の再実装」ではなく、<strong>AIに任せきれない判断</strong>（権限・承認・監査、数値の決定的な検証）だけ。<strong>再実装は挟まず、統制と決定性は挟む</strong>——これがLUDENTZの線引きです。</p>
           </div>
         </section>
+
+        <AxStack />
 
         <AxPricing />
 

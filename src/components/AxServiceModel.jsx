@@ -3,7 +3,7 @@ const MODELS = [
     number: '①',
     name: '伴走型',
     en: 'SKILLS',
-    concept: 'Claude + Skills 設計・配布',
+    concept: 'AIスキルの設計・配布',
     rows: [
       ['対象', '人が判断しながら進める業務'],
       ['例', '分析、企画、クリエイティブ、提案書'],
@@ -27,11 +27,11 @@ const MODELS = [
     number: '③',
     name: '委任型エージェント',
     en: 'DELEGATED',
-    concept: 'Claude Cowork → Managed Agents',
+    concept: '既製エージェント → カスタム構築',
     rows: [
       ['対象', '投げて離れる業務（無人・長時間・並列）'],
       ['例', '常時リサーチ、アウトバウンド運用'],
-      ['提供', '既製（Cowork）から始め、必要な時のみカスタム構築（Managed Agents）'],
+      ['提供', '既製のエージェント環境から始め、必要な時のみカスタム構築する'],
       ['責任', '設計・構築はLUDENTZ。運用保守はクライアントへ移管、または提携先をご紹介'],
     ],
   },
@@ -42,8 +42,8 @@ export default function AxServiceModel() {
     <section className="business-band ax-model">
       <div className="business-section-head">
         <p className="business-kicker">SERVICE MODEL</p>
-        <h2>提供モデルは、3枚。</h2>
-        <p className="business-section-copy"><strong>We build on Claude.</strong> — Claude特化は制約ではなく戦略です。寄せ集めの浅い横断ではなく、設計の深さで勝ちます。</p>
+        <h2>業務を棚卸しし、<span className="nowrap">3つの型</span>に組み直す。</h2>
+        <p className="business-section-copy">すべての業務を工程レベルで洗い出し、判定基準に沿って「どの型で組み直すか」を決めます。型が決まれば、コストも、統制も、定着のさせ方も決まります。</p>
       </div>
 
       <div className="ax-model-gate">

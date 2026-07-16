@@ -4318,3 +4318,68 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .ax-model-gate { padding: 20px 22px; }
   .ax-model-gate-routes { margin-left: 0; }
 }
+
+/* ── AX · recommended stack ────────────────────────────── */
+.ax-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+}
+.ax-stack-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 24px 22px 26px;
+  background: var(--paper);
+}
+.ax-stack-card.is-core {
+  background: var(--ink-0);
+}
+.ax-stack-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--fg-primary);
+}
+.ax-stack-card.is-core h3 { color: var(--paper); }
+.ax-stack-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--fg-muted);
+}
+.ax-stack-card.is-core p { color: var(--ink-6); }
+.ax-stack-note {
+  margin-top: 24px;
+  display: grid;
+  gap: 10px;
+  padding: 24px 30px;
+  border: 1px dashed var(--border-strong);
+}
+.ax-stack-note > span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.ax-stack-note p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--fg-body);
+}
+
+@media (max-width: 900px) {
+  .ax-stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .ax-stack-grid { grid-template-columns: 1fr; }
+  .ax-stack-note { padding: 20px 22px; }
+}

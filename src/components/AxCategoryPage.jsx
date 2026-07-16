@@ -4,6 +4,7 @@ import CTA from './CTA';
 import Footer from './Footer';
 import ContactModal from './ContactModal';
 import AxServiceModel from './AxServiceModel';
+import AxStack from './AxStack';
 import AxPricing from './AxPricing';
 import { trackEvent } from '../lib/analytics';
 
@@ -79,6 +80,8 @@ export default function AxCategoryPage({ config, children }) {
         <AxServiceModel />
 
         {children}
+
+        <AxStack />
 
         <AxPricing />
 
