@@ -3,6 +3,7 @@ import Nav from './Nav';
 import CTA from './CTA';
 import Footer from './Footer';
 import ContactModal from './ContactModal';
+import AxIntro from './AxIntro';
 import AxServiceModel from './AxServiceModel';
 import AxStack from './AxStack';
 import AxPricing from './AxPricing';
@@ -76,6 +77,8 @@ export default function AxCategoryPage({ config, children }) {
             </aside>
           </div>
         </section>
+
+        <AxIntro />
 
         <AxServiceModel />
 
