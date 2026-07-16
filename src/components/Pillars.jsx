@@ -9,9 +9,15 @@ export default function Pillars() {
     links: [
       {
         href: '/service/ax-consulting',
-        number: '',
+        number: '01',
         label: '広告運用AX',
         body: '広告運用まわりの実務を工程レベルで分解し、AIエージェント化。提案資料・レポーティング・入稿・運用改善までを自動化する。',
+      },
+      {
+        href: '/service/ax-consulting#prospecting',
+        number: '02',
+        label: '新規開拓AX',
+        body: 'ターゲットリストの作成から文面生成、送信、返信対応までをAIエージェント化。フォーム・メール・手紙・テレアポ・FAXの接点づくりを自動で回す。',
       },
     ],
   };

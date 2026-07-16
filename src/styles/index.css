@@ -4109,3 +4109,58 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .ax-principle-statement { padding: 22px 20px; }
   .ax-principle-exception { padding: 20px 22px; }
 }
+
+/* ── AX · prospecting use case ─────────────────────────── */
+.ax-step-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.ax-step-grid--four .ax-step {
+  min-height: 0;
+  padding: 24px 24px 26px 0;
+  border-right: 1px solid var(--border-subtle);
+}
+.ax-step-grid--four .ax-step + .ax-step { padding-left: 24px; }
+.ax-step-grid--four .ax-step:last-child { border-right: 0; padding-right: 0; }
+.ax-channel-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+}
+.ax-channel-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.ax-channel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ax-channel-tags span {
+  padding: 7px 16px;
+  border: 1px solid var(--border-strong);
+  font-size: 13px;
+  line-height: 1;
+  color: var(--fg-body);
+}
+
+@media (max-width: 900px) {
+  .ax-step-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ax-step-grid--four .ax-step:nth-child(2n) { border-right: 0; }
+}
+@media (max-width: 640px) {
+  .ax-step-grid--four { grid-template-columns: 1fr; }
+  .ax-step-grid--four .ax-step {
+    padding: 22px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .ax-step-grid--four .ax-step + .ax-step { padding-left: 0; }
+  .ax-step-grid--four .ax-step:last-child { border-bottom: 0; }
+}

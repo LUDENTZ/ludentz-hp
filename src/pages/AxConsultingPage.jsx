@@ -211,7 +211,7 @@ export default function AxConsultingPage() {
 
         <section className="business-band ax-usecase">
           <div className="business-section-head">
-            <p className="business-kicker">USE CASE</p>
+            <p className="business-kicker">USE CASE 01</p>
             <h2>事例：広告運用 × AIエージェント。</h2>
             <p className="business-section-copy">広告運用AXでは、広告運用まわりの実務を8領域×工程レベルに分解し、AIエージェント化。人はレビューと承認に集中できる体制に変えていきます。</p>
           </div>
@@ -245,6 +245,46 @@ export default function AxConsultingPage() {
               </ul>
             </div>
             <p className="ax-usecase-disclaimer">※ 工数は業界一般の目安です。導入時は御社の実測値でBeforeを置き換え、効果を測定します。</p>
+          </div>
+        </section>
+
+        <section className="business-band ax-prospect" id="prospecting">
+          <div className="business-section-head">
+            <p className="business-kicker">USE CASE 02</p>
+            <h2>事例：新規開拓 × AIエージェント。</h2>
+            <p className="business-section-copy">新規開拓AXでは、ターゲットリストの作成から文面生成、送信、返信対応までを一本のパイプラインとして自動化。人は商談に集中できる体制に変えていきます。</p>
+          </div>
+          <div className="ax-step-grid ax-step-grid--four">
+            <article className="ax-step">
+              <span className="ax-step-num">STEP 01</span>
+              <h3>リスト作成</h3>
+              <p>ICP定義をもとに、AIがターゲット企業リストを生成・更新し続けます。</p>
+            </article>
+            <article className="ax-step">
+              <span className="ax-step-num">STEP 02</span>
+              <h3>文面生成</h3>
+              <p>企業ごとの事業内容・文脈を踏まえ、AIが1社ずつパーソナライズした文面を起案します。</p>
+            </article>
+            <article className="ax-step">
+              <span className="ax-step-num">STEP 03</span>
+              <h3>マルチチャネル送信</h3>
+              <p>チャネルごとの特性に合わせて送信を自動実行。到達状況も記録します。</p>
+            </article>
+            <article className="ax-step">
+              <span className="ax-step-num">STEP 04</span>
+              <h3>返信検知・商談化</h3>
+              <p>返信・反応をAIが検知して一次対応し、商談機会として人に引き渡します。</p>
+            </article>
+          </div>
+          <div className="ax-channel-row" aria-label="対応チャネル">
+            <span className="ax-channel-label">対応チャネル</span>
+            <div className="ax-channel-tags">
+              <span>フォーム</span>
+              <span>メール</span>
+              <span>手紙</span>
+              <span>テレアポ</span>
+              <span>FAX</span>
+            </div>
           </div>
         </section>
 
