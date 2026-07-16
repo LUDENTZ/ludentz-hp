@@ -3889,11 +3889,14 @@ body[data-lang="ja"] .show-en { display: none !important; }
 
 .ax-usecase-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 1px;
   background: var(--border-subtle);
   border: 1px solid var(--border-subtle);
 }
+/* 7 cards: row 1 = four span-3 cards, row 2 = three span-4 cards. No empty cell. */
+.ax-usecase-card { grid-column: span 3; }
+.ax-usecase-card:nth-child(n+5) { grid-column: span 4; }
 .ax-usecase-card {
   display: grid;
   align-content: start;
@@ -4005,6 +4008,8 @@ body[data-lang="ja"] .show-en { display: none !important; }
 
 @media (max-width: 900px) {
   .ax-usecase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ax-usecase-card,
+  .ax-usecase-card:nth-child(n+5) { grid-column: auto; }
   .ax-usecase-notes { grid-template-columns: 1fr; gap: 20px; }
 }
 
