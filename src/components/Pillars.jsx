@@ -19,6 +19,12 @@ export default function Pillars() {
         label: '新規開拓AX',
         body: 'ターゲットリストの作成から文面生成、送信、返信対応までをAIエージェント化。フォーム・メール・手紙・FAX・テレアポ（検証中）の接点づくりを自動で回す。',
       },
+      {
+        href: '/service/ax-consulting#publishing',
+        number: '03',
+        label: '情報発信AX',
+        body: '事例記事・オウンドメディア・社内報まで、発信業務をAIエージェント化。取材音源や実績データを投げれば、記事の初稿まで自動で仕上がる。',
+      },
     ],
   };
 
