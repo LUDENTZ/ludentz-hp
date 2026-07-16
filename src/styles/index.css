@@ -4149,6 +4149,19 @@ body[data-lang="ja"] .show-en { display: none !important; }
   line-height: 1;
   color: var(--fg-body);
 }
+.ax-channel-tags .is-pilot {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  border-style: dashed;
+  color: var(--fg-secondary);
+}
+.ax-channel-tags .is-pilot small {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
 
 @media (max-width: 900px) {
   .ax-step-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }

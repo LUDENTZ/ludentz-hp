@@ -282,7 +282,7 @@ export default function AxConsultingPage() {
               <span>フォーム</span>
               <span>メール</span>
               <span>手紙</span>
-              <span>テレアポ</span>
+              <span className="is-pilot">テレアポ<small>※検証フェーズ</small></span>
               <span>FAX</span>
             </div>
           </div>
