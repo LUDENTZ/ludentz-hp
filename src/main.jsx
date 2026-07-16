@@ -2,26 +2,15 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { hydrateRoot } from 'react-dom/client';
 import './styles/index.css';
-import App from './App';
-import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
-import BusinessGrowthPage from './pages/BusinessGrowthPage';
-import AxConsultingPage from './pages/AxConsultingPage';
 import SitePage from './SitePage';
+import { findRoute } from './routes';
 import { initAnalytics } from './lib/analytics';
 
 const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
-const isBusinessDevelopmentPage = pathname === '/service/business-development';
-const isBusinessGrowthPage = pathname === '/service/business-growth';
-const isAxConsultingPage = pathname === '/service/ax-consulting';
-const Page = isBusinessDevelopmentPage
-  ? BusinessDevelopmentPage
-  : isBusinessGrowthPage
-    ? BusinessGrowthPage
-    : isAxConsultingPage
-      ? AxConsultingPage
-      : App;
+const route = findRoute(pathname);
+const Page = route.component;
 
-if (isBusinessDevelopmentPage || isBusinessGrowthPage || isAxConsultingPage) {
+if (pathname.startsWith('/service/')) {
   const robotsMeta = document.querySelector('meta[name="robots"]') ?? document.createElement('meta');
   robotsMeta.setAttribute('name', 'robots');
   robotsMeta.setAttribute('content', 'noindex, nofollow');
