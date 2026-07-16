@@ -17,7 +17,7 @@ export default function Pillars() {
         href: '/service/ax-consulting#prospecting',
         number: '02',
         label: '新規開拓AX',
-        body: 'ターゲットリストの作成から文面生成、送信、返信対応までをAIエージェント化。フォーム・メール・手紙・テレアポ・FAXの接点づくりを自動で回す。',
+        body: 'ターゲットリストの作成から文面生成、送信、返信対応までをAIエージェント化。フォーム・メール・手紙・FAX・テレアポ（検証中）の接点づくりを自動で回す。',
       },
     ],
   };
