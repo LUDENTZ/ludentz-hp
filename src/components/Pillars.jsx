@@ -8,19 +8,19 @@ export default function Pillars() {
     body_ja: 'AIをツールとして足すだけでは、成果は頭打ちになる。業務プロセスそのものをAI前提に作り変え、組織に定着するまで伴走します。',
     links: [
       {
-        href: '/service/ax-consulting',
+        href: '/service/ad-operations-ax',
         number: '01',
         label: '広告運用AX',
         body: '広告運用まわりの実務を工程レベルで分解し、AIエージェント化。提案資料・レポーティング・入稿・運用改善までを自動化する。',
       },
       {
-        href: '/service/ax-consulting#prospecting',
+        href: '/service/prospecting-ax',
         number: '02',
         label: '新規開拓AX',
         body: 'ターゲットリストの作成から文面生成、送信、返信対応までをAIエージェント化。フォーム・メール・手紙・FAX・テレアポ（検証中）の接点づくりを自動で回す。',
       },
       {
-        href: '/service/ax-consulting#publishing',
+        href: '/service/publishing-ax',
         number: '03',
         label: '情報発信AX',
         body: '事例記事・オウンドメディア・社内報まで、発信業務をAIエージェント化。取材音源や実績データを投げれば、記事の初稿まで自動で仕上がる。',

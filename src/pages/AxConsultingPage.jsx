@@ -3,6 +3,8 @@ import Nav from '../components/Nav';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
+import AxServiceModel from '../components/AxServiceModel';
+import AxPricing from '../components/AxPricing';
 import { trackEvent } from '../lib/analytics';
 
 const DEFAULTS = { lang: 'ja', theme: 'light', intensity: 'normal' };
@@ -38,30 +40,25 @@ const commonIssues = [
   },
 ];
 
-const plans = [
+const categories = [
   {
-    name: '助言のみ',
-    label: 'ADVISORY',
-    price: '月20万円〜',
-    body: 'AI活用方針の助言・壁打ちを中心としたプラン（実働なし）。',
+    href: '/service/ad-operations-ax',
+    number: '01',
+    label: '広告運用AX',
+    body: '提案資料・レポーティング・入稿・運用改善まで、広告運用の実務を8領域で自動化する。',
   },
   {
-    name: '伴走支援',
-    label: 'HANDS-ON',
-    price: '月50万円〜200万円',
-    body: '週次MTGと実行支援。支援範囲は内容に応じて調整します。',
+    href: '/service/prospecting-ax',
+    number: '02',
+    label: '新規開拓AX',
+    body: 'リスト作成から文面生成、送信、返信対応まで。フォーム・メール・手紙・FAX・テレアポ（検証中）を自動で回す。',
   },
-];
-
-const marketingUseCases = [
-  { number: '01', title: '営業提案資料', before: '約6〜8時間', after: '約30分', badge: '工数 約90%削減' },
-  { number: '02', title: '定例資料', before: '約3〜4時間', after: '約15分', badge: '工数 約92%削減' },
-  { number: '03', title: 'レポーティング', before: '1〜2時間×社数', after: 'ほぼゼロ', badge: '完全自動化' },
-  { number: '04', title: 'バナー生成', before: '約2〜3時間', after: '数十分で10案', badge: '工数 約85%削減' },
-  { number: '05', title: '動画生成', before: '数日〜数週間', after: '1時間以内', badge: '※検証フェーズ推奨' },
-  { number: '06', title: '入稿・構築', before: '約8〜16時間', after: '2〜3時間', badge: '工数 約75%削減' },
-  { number: '07', title: '運用改善', before: '約2〜3時間', after: '週30分', badge: '工数 約80%削減' },
-  { number: '08', title: '事例記事作成', before: '約8〜12時間', after: '1〜2時間', badge: '工数 約85%削減' },
+  {
+    href: '/service/publishing-ax',
+    number: '03',
+    label: '情報発信AX',
+    body: '事例記事・オウンドメディア・社内報まで。素材を投げれば初稿まで自動で仕上がる発信体制をつくる。',
+  },
 ];
 
 export default function AxConsultingPage() {
@@ -148,19 +145,24 @@ export default function AxConsultingPage() {
           </div>
         </section>
 
-        <section className="business-band ax-solution">
+        <AxServiceModel />
+
+        <section className="business-band ax-categories">
           <div className="business-section-head">
-            <p className="business-kicker">SOLUTION</p>
-            <h2>棚卸しから始め、インパクトの大きい業務から変える。</h2>
-            <p className="business-section-copy">いきなりの全社改革ではなく、効果の見える領域から着実にAI前提へ作り変えます。</p>
+            <p className="business-kicker">CATEGORIES</p>
+            <h2>いま提供している、3つのAX。</h2>
+            <p className="business-section-copy">マーケの獲得・営業・発信の実務から着手します。詳細は各ページをご覧ください。</p>
           </div>
-          <div className="ax-step-grid">
-            {approachSteps.map((step) => (
-              <article className="ax-step" key={step.number}>
-                <span className="ax-step-num">STEP {step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
-              </article>
+          <div className="pillar-service-links ax-category-links" aria-label="Marketing AXのカテゴリ">
+            {categories.map((category) => (
+              <a className="pillar-service-link" href={category.href} key={category.href}>
+                <span className="pillar-service-num">{category.number}</span>
+                <span className="pillar-service-main">
+                  <strong>{category.label}</strong>
+                  <small>{category.body}</small>
+                </span>
+                <span className="pillar-service-arrow" aria-hidden="true">→</span>
+              </a>
             ))}
           </div>
         </section>
@@ -191,142 +193,7 @@ export default function AxConsultingPage() {
           </div>
         </section>
 
-        <section className="business-band ax-pricing">
-          <div className="business-section-head">
-            <p className="business-kicker">PRICING</p>
-            <h2>まず助言から。実行フェーズで伴走へ。</h2>
-            <p className="business-section-copy">状況に合わせて、助言のみ／実行まで踏み込む伴走支援の2段階でご提供します。</p>
-          </div>
-          <div className="ax-plan-grid">
-            {plans.map((plan) => (
-              <article className="ax-plan" key={plan.name}>
-                <span className="ax-plan-label">{plan.label}</span>
-                <h3 className="ax-plan-name">{plan.name}</h3>
-                <strong className="ax-plan-price">{plan.price}</strong>
-                <p className="ax-plan-body">{plan.body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="business-band ax-usecase">
-          <div className="business-section-head">
-            <p className="business-kicker">USE CASE 01</p>
-            <h2>事例：広告運用 × AIエージェント。</h2>
-            <p className="business-section-copy">広告運用AXでは、広告運用まわりの実務を8領域×工程レベルに分解し、AIエージェント化。人はレビューと承認に集中できる体制に変えていきます。</p>
-          </div>
-          <div className="ax-usecase-grid">
-            {marketingUseCases.map((useCase) => (
-              <article className="ax-usecase-card" key={useCase.number}>
-                <span className="ax-usecase-num">{useCase.number}</span>
-                <h3>{useCase.title}</h3>
-                <div className="ax-usecase-flow">
-                  <div>
-                    <small>Before</small>
-                    <span>{useCase.before}</span>
-                  </div>
-                  <span className="ax-usecase-arrow" aria-hidden="true">→</span>
-                  <div>
-                    <small>After</small>
-                    <span>{useCase.after}</span>
-                  </div>
-                </div>
-                <p className="ax-usecase-badge">{useCase.badge}</p>
-              </article>
-            ))}
-          </div>
-          <div className="ax-usecase-notes">
-            <div className="ax-usecase-stages">
-              <span>人の関与は3段階</span>
-              <ul>
-                <li>完全自動：レポーティング</li>
-                <li>AI一気通貫 × レビュー：資料・クリエイティブ</li>
-                <li>AI提案 × 承認実行：入稿・運用改善</li>
-              </ul>
-            </div>
-            <p className="ax-usecase-disclaimer">※ 工数は業界一般の目安です。導入時は御社の実測値でBeforeを置き換え、効果を測定します。</p>
-          </div>
-        </section>
-
-        <section className="business-band ax-prospect" id="prospecting">
-          <div className="business-section-head">
-            <p className="business-kicker">USE CASE 02</p>
-            <h2>事例：新規開拓 × AIエージェント。</h2>
-            <p className="business-section-copy">新規開拓AXでは、ターゲットリストの作成から文面生成、送信、返信対応までを一本のパイプラインとして自動化。人は商談に集中できる体制に変えていきます。</p>
-          </div>
-          <div className="ax-step-grid ax-step-grid--four">
-            <article className="ax-step">
-              <span className="ax-step-num">STEP 01</span>
-              <h3>リスト作成</h3>
-              <p>ICP定義をもとに、AIがターゲット企業リストを生成・更新し続けます。</p>
-            </article>
-            <article className="ax-step">
-              <span className="ax-step-num">STEP 02</span>
-              <h3>文面生成</h3>
-              <p>企業ごとの事業内容・文脈を踏まえ、AIが1社ずつパーソナライズした文面を起案します。</p>
-            </article>
-            <article className="ax-step">
-              <span className="ax-step-num">STEP 03</span>
-              <h3>マルチチャネル送信</h3>
-              <p>チャネルごとの特性に合わせて送信を自動実行。到達状況も記録します。</p>
-            </article>
-            <article className="ax-step">
-              <span className="ax-step-num">STEP 04</span>
-              <h3>返信検知・商談化</h3>
-              <p>返信・反応をAIが検知して一次対応し、商談機会として人に引き渡します。</p>
-            </article>
-          </div>
-          <div className="ax-channel-row" aria-label="対応チャネル">
-            <span className="ax-channel-label">対応チャネル</span>
-            <div className="ax-channel-tags">
-              <span>フォーム</span>
-              <span>メール</span>
-              <span>手紙</span>
-              <span className="is-pilot">テレアポ<small>※検証フェーズ</small></span>
-              <span>FAX</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="business-band ax-publish" id="publishing">
-          <div className="business-section-head">
-            <p className="business-kicker">USE CASE 03</p>
-            <h2>事例：情報発信 × AIエージェント。</h2>
-            <p className="business-section-copy">情報発信AXでは、素材の集約から初稿生成、配信・多面展開までをAIエージェント化。社外向けの記事から社内発信まで、発信を「続けられる」体制をつくります。</p>
-          </div>
-          <div className="ax-step-grid ax-step-grid--four">
-            <article className="ax-step">
-              <span className="ax-step-num">STEP 01</span>
-              <h3>素材の集約</h3>
-              <p>取材音源・商談録・実績データなど、社内に散らばる一次情報をAIが整理します。</p>
-            </article>
-            <article className="ax-step">
-              <span className="ax-step-num">STEP 02</span>
-              <h3>構成・初稿生成</h3>
-              <p>読者と目的に合わせてAIが構成を立て、初稿まで一気に書き上げます。</p>
-            </article>
-            <article className="ax-step">
-              <span className="ax-step-num">STEP 03</span>
-              <h3>レビュー・調整</h3>
-              <p>トンマナと事実確認は人がレビュー。修正指示は自然言語でそのまま反映します。</p>
-            </article>
-            <article className="ax-step">
-              <span className="ax-step-num">STEP 04</span>
-              <h3>配信・多面展開</h3>
-              <p>1本の記事をSNS・メルマガ・社内報向けに自動展開し、発信を止めません。</p>
-            </article>
-          </div>
-          <div className="ax-channel-row" aria-label="対応アウトプット">
-            <span className="ax-channel-label">対応アウトプット</span>
-            <div className="ax-channel-tags">
-              <span>事例記事</span>
-              <span>オウンドメディア</span>
-              <span>メルマガ</span>
-              <span>SNS</span>
-              <span>社内報・社内発信</span>
-            </div>
-          </div>
-        </section>
+        <AxPricing />
 
         <CTA />
       </main>
