@@ -15,12 +15,12 @@ const MODELS = [
     number: '②',
     name: '固定ワークフロー',
     en: 'WORKFLOW',
-    concept: '決定的パイプライン + LLM工程',
+    concept: '決定論的パイプライン + LLM工程',
     rows: [
       ['対象', '毎回同じ手順で流れる定型業務'],
       ['例', '定時レポートの集計・配信、リード処理'],
       ['提供', '「エージェント化しない」判断。安く、壊れにくい自動化として実装する'],
-      ['責任', '挙動が決定的なため、統制しやすい'],
+      ['責任', '挙動が決定論的で、統制しやすい'],
     ],
   },
   {
@@ -43,7 +43,7 @@ export default function AxServiceModel() {
       <div className="business-section-head">
         <p className="business-kicker">SERVICE MODEL</p>
         <h2>業務を棚卸しし、<span className="nowrap">3つの型</span>に組み直す。</h2>
-        <p className="business-section-copy">すべての業務を工程レベルで洗い出し、判定基準に沿って「どの型で組み直すか」を決めます。型が決まれば、コストも、統制も、定着のさせ方も決まります。</p>
+        <p className="business-section-copy">すべての業務を工程レベルで洗い出し、「どの型で組み直すか」を見立てます。丸ごと自動化するのではありません。どこに人の判断を残すか、現場の専門性をどうフローに織り込むか——その設計こそが、価値の源泉です。</p>
       </div>
 
       <div className="ax-model-gate">

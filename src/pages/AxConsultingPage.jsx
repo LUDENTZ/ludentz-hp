@@ -190,7 +190,7 @@ export default function AxConsultingPage() {
           <p className="ax-principle-statement">自社システムを挟んだ瞬間、会社のAI能力の上限が「自社システムの保守速度」に律速される。</p>
           <div className="ax-principle-exception">
             <span>例外 — 薄く挟むべきレイヤー</span>
-            <p>統制・決定性・独自データが要るところだけ、薄く挟みます。挟むのは「純正機能の再実装」ではなく、<strong>AIに任せきれない判断</strong>（権限・承認・監査、数値の決定的な検証）だけ。<strong>再実装は挟まず、統制と決定性は挟む</strong>——これがLUDENTZの線引きです。</p>
+            <p>統制・決定性・独自データが要るところだけ、薄く挟みます。挟むのは「純正機能の再実装」ではなく、<strong>AIに任せきれない判断</strong>（権限・承認・監査、数値の決定論的な検証）だけ。<strong>再実装は挟まず、統制と決定性は挟む</strong>——これがLUDENTZの線引きです。</p>
           </div>
         </section>
 
