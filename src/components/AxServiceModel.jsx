@@ -51,8 +51,8 @@ export default function AxServiceModel() {
         <p className="ax-model-gate-question">その業務、開始ボタンを押したあと「人がそこにいる」必要があるか？</p>
         <ul className="ax-model-gate-routes">
           <li>いる <em>→ ① 伴走型</em></li>
-          <li>いらない・手順は毎回同じ <em>→ ② 固定ワークフロー</em></li>
-          <li>いらない・投げて離れたい <em>→ ③ 委任型エージェント</em></li>
+          <li>いらない・手順を渡せる <em>→ ② 固定ワークフロー</em></li>
+          <li>いらない・目的だけ渡したい <em>→ ③ 委任型エージェント</em></li>
         </ul>
       </div>
 
