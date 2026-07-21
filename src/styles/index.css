@@ -4643,6 +4643,7 @@ body[data-lang="ja"] .show-en { display: none !important; }
   object-fit: cover;
   border: 1px solid var(--border-subtle);
   border-radius: 2px;
+  filter: grayscale(100%) contrast(1.08);
 }
 .article-author-name {
   font-weight: 700;

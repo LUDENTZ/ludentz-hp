@@ -66,7 +66,7 @@ const articleJsonLd = {
     '@type': 'Person',
     name: '大平 葵',
     jobTitle: '代表取締役',
-    image: 'https://ludentz.net/assets/person-o.png',
+    image: 'https://ludentz.net/assets/person-k.png',
     worksFor: { '@type': 'Organization', name: 'LUDENTZ株式会社' },
     // TODO: note・XのURLが確定したら sameAs: ['<note URL>', '<X URL>'] を追加する
   },
@@ -462,7 +462,7 @@ export default function MarketingAxArticlePage() {
               <div className="article-author-card">
                 <img
                   className="article-author-photo"
-                  src="/assets/person-o.png"
+                  src="/assets/person-k.png"
                   alt="大平 葵"
                   width="72"
                   height="72"
