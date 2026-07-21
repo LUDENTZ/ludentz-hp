@@ -1,5 +1,8 @@
 import App from './App';
 import MarketingAxArticlePage from './pages/MarketingAxArticlePage';
+import AdOperationsArticlePage from './pages/AdOperationsArticlePage';
+import CostArticlePage from './pages/CostArticlePage';
+import ComparisonArticlePage from './pages/ComparisonArticlePage';
 import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
 import BusinessGrowthPage from './pages/BusinessGrowthPage';
 import AxConsultingPage from './pages/AxConsultingPage';
@@ -34,6 +37,51 @@ export const routes = [
     og: {
       kicker: 'KNOWLEDGE',
       lines: ['マーケティングAXとは？', 'DXとの違い・進め方・', '費用相場まで'],
+    },
+  },
+  {
+    path: '/marketing-ax/ad-operations',
+    component: AdOperationsArticlePage,
+    file: 'marketing-ax/ad-operations/index.html',
+    seo: {
+      title:
+        '広告運用AXとは？運用型広告の業務をAI前提に再設計する方法【7領域の実装マップ付き】 | LUDENTZ',
+      description:
+        '広告運用AXとは、提案資料・入稿・レポーティング・運用改善など運用型広告の業務をAI前提に再設計する取り組み。媒体AI（P-MAX等）との違い、7領域の実装マップ、進め方、よくある失敗までを支援会社が解説します。',
+    },
+    og: {
+      kicker: 'KNOWLEDGE',
+      lines: ['広告運用AXとは？', '7領域の実装マップ付き'],
+    },
+  },
+  {
+    path: '/marketing-ax/cost',
+    component: CostArticlePage,
+    file: 'marketing-ax/cost/index.html',
+    seo: {
+      title:
+        'マーケティングAX・広告運用のAI化にかかる費用相場は？支援タイプ別の料金と選び方 | LUDENTZ',
+      description:
+        'マーケティングAX・広告運用のAI化にかかる費用相場を解説。助言型は月20万円前後〜、伴走型は月50万〜200万円、ツール導入のみは月数万円〜。価格を決める4つの変数と費用対効果の考え方まで、料金を公開するLUDENTZが解説します。',
+    },
+    og: {
+      kicker: 'KNOWLEDGE',
+      lines: ['AX支援の費用相場は？', '支援タイプ別の料金と選び方'],
+    },
+  },
+  {
+    path: '/marketing-ax/comparison',
+    component: ComparisonArticlePage,
+    file: 'marketing-ax/comparison/index.html',
+    seo: {
+      title:
+        '広告運用は内製と外注どっちがいい？AI時代の第三の選択肢「AX支援」まで徹底比較 | LUDENTZ',
+      description:
+        '広告運用の内製・外注それぞれのメリットとデメリットを整理し、AI時代の第三の選択肢「AX支援」まで徹底比較。コスト構造・ノウハウ蓄積・属人化リスクの比較表と、3つの問いでわかる選び方を解説します。',
+    },
+    og: {
+      kicker: 'KNOWLEDGE',
+      lines: ['内製 vs 外注 vs AX支援', '広告運用の選び方'],
     },
   },
   {

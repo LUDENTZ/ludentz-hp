@@ -26,6 +26,9 @@ export default function Footer() {
           <div className="footer-col">
             <div className="h">Knowledge</div>
             <a href="/marketing-ax/">マーケティングAXとは</a>
+            <a href="/marketing-ax/ad-operations">広告運用AXとは</a>
+            <a href="/marketing-ax/cost">AX支援の費用相場</a>
+            <a href="/marketing-ax/comparison">内製 vs 外注 vs AX</a>
           </div>
         </div>
         <div
