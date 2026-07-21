@@ -4701,6 +4701,13 @@ body[data-lang="ja"] .show-en { display: none !important; }
 }
 
 /* ── Home · Knowledge section ──────────────────────────── */
+/* JAモードでも英語ディスプレイタイトルを表示する（heroと同じ言語ミックス） */
+body[data-lang="ja"] .section-title--bilingual {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
 .knowledge-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
