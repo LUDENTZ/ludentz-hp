@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Pillars from './components/Pillars';
+import Knowledge from './components/Knowledge';
 import Manifesto from './components/Manifesto';
 import Company from './components/Company';
 import CTA from './components/CTA';
@@ -61,6 +62,7 @@ export default function App() {
       <main>
         <Hero onContact={() => openContact('hero')} onScrollTo={scrollTo} />
         <Pillars />
+        <Knowledge />
         <Manifesto />
         <Company />
         <CTA onContact={() => openContact('cta')} />

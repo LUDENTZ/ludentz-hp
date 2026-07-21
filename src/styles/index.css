@@ -4699,3 +4699,79 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .article-faq-item { padding: 20px 20px 8px; }
   .article-author-card { grid-template-columns: 1fr; gap: 16px; }
 }
+
+/* ── Home · Knowledge section ──────────────────────────── */
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+}
+.knowledge-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 30px 30px 56px;
+  background: var(--paper);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.knowledge-card--feature {
+  grid-column: 1 / -1;
+  padding: 38px 30px 42px;
+}
+.knowledge-feature-main {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 28px;
+  align-items: baseline;
+}
+.knowledge-card--feature .knowledge-title {
+  font-size: clamp(24px, 2.6vw, 34px);
+}
+.knowledge-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--fg-muted);
+}
+.knowledge-title {
+  margin: 0;
+  font-family: var(--font-ja-mincho);
+  font-weight: 900;
+  font-size: clamp(19px, 1.7vw, 23px);
+  line-height: 1.45;
+  color: var(--fg-primary);
+}
+.knowledge-body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--fg-secondary);
+}
+.knowledge-arrow {
+  position: absolute;
+  right: 26px;
+  bottom: 22px;
+  color: var(--fg-primary);
+  transition: transform var(--dur-fast) var(--ease);
+}
+.knowledge-card--feature .knowledge-arrow { bottom: 38px; }
+.knowledge-card:hover { background: var(--ink-0); }
+.knowledge-card:hover .knowledge-meta,
+.knowledge-card:hover .knowledge-body { color: var(--ink-6); }
+.knowledge-card:hover .knowledge-title,
+.knowledge-card:hover .knowledge-arrow { color: var(--paper); }
+.knowledge-card:hover .knowledge-arrow { transform: translateX(3px); }
+
+@media (max-width: 900px) {
+  .knowledge-grid { grid-template-columns: 1fr; }
+  .knowledge-card { padding: 26px 22px 52px; }
+  .knowledge-card--feature { padding: 30px 22px 52px; }
+  .knowledge-feature-main { grid-template-columns: 1fr; gap: 12px; }
+  .knowledge-card--feature .knowledge-arrow { bottom: 22px; }
+}
