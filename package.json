@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist/server --emptyOutDir false && node scripts/prerender.mjs",
+    "og": "node scripts/og-images.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "playwright-core": "^1.61.1",
     "vite": "^6.3.3"
   }
 }

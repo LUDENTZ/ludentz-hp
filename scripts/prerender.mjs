@@ -7,7 +7,9 @@ const rootDir = path.resolve(dirname, '..');
 const distDir = path.join(rootDir, 'dist');
 const serverEntry = path.join(distDir, 'server', 'entry-server.js');
 
-const { render, routes, canonicalFor } = await import(pathToFileURL(serverEntry).href);
+const { render, routes, canonicalFor, ogImagePathFor, SITE_URL } = await import(
+  pathToFileURL(serverEntry).href
+);
 const template = await fs.readFile(path.join(distDir, 'index.html'), 'utf8');
 
 const escapeHtml = (value) =>
@@ -66,6 +68,22 @@ function applySeo(html, route) {
     );
 }
 
+// og設定を持つルートはページ固有のOG画像（scripts/og-images.mjsで生成・コミット済み）に差し替える
+function applyOgImage(html, route) {
+  const ogPath = ogImagePathFor(route);
+  if (!ogPath) return html;
+  const url = `${SITE_URL}${ogPath}`;
+  return html
+    .replace(
+      /<meta property="og:image" content="[\s\S]*?" \/>/,
+      `<meta property="og:image" content="${url}" />`
+    )
+    .replace(
+      /<meta name="twitter:image" content="[\s\S]*?" \/>/,
+      `<meta name="twitter:image" content="${url}" />`
+    );
+}
+
 await Promise.all(
   routes.map(async (route) => {
     let html = template.replace(
@@ -75,6 +93,7 @@ await Promise.all(
     if (route.seo) {
       html = applySeo(html, route);
     }
+    html = applyOgImage(html, route);
     const outputPath = path.join(distDir, route.file);
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
     await fs.writeFile(outputPath, html);

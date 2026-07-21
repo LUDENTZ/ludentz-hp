@@ -1,8 +1,8 @@
 import { renderToString } from 'react-dom/server';
 import SitePage from './SitePage';
-import { routes, findRoute, canonicalFor, SITE_URL } from './routes';
+import { routes, findRoute, canonicalFor, ogImagePathFor, SITE_URL } from './routes';
 
-export { routes, canonicalFor, SITE_URL };
+export { routes, canonicalFor, ogImagePathFor, SITE_URL };
 
 export function render(pathname = '/') {
   const route = findRoute(pathname);

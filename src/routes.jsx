@@ -31,11 +31,19 @@ export const routes = [
         'マーケティングAX（AIトランスフォーメーション）とは、マーケティング業務をAI前提に再設計する取り組み。DXとの違い、広告運用など領域別の進め方、3つの実装パターン、費用相場までを支援会社が解説します。',
       canonical: 'https://ludentz.net/marketing-ax/',
     },
+    og: {
+      kicker: 'KNOWLEDGE',
+      lines: ['マーケティングAXとは？', 'DXとの違い・進め方・', '費用相場まで'],
+    },
   },
   {
     path: '/service/business-development',
     component: BusinessDevelopmentPage,
     file: 'service/business-development/index.html',
+    og: {
+      kicker: 'SERVICE — 新規事業開発',
+      lines: ['AIプロダクトで、', '次の柱をつくる。'],
+    },
     seo: {
       title: '新規事業開発 — LUDENTZ',
       description:
@@ -46,6 +54,10 @@ export const routes = [
     path: '/service/business-growth',
     component: BusinessGrowthPage,
     file: 'service/business-growth/index.html',
+    og: {
+      kicker: 'SERVICE — 新規事業グロース支援',
+      lines: ['立ち上がった事業を、', '成長の軌道へ。'],
+    },
     seo: {
       title: '新規事業グロース支援 — LUDENTZ',
       description:
@@ -56,6 +68,10 @@ export const routes = [
     path: '/service/ax-consulting',
     component: AxConsultingPage,
     file: 'service/ax-consulting/index.html',
+    og: {
+      kicker: 'SERVICE — MARKETING AX',
+      lines: ['マーケの業務プロセスを、', 'AI前提に再設計。'],
+    },
     seo: {
       title: 'Marketing AX — LUDENTZ',
       description:
@@ -66,6 +82,10 @@ export const routes = [
     path: '/service/ad-operations-ax',
     component: AdOperationsAxPage,
     file: 'service/ad-operations-ax/index.html',
+    og: {
+      kicker: 'MARKETING AX — 広告運用AX',
+      lines: ['広告運用の実務を、', 'AIエージェントに。'],
+    },
     seo: {
       title: '広告運用AX — LUDENTZ',
       description:
@@ -76,6 +96,10 @@ export const routes = [
     path: '/service/prospecting-ax',
     component: ProspectingAxPage,
     file: 'service/prospecting-ax/index.html',
+    og: {
+      kicker: 'MARKETING AX — 新規開拓AX',
+      lines: ['新規開拓を、', '止まらない仕組みに。'],
+    },
     seo: {
       title: '新規開拓AX — LUDENTZ',
       description:
@@ -86,6 +110,10 @@ export const routes = [
     path: '/service/publishing-ax',
     component: PublishingAxPage,
     file: 'service/publishing-ax/index.html',
+    og: {
+      kicker: 'MARKETING AX — 情報発信AX',
+      lines: ['発信を、', '続けられる体制に。'],
+    },
     seo: {
       title: '情報発信AX — LUDENTZ',
       description:
@@ -97,6 +125,12 @@ export const routes = [
 export function canonicalFor(route) {
   if (route.seo?.canonical) return route.seo.canonical;
   return route.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${route.path}`;
+}
+
+// og付きルートのOG画像パス。scripts/og-images.mjs が生成し、prerenderが<head>に差し込む
+export function ogImagePathFor(route) {
+  if (!route.og) return null;
+  return `/assets/og/${route.path.slice(1).replace(/\//g, '-')}.png`;
 }
 
 export function findRoute(pathname = '/') {
