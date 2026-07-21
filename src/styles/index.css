@@ -4640,13 +4640,9 @@ body[data-lang="ja"] .show-en { display: none !important; }
 .article-author-photo {
   width: 72px;
   height: 72px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--border-strong);
-  font-family: var(--font-mono);
-  font-size: 15px;
-  letter-spacing: 0.08em;
-  color: var(--fg-muted);
+  object-fit: cover;
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
 }
 .article-author-name {
   font-weight: 700;

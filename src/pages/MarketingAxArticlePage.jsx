@@ -66,6 +66,7 @@ const articleJsonLd = {
     '@type': 'Person',
     name: '大平 葵',
     jobTitle: '代表取締役',
+    image: 'https://ludentz.net/assets/person-o.png',
     worksFor: { '@type': 'Organization', name: 'LUDENTZ株式会社' },
     // TODO: note・XのURLが確定したら sameAs: ['<note URL>', '<X URL>'] を追加する
   },
@@ -459,10 +460,14 @@ export default function MarketingAxArticlePage() {
             <section className="article-author" aria-label="この記事の執筆者">
               <h2>この記事の執筆者</h2>
               <div className="article-author-card">
-                {/* 顔写真プレースホルダ：写真が用意でき次第 <img> に差し替える */}
-                <span className="article-author-photo" aria-hidden="true">
-                  AO
-                </span>
+                <img
+                  className="article-author-photo"
+                  src="/assets/person-o.png"
+                  alt="大平 葵"
+                  width="72"
+                  height="72"
+                  loading="lazy"
+                />
                 <div className="article-author-body">
                   <p className="article-author-name">
                     大平 葵（LUDENTZ株式会社 創業者・代表取締役）
