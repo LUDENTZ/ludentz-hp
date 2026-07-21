@@ -39,7 +39,7 @@ export default function Knowledge() {
           <span className="show-ja">ナレッジ</span>
         </div>
         <h2 className="section-title section-title--bilingual reveal">
-          Notes from<br />the field.
+          What we’ve<br />learned.
         </h2>
       </div>
 
