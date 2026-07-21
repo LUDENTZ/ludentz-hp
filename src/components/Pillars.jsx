@@ -67,6 +67,10 @@ export default function Pillars() {
               <span className="show-en">{primary.body_en}</span>
               <span className="show-ja">{primary.body_ja}</span>
             </p>
+            <a className="pillar-knowledge-link" href="/marketing-ax/">
+              <span>マーケティングAXとは何か？</span>
+              <span className="pillar-service-arrow" aria-hidden="true">→</span>
+            </a>
             <div className="pillar-service-links" aria-label={`${primary.ja}のサービス`}>
               {primary.links.map((link) => (
                 <a className="pillar-service-link" href={link.href} key={link.href}>

@@ -23,6 +23,10 @@ export default function Footer() {
             <a onClick={() => scrollTo('work')}>Marketing AX</a>
             <a onClick={() => scrollTo('work')}>Business Development</a>
           </div>
+          <div className="footer-col">
+            <div className="h">Knowledge</div>
+            <a href="/marketing-ax/">マーケティングAXとは</a>
+          </div>
         </div>
         <div
           className="footer-wordmark"

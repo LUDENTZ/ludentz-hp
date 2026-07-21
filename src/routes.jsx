@@ -1,4 +1,5 @@
 import App from './App';
+import MarketingAxArticlePage from './pages/MarketingAxArticlePage';
 import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
 import BusinessGrowthPage from './pages/BusinessGrowthPage';
 import AxConsultingPage from './pages/AxConsultingPage';
@@ -17,6 +18,18 @@ export const routes = [
       title: "LUDENTZ — Let's shape what's next",
       description:
         'LUDENTZは、東京を拠点とするスタジオです。新規事業開発・AXコンサルティング・自社事業の三つの軸で、先端を走ります。',
+    },
+  },
+  {
+    path: '/marketing-ax',
+    component: MarketingAxArticlePage,
+    file: 'marketing-ax/index.html',
+    seo: {
+      title:
+        'マーケティングAXとは？DXとの違い・進め方・費用相場まで【定義と実践ガイド】 | LUDENTZ',
+      description:
+        'マーケティングAX（AIトランスフォーメーション）とは、マーケティング業務をAI前提に再設計する取り組み。DXとの違い、広告運用など領域別の進め方、3つの実装パターン、費用相場までを支援会社が解説します。',
+      canonical: 'https://ludentz.net/marketing-ax/',
     },
   },
   {
@@ -82,6 +95,7 @@ export const routes = [
 ];
 
 export function canonicalFor(route) {
+  if (route.seo?.canonical) return route.seo.canonical;
   return route.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${route.path}`;
 }
 
