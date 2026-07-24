@@ -6,8 +6,6 @@
   <text x="60" y="126" font-size="15" fill="#55554F">深く渡すほど、渡す回数は減っていく。</text>
 
   <!-- 01 COPILOT -->
-  <rect x="82" y="284" width="120" height="26" rx="13" fill="#FFFFFF" stroke="#C9C7C2"/>
-  <text x="142" y="302" text-anchor="middle" font-size="12" fill="#55554F">渡すのは毎回</text>
   <rect x="60" y="320" width="248" height="114" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
   <text x="82" y="350" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">01 COPILOT</text>
   <text x="82" y="380" font-size="20" font-weight="700" fill="#0A0A0A">作業を渡す</text>
@@ -15,8 +13,6 @@
   <text x="82" y="424" font-size="13" fill="#55554F">AIが作業を巻き取る</text>
 
   <!-- 02 WORKFLOW -->
-  <rect x="348" y="206" width="160" height="26" rx="13" fill="#FFFFFF" stroke="#C9C7C2"/>
-  <text x="428" y="224" text-anchor="middle" font-size="12" fill="#55554F">渡すのは最初の一度</text>
   <rect x="326" y="242" width="248" height="192" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
   <text x="348" y="272" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">02 WORKFLOW</text>
   <text x="348" y="302" font-size="20" font-weight="700" fill="#0A0A0A">手順を渡す</text>
@@ -24,18 +20,20 @@
   <text x="348" y="346" font-size="13" fill="#55554F">無人のレールに載る</text>
 
   <!-- 03 AGENT -->
-  <rect x="614" y="128" width="160" height="26" rx="13" fill="#FFFFFF" stroke="#C9C7C2"/>
-  <text x="694" y="146" text-anchor="middle" font-size="12" fill="#55554F">渡すのはゴール単位</text>
   <rect x="592" y="164" width="248" height="270" rx="6" fill="#FFFFFF" stroke="#6B7FC7" stroke-width="1.5"/>
   <text x="614" y="194" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">03 AGENT</text>
   <text x="614" y="224" font-size="20" font-weight="700" fill="#0A0A0A">目的を渡す</text>
   <text x="614" y="249" font-size="13" fill="#55554F">進め方は問わない。</text>
   <text x="614" y="268" font-size="13" fill="#55554F">ゴールだけ渡して自走させる</text>
 
-  <!-- axis -->
-  <line x1="125" y1="462" x2="742" y2="462" stroke="#6B7FC7" stroke-width="2"/>
-  <path d="M746,462 l-12,-6 v12 z" fill="#6B7FC7"/>
-  <text x="450" y="492" text-anchor="middle" font-size="13" fill="#55554F">委譲が深まるほど、人の手が空く</text>
+  <!-- trade-off axes -->
+  <text x="60" y="463" font-size="14" font-weight="700" fill="#0A0A0A">委譲が深まるほど——</text>
+  <line x1="256" y1="452" x2="536" y2="452" stroke="#6B7FC7" stroke-width="2"/>
+  <path d="M540,452 l-12,-6 v12 z" fill="#6B7FC7"/>
+  <text x="556" y="457" font-size="13.5" fill="#3E5296">人の手が空く</text>
+  <line x1="256" y1="484" x2="536" y2="484" stroke="#B5B3AD" stroke-width="2"/>
+  <path d="M540,484 l-12,-6 v12 z" fill="#B5B3AD"/>
+  <text x="556" y="489" font-size="13.5" fill="#55554F">壊れやすさ・保守コストも増える</text>
 
-  <text x="840" y="492" text-anchor="end" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" fill="#B5B3AD">LUDENTZ — Marketing AX</text>
+  <text x="840" y="52" text-anchor="end" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" fill="#B5B3AD">LUDENTZ — Marketing AX</text>
 </svg>
