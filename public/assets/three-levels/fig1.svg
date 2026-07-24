@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 506" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif">
+  <title>委譲の階段——AIには、作業か、手順か、目的を渡す</title>
+  <rect width="900" height="506" fill="#0A0A0A"/>
+  <text x="60" y="50" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" letter-spacing="4" fill="#8a8a86">AI委譲の3段階</text>
+  <text x="60" y="90" font-size="26" font-weight="700" fill="#F5F5F2">AIには、作業か、手順か、目的を渡す。</text>
+  <text x="60" y="122" font-size="14" fill="#9a9a96">深く渡すほど、渡す回数は減っていく。</text>
+
+  <!-- 01 COPILOT -->
+  <rect x="85" y="293" width="102" height="21" rx="10.5" fill="#1c1c22" stroke="#3a3a42"/>
+  <text x="136" y="307" text-anchor="middle" font-size="10" fill="#c8c8c4">渡すのは毎回</text>
+  <rect x="60" y="322" width="240" height="112" rx="6" fill="#15151a"/>
+  <text x="82" y="352" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" letter-spacing="2" fill="#8a8a86">01 COPILOT</text>
+  <text x="82" y="380" font-size="17" font-weight="700" fill="#F5F5F2">作業を渡す</text>
+  <text x="82" y="403" font-size="10.5" fill="#9a9a96">判断は人に残る。人が方向づけ、</text>
+  <text x="82" y="420" font-size="10.5" fill="#9a9a96">AIが作業を巻き取る</text>
+
+  <!-- 02 WORKFLOW -->
+  <rect x="355" y="218" width="128" height="21" rx="10.5" fill="#1c1c22" stroke="#3a3a42"/>
+  <text x="419" y="232" text-anchor="middle" font-size="10" fill="#c8c8c4">渡すのは最初の一度</text>
+  <rect x="330" y="247" width="240" height="187" rx="6" fill="#15151a"/>
+  <text x="352" y="277" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" letter-spacing="2" fill="#8a8a86">02 WORKFLOW</text>
+  <text x="352" y="305" font-size="17" font-weight="700" fill="#F5F5F2">手順を渡す</text>
+  <text x="352" y="328" font-size="10.5" fill="#9a9a96">やり方まで言語化できているなら、</text>
+  <text x="352" y="345" font-size="10.5" fill="#9a9a96">無人のレールに載る</text>
+
+  <!-- 03 AGENT -->
+  <rect x="620" y="143" width="122" height="21" rx="10.5" fill="#1c1c22" stroke="#3a3a42"/>
+  <text x="681" y="157" text-anchor="middle" font-size="10" fill="#c8c8c4">渡すのはゴール単位</text>
+  <rect x="600" y="172" width="240" height="262" rx="6" fill="#121218" stroke="#aab8e8" stroke-width="1"/>
+  <text x="622" y="202" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" letter-spacing="2" fill="#8a8a86">03 AGENT</text>
+  <text x="622" y="230" font-size="17" font-weight="700" fill="#F5F5F2">目的を渡す</text>
+  <text x="622" y="253" font-size="10.5" fill="#9a9a96">進め方は問わない。</text>
+  <text x="622" y="270" font-size="10.5" fill="#9a9a96">ゴールだけ渡して自走させる</text>
+
+  <!-- axis -->
+  <line x1="125" y1="464" x2="742" y2="464" stroke="#aab8e8" stroke-width="1.5"/>
+  <path d="M742,464 l-10,-5 v10 z" fill="#aab8e8"/>
+  <text x="450" y="490" text-anchor="middle" font-size="11" fill="#9a9a96">委譲が深まるほど、人の手が空く</text>
+
+  <text x="840" y="488" text-anchor="end" font-family="'JetBrains Mono',Menlo,monospace" font-size="9" fill="#4a4a46">LUDENTZ — Marketing AX</text>
+</svg>

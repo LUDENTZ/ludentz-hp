@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 506" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif">
+  <title>COPILOTの実例——提案資料Skill</title>
+  <rect width="900" height="506" fill="#0A0A0A"/>
+  <text x="60" y="50" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" letter-spacing="4" fill="#8a8a86">01 COPILOT — 作業を渡す</text>
+  <text x="60" y="90" font-size="24" font-weight="700" fill="#F5F5F2">実例：提案資料Skill</text>
+  <text x="60" y="120" font-size="13" fill="#9a9a96">過去の提案書の型を一度Skill化すれば、誰が使っても同じ品質で立ち上がる</text>
+
+  <!-- asset card -->
+  <rect x="60" y="168" width="196" height="120" rx="6" fill="#15151a"/>
+  <text x="76" y="194" font-family="'JetBrains Mono',Menlo,monospace" font-size="9" letter-spacing="1.5" fill="#8a8a86">資産（一度だけ用意）</text>
+  <text x="76" y="220" font-size="12.5" font-weight="700" fill="#F5F5F2">過去の提案書・構成</text>
+  <text x="76" y="239" font-size="12.5" font-weight="700" fill="#F5F5F2">ルール・トンマナ</text>
+  <text x="76" y="266" font-size="10" fill="#9a9a96">→「提案資料Skill」として配布</text>
+
+  <line x1="256" y1="228" x2="312" y2="228" stroke="#6a6a70" stroke-width="1.3"/>
+  <path d="M314,228 l-9,-5 v10 z" fill="#6a6a70"/>
+
+  <!-- AI card -->
+  <rect x="318" y="160" width="248" height="132" rx="8" fill="#c9d4f4"/>
+  <text x="442" y="192" text-anchor="middle" font-size="14" font-weight="700" fill="#12121a">AI（Skillを装着）</text>
+  <text x="442" y="218" text-anchor="middle" font-size="12" fill="#23232c">構成案 → 本文 → 図表 → 体裁</text>
+  <text x="442" y="236" text-anchor="middle" font-size="12" fill="#23232c">を一気に生成</text>
+  <text x="442" y="266" text-anchor="middle" font-size="10" fill="#5a5f78">作業はAIが巻き取る</text>
+
+  <!-- human circle -->
+  <circle cx="712" cy="226" r="54" fill="none" stroke="#e8e8e4" stroke-width="1.2"/>
+  <text x="712" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#F5F5F2">人</text>
+  <text x="712" y="244" text-anchor="middle" font-size="10" fill="#9a9a96">方向づけ・判断</text>
+
+  <!-- arrows AI <-> human -->
+  <line x1="566" y1="200" x2="648" y2="200" stroke="#e8e8e4" stroke-width="1.2"/>
+  <path d="M650,200 l-9,-5 v10 z" fill="#e8e8e4"/>
+  <text x="608" y="188" text-anchor="middle" font-size="9.5" fill="#9a9a96">ドラフト</text>
+  <line x1="648" y1="252" x2="566" y2="252" stroke="#e8e8e4" stroke-width="1.2"/>
+  <path d="M564,252 l9,-5 v10 z" fill="#e8e8e4"/>
+  <text x="608" y="272" text-anchor="middle" font-size="9.5" fill="#9a9a96">骨子指示・修正</text>
+
+  <!-- before/after band -->
+  <rect x="60" y="350" width="780" height="92" rx="8" fill="#15151a"/>
+  <text x="96" y="386" font-size="11" fill="#9a9a96">Before</text>
+  <text x="96" y="414" font-size="20" font-weight="700" fill="#F5F5F2">約6〜8時間</text>
+  <line x1="316" y1="398" x2="382" y2="398" stroke="#aab8e8" stroke-width="2"/>
+  <path d="M386,398 l-12,-6 v12 z" fill="#aab8e8"/>
+  <text x="428" y="386" font-size="11" fill="#9a9a96">After</text>
+  <text x="428" y="414" font-size="20" font-weight="700" fill="#c9d4f4">約30分</text>
+  <text x="804" y="392" text-anchor="end" font-size="10.5" fill="#9a9a96">判断の質は落とさず、</text>
+  <text x="804" y="410" text-anchor="end" font-size="10.5" fill="#9a9a96">作業時間だけを消す</text>
+
+  <text x="840" y="488" text-anchor="end" font-family="'JetBrains Mono',Menlo,monospace" font-size="9" fill="#4a4a46">LUDENTZ — Marketing AX</text>
+</svg>

@@ -4710,12 +4710,13 @@ body[data-lang="ja"] .section-title--bilingual {
 }
 .knowledge-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 1px;
   background: var(--border-subtle);
   border: 1px solid var(--border-subtle);
 }
 .knowledge-card {
+  grid-column: span 3;
   position: relative;
   display: grid;
   align-content: start;
@@ -4777,8 +4778,27 @@ body[data-lang="ja"] .section-title--bilingual {
 
 @media (max-width: 900px) {
   .knowledge-grid { grid-template-columns: 1fr; }
-  .knowledge-card { padding: 26px 22px 52px; }
+  .knowledge-card { grid-column: auto; padding: 26px 22px 52px; }
   .knowledge-card--feature { padding: 30px 22px 52px; }
   .knowledge-feature-main { grid-template-columns: 1fr; gap: 12px; }
   .knowledge-card--feature .knowledge-arrow { bottom: 22px; }
 }
+
+/* ── Article figures (/marketing-ax/three-levels) ──────── */
+.article-figure {
+  margin: 28px 0 36px;
+}
+.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.article-figure figcaption {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+}
+.article-hero .article-figure { margin: 32px 0 8px; }

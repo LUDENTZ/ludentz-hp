@@ -295,6 +295,9 @@ export default function AdOperationsArticlePage() {
               <p>
                 重要なのは「すべてを完全自動にしない」ことです。お金が動く工程（入稿・予算変更）には必ず人の承認を挟む、ブランドに関わる工程（クリエイティブ）には人のレビューを残す——どこに人を残すかの設計こそが、広告運用AXの品質を決めます。
               </p>
+              <p>
+                この3つの型の詳細と実例は<a href="/marketing-ax/three-levels">AI委譲の3段階</a>で解説しています。
+              </p>
             </section>
 
             <section id="steps">

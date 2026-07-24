@@ -3,6 +3,7 @@ import MarketingAxArticlePage from './pages/MarketingAxArticlePage';
 import AdOperationsArticlePage from './pages/AdOperationsArticlePage';
 import CostArticlePage from './pages/CostArticlePage';
 import ComparisonArticlePage from './pages/ComparisonArticlePage';
+import ThreeLevelsArticlePage from './pages/ThreeLevelsArticlePage';
 import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
 import BusinessGrowthPage from './pages/BusinessGrowthPage';
 import AxConsultingPage from './pages/AxConsultingPage';
@@ -82,6 +83,21 @@ export const routes = [
     og: {
       kicker: 'KNOWLEDGE',
       lines: ['内製 vs 外注 vs AX支援', '広告運用の選び方'],
+    },
+  },
+  {
+    path: '/marketing-ax/three-levels',
+    component: ThreeLevelsArticlePage,
+    file: 'marketing-ax/three-levels/index.html',
+    seo: {
+      title:
+        'AI導入がツール止まりになる理由——業務は「作業・手順・目的」の3段階でAIに渡す【AI委譲の3段階】 | LUDENTZ',
+      description:
+        '「AIツールを導入したのに業務が変わらない」の原因は、業務を分類せずAIを当てていること。業務は作業・手順・目的の3段階でAIに渡す——COPILOT／WORKFLOW／AGENTの判定基準と実例、組織がこの階段を登る道筋を解説します。',
+    },
+    og: {
+      // OG画像はテキストカードではなく図1（委譲の階段）をそのまま使う
+      svgSource: 'public/assets/three-levels/fig1.svg',
     },
   },
   {

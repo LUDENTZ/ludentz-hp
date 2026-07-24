@@ -29,6 +29,7 @@ export default function Footer() {
             <a href="/marketing-ax/ad-operations">広告運用AXとは</a>
             <a href="/marketing-ax/cost">AX支援の費用相場</a>
             <a href="/marketing-ax/comparison">内製 vs 外注 vs AX</a>
+            <a href="/marketing-ax/three-levels">AI委譲の3段階</a>
           </div>
         </div>
         <div

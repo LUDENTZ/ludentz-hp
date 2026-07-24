@@ -37,6 +37,7 @@ const glyphs = new Set(
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .,—–-·/?！？。、'
 );
 for (const route of targets) {
+  if (route.og.svgSource) continue;
   for (const c of route.og.kicker + route.og.lines.join('')) glyphs.add(c);
 }
 const text = [...glyphs].join('');
@@ -139,11 +140,22 @@ body { width: 1200px; height: 630px; background: #FAFAF8; }
 </div>`;
 }
 
+// og.svgSource 指定ルートは、テキストカードの代わりにそのSVGを1200×630に敷いてPNG化する
+async function svgHtml(svgPath) {
+  const svg = await fs.readFile(path.join(rootDir, svgPath));
+  const dataUri = `data:image/svg+xml;base64,${svg.toString('base64')}`;
+  return `<!doctype html><meta charset="utf-8">
+<style>* { margin: 0; } body { width: 1200px; height: 630px; background: #0A0A0A; display: grid; place-items: center; }
+img { max-width: 100%; max-height: 100%; }</style>
+<img src="${dataUri}" height="630">`;
+}
+
 await fs.mkdir(outDir, { recursive: true });
 const browser = await chromium.launch({ executablePath: CHROMIUM });
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
 for (const route of targets) {
-  await page.setContent(cardHtml(route.og), { waitUntil: 'networkidle' });
+  const html = route.og.svgSource ? await svgHtml(route.og.svgSource) : cardHtml(route.og);
+  await page.setContent(html, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const file = path.join(rootDir, 'public', ogImagePathFor(route).slice(1));
   await page.screenshot({ path: file });

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 506" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif">
+  <title>WORKFLOWの実例——週次レポートライン</title>
+  <rect width="900" height="506" fill="#0A0A0A"/>
+  <text x="60" y="50" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" letter-spacing="4" fill="#8a8a86">02 WORKFLOW — 手順を渡す</text>
+  <text x="60" y="90" font-size="24" font-weight="700" fill="#F5F5F2">実例：週次レポートライン</text>
+  <text x="60" y="120" font-size="13" fill="#9a9a96">一度手順を渡せば、毎週月曜、無人で回る。人は見張るだけ</text>
+
+  <!-- unmanned zone -->
+  <text x="66" y="170" font-size="10" fill="#8a8a86">無人ゾーン（開始ボタンすら押さない）</text>
+  <rect x="58" y="180" width="784" height="118" rx="8" fill="none" stroke="#3a3a42" stroke-dasharray="5 5"/>
+
+  <!-- nodes -->
+  <rect x="70" y="200" width="132" height="78" rx="6" fill="#121218" stroke="#aab8e8"/>
+  <text x="136" y="234" text-anchor="middle" font-size="11" fill="#aab8e8">毎週月曜 9:00</text>
+  <text x="136" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#F5F5F2">自動起動</text>
+
+  <line x1="202" y1="239" x2="222" y2="239" stroke="#6a6a70" stroke-width="1.3"/>
+  <path d="M224,239 l-8,-4.5 v9 z" fill="#6a6a70"/>
+
+  <rect x="226" y="200" width="132" height="78" rx="6" fill="#15151a"/>
+  <text x="292" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F5F5F2">媒体データ取得</text>
+  <text x="292" y="256" text-anchor="middle" font-size="9.5" fill="#9a9a96">媒体横断・API</text>
+
+  <line x1="358" y1="239" x2="378" y2="239" stroke="#6a6a70" stroke-width="1.3"/>
+  <path d="M380,239 l-8,-4.5 v9 z" fill="#6a6a70"/>
+
+  <rect x="382" y="200" width="132" height="78" rx="6" fill="#15151a"/>
+  <text x="448" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F5F5F2">集計・グラフ化</text>
+  <text x="448" y="256" text-anchor="middle" font-size="9.5" fill="#9a9a96">決定論的な処理</text>
+
+  <line x1="514" y1="239" x2="534" y2="239" stroke="#6a6a70" stroke-width="1.3"/>
+  <path d="M536,239 l-8,-4.5 v9 z" fill="#6a6a70"/>
+
+  <rect x="538" y="200" width="132" height="78" rx="6" fill="#c9d4f4"/>
+  <text x="604" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12121a">考察ドラフト</text>
+  <text x="604" y="256" text-anchor="middle" font-size="9.5" fill="#4a5070">ここだけLLM工程</text>
+
+  <line x1="670" y1="239" x2="690" y2="239" stroke="#6a6a70" stroke-width="1.3"/>
+  <path d="M692,239 l-8,-4.5 v9 z" fill="#6a6a70"/>
+
+  <rect x="694" y="200" width="132" height="78" rx="6" fill="#15151a"/>
+  <text x="760" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F5F5F2">Slackへ配信</text>
+  <text x="760" y="256" text-anchor="middle" font-size="9.5" fill="#9a9a96">関係者に自動共有</text>
+
+  <!-- watcher -->
+  <circle cx="440" cy="396" r="43" fill="none" stroke="#6a6a70" stroke-dasharray="4 4"/>
+  <text x="440" y="393" text-anchor="middle" font-size="13" font-weight="700" fill="#F5F5F2">人</text>
+  <text x="440" y="413" text-anchor="middle" font-size="9.5" fill="#9a9a96">見張るだけ</text>
+  <line x1="470" y1="364" x2="588" y2="292" stroke="#6a6a70" stroke-dasharray="4 4"/>
+  <path d="M590,290 l-10,2 5,8 z" fill="#6a6a70"/>
+  <text x="608" y="342" font-size="10" fill="#9a9a96">異常値アラートが出たときだけ呼ばれる</text>
+
+  <text x="60" y="470" font-size="11.5" fill="#c8c8c4">レポーティング工数：1〜2時間×社数 → <tspan font-weight="700" fill="#c9d4f4">ほぼゼロ</tspan></text>
+  <text x="840" y="488" text-anchor="end" font-family="'JetBrains Mono',Menlo,monospace" font-size="9" fill="#4a4a46">LUDENTZ — Marketing AX</text>
+</svg>

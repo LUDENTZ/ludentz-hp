@@ -311,6 +311,9 @@ export default function MarketingAxArticlePage() {
               <p>
                 売り物は「機構」ではなく「設計」——業務をどこで切り、何をAIに任せ、何をルールで縛り、何を人が見るか。この設計こそがマーケティングAXの価値の源泉です。
               </p>
+              <p>
+                この3つの型の詳細と実例は<a href="/marketing-ax/three-levels">AI委譲の3段階</a>で解説しています。
+              </p>
             </section>
 
             <section id="steps">

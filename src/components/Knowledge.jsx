@@ -28,6 +28,13 @@ const articles = [
     title: '内製 vs 外注 vs AX支援',
     body: '広告運用の体制はどう組むべきか。AI時代の第三の選択肢まで徹底比較。',
   },
+  {
+    href: '/marketing-ax/three-levels',
+    number: '05',
+    label: 'METHOD',
+    title: 'AI委譲の3段階',
+    body: 'AIには、作業か、手順か、目的を渡す。COPILOT／WORKFLOW／AGENTを図解。',
+  },
 ];
 
 export default function Knowledge() {
