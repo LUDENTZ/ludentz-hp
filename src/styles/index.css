@@ -4792,7 +4792,9 @@ body[data-lang="ja"] .section-title--bilingual {
   display: block;
   width: 100%;
   height: auto;
+  border: 1px solid var(--border-subtle);
   border-radius: 4px;
+  background: #FAFAF8;
 }
 .article-figure figcaption {
   margin-top: 10px;

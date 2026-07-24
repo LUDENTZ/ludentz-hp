@@ -145,7 +145,7 @@ async function svgHtml(svgPath) {
   const svg = await fs.readFile(path.join(rootDir, svgPath));
   const dataUri = `data:image/svg+xml;base64,${svg.toString('base64')}`;
   return `<!doctype html><meta charset="utf-8">
-<style>* { margin: 0; } body { width: 1200px; height: 630px; background: #0A0A0A; display: grid; place-items: center; }
+<style>* { margin: 0; } body { width: 1200px; height: 630px; background: #FAFAF8; display: grid; place-items: center; }
 img { max-width: 100%; max-height: 100%; }</style>
 <img src="${dataUri}" height="630">`;
 }

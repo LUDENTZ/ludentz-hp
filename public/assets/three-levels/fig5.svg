@@ -1,61 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 506" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif">
   <title>AGENTの実例——新規開拓エージェント</title>
-  <rect width="900" height="506" fill="#0A0A0A"/>
-  <text x="60" y="50" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" letter-spacing="4" fill="#8a8a86">03 AGENT — 目的を渡す</text>
-  <text x="60" y="90" font-size="24" font-weight="700" fill="#F5F5F2">実例：新規開拓エージェント</text>
-  <text x="60" y="120" font-size="13" fill="#9a9a96">渡すのはICP（狙う顧客の定義）だけ。過程は問わず、成果だけ受け取る</text>
+  <rect width="900" height="506" fill="#FAFAF8"/>
+  <text x="60" y="52" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="3" fill="#8A8A84">03 AGENT — 目的を渡す</text>
+  <text x="60" y="94" font-size="26" font-weight="700" fill="#0A0A0A">実例：新規開拓エージェント</text>
+  <text x="60" y="124" font-size="15" fill="#55554F">渡すのはICP（狙う顧客の定義）だけ。過程は問わず、成果だけ受け取る</text>
 
   <!-- human -->
-  <circle cx="118" cy="286" r="46" fill="none" stroke="#e8e8e4" stroke-width="1.2"/>
-  <text x="118" y="283" text-anchor="middle" font-size="14" font-weight="700" fill="#F5F5F2">人</text>
-  <text x="118" y="303" text-anchor="middle" font-size="9.5" fill="#9a9a96">目的を渡す</text>
+  <circle cx="122" cy="296" r="50" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.3"/>
+  <text x="122" y="292" text-anchor="middle" font-size="16" font-weight="700" fill="#0A0A0A">人</text>
+  <text x="122" y="314" text-anchor="middle" font-size="11" fill="#55554F">目的を渡す</text>
 
-  <line x1="164" y1="286" x2="200" y2="286" stroke="#6a6a70" stroke-width="1.3"/>
-  <path d="M202,286 l-8,-4.5 v9 z" fill="#6a6a70"/>
+  <line x1="172" y1="296" x2="204" y2="296" stroke="#8A8A84" stroke-width="1.4"/>
+  <path d="M208,296 l-9,-5 v10 z" fill="#8A8A84"/>
 
   <!-- ICP card -->
-  <rect x="206" y="258" width="112" height="56" rx="6" fill="#15151a" stroke="#3a3a42"/>
-  <text x="262" y="281" text-anchor="middle" font-size="9" fill="#8a8a86">渡すもの</text>
-  <text x="262" y="300" text-anchor="middle" font-size="11.5" font-weight="700" fill="#F5F5F2">ICP定義のみ</text>
+  <rect x="212" y="264" width="122" height="64" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
+  <text x="273" y="290" text-anchor="middle" font-size="10.5" fill="#8A8A84">渡すもの</text>
+  <text x="273" y="311" text-anchor="middle" font-size="13" font-weight="700" fill="#0A0A0A">ICP定義のみ</text>
 
-  <line x1="318" y1="286" x2="352" y2="286" stroke="#6a6a70" stroke-width="1.3"/>
-  <path d="M354,286 l-8,-4.5 v9 z" fill="#6a6a70"/>
+  <line x1="334" y1="296" x2="364" y2="296" stroke="#8A8A84" stroke-width="1.4"/>
+  <path d="M368,296 l-9,-5 v10 z" fill="#8A8A84"/>
 
   <!-- agent card -->
-  <rect x="358" y="248" width="150" height="76" rx="8" fill="#c9d4f4"/>
-  <text x="433" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#12121a">エージェント</text>
-  <text x="433" y="301" text-anchor="middle" font-size="9" fill="#4a5070">無人・長時間・並列で自走</text>
+  <rect x="372" y="254" width="158" height="84" rx="8" fill="#C9D4F4"/>
+  <text x="451" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#12121A">エージェント</text>
+  <text x="451" y="313" text-anchor="middle" font-size="10.5" fill="#4A5070">無人・長時間・並列で自走</text>
 
   <!-- fan arrows -->
-  <line x1="508" y1="272" x2="560" y2="190" stroke="#6a6a70" stroke-width="1.2"/>
-  <path d="M561,188 l-9,3 6,7 z" fill="#6a6a70"/>
-  <line x1="508" y1="280" x2="560" y2="258" stroke="#6a6a70" stroke-width="1.2"/>
-  <path d="M562,257 l-10,0 3,8 z" fill="#6a6a70"/>
-  <line x1="508" y1="294" x2="560" y2="324" stroke="#6a6a70" stroke-width="1.2"/>
-  <path d="M562,325 l-9,-4 -1,9 z" fill="#6a6a70"/>
-  <line x1="508" y1="302" x2="560" y2="390" stroke="#6a6a70" stroke-width="1.2"/>
-  <path d="M561,392 l-3,-9 -6,6 z" fill="#6a6a70"/>
+  <line x1="530" y1="278" x2="576" y2="204" stroke="#8A8A84" stroke-width="1.3"/>
+  <path d="M578,201 l-10,3 7,8 z" fill="#8A8A84"/>
+  <line x1="530" y1="288" x2="576" y2="270" stroke="#8A8A84" stroke-width="1.3"/>
+  <path d="M580,268 l-11,0 4,9 z" fill="#8A8A84"/>
+  <line x1="530" y1="304" x2="576" y2="336" stroke="#8A8A84" stroke-width="1.3"/>
+  <path d="M579,338 l-10,-5 -1,10 z" fill="#8A8A84"/>
+  <line x1="530" y1="314" x2="576" y2="404" stroke="#8A8A84" stroke-width="1.3"/>
+  <path d="M578,407 l-4,-10 -7,6 z" fill="#8A8A84"/>
 
   <!-- task cards -->
-  <rect x="568" y="162" width="180" height="48" rx="6" fill="#15151a"/>
-  <text x="658" y="190" text-anchor="middle" font-size="11.5" font-weight="700" fill="#F5F5F2">リスト生成・更新</text>
+  <rect x="584" y="172" width="196" height="52" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
+  <text x="682" y="203" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0A0A0A">リスト生成・更新</text>
 
-  <rect x="568" y="234" width="180" height="52" rx="6" fill="#15151a"/>
-  <text x="658" y="256" text-anchor="middle" font-size="11.5" font-weight="700" fill="#F5F5F2">1社ずつ文面起案</text>
-  <text x="658" y="274" text-anchor="middle" font-size="8.5" fill="#9a9a96">事業内容を踏まえてパーソナライズ</text>
+  <rect x="584" y="246" width="196" height="60" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
+  <text x="682" y="271" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0A0A0A">1社ずつ文面起案</text>
+  <text x="682" y="292" text-anchor="middle" font-size="10" fill="#75756F">事業内容を踏まえてパーソナライズ</text>
 
-  <rect x="568" y="304" width="180" height="52" rx="6" fill="#15151a"/>
-  <text x="658" y="326" text-anchor="middle" font-size="11.5" font-weight="700" fill="#F5F5F2">マルチチャネル送信</text>
-  <text x="658" y="344" text-anchor="middle" font-size="8.5" fill="#9a9a96">フォーム・メール・手紙</text>
+  <rect x="584" y="328" width="196" height="60" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
+  <text x="682" y="353" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0A0A0A">マルチチャネル送信</text>
+  <text x="682" y="374" text-anchor="middle" font-size="10" fill="#75756F">フォーム・メール・手紙</text>
 
-  <rect x="568" y="376" width="180" height="48" rx="6" fill="#15151a"/>
-  <text x="658" y="404" text-anchor="middle" font-size="11.5" font-weight="700" fill="#F5F5F2">返信検知・一次対応</text>
+  <rect x="584" y="410" width="196" height="52" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
+  <text x="682" y="441" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0A0A0A">返信検知・一次対応</text>
 
   <!-- return curve -->
-  <path d="M 750,378 C 872,300 850,128 175,150 C 150,152 132,180 124,222" fill="none" stroke="#aab8e8" stroke-width="1.2"/>
-  <path d="M124,224 l-2,-10 8,3 z" fill="#aab8e8"/>
-  <text x="460" y="150" text-anchor="middle" font-size="10.5" fill="#e8e8e4">人に届くのは「商談化した返信」だけ</text>
+  <path d="M 780,414 C 878,330 856,140 190,158 C 164,160 142,190 130,240" fill="none" stroke="#6B7FC7" stroke-width="1.5"/>
+  <path d="M129,244 l-2,-12 10,4 z" fill="#6B7FC7"/>
+  <text x="470" y="156" text-anchor="middle" font-size="12.5" fill="#3A3A36">人に届くのは「商談化した返信」だけ</text>
 
-  <text x="60" y="470" font-size="11.5" fill="#c8c8c4">人は商談に集中。接点づくりは<tspan font-weight="700" fill="#c9d4f4">別働隊</tspan>が回し続ける</text>
-  <text x="840" y="488" text-anchor="end" font-family="'JetBrains Mono',Menlo,monospace" font-size="9" fill="#4a4a46">LUDENTZ — Marketing AX</text>
+  <text x="60" y="478" font-size="14" fill="#3A3A36">人は商談に集中。接点づくりは<tspan font-weight="700" fill="#3E5296">別働隊</tspan>が回し続ける</text>
+  <text x="840" y="492" text-anchor="end" font-family="'JetBrains Mono',Menlo,monospace" font-size="10" fill="#B5B3AD">LUDENTZ — Marketing AX</text>
 </svg>
