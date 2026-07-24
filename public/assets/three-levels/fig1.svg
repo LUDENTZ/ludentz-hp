@@ -7,21 +7,21 @@
 
   <!-- 01 COPILOT -->
   <rect x="60" y="320" width="248" height="114" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
-  <text x="82" y="350" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">01 COPILOT</text>
+  <text x="82" y="350" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">① 伴走型</text>
   <text x="82" y="380" font-size="20" font-weight="700" fill="#0A0A0A">作業を渡す</text>
   <text x="82" y="405" font-size="13" fill="#55554F">判断は人に残る。人が方向づけ、</text>
   <text x="82" y="424" font-size="13" fill="#55554F">AIが作業を巻き取る</text>
 
   <!-- 02 WORKFLOW -->
   <rect x="326" y="242" width="248" height="192" rx="6" fill="#FFFFFF" stroke="#D8D6D1"/>
-  <text x="348" y="272" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">02 WORKFLOW</text>
+  <text x="348" y="272" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">② 固定ワークフロー</text>
   <text x="348" y="302" font-size="20" font-weight="700" fill="#0A0A0A">手順を渡す</text>
   <text x="348" y="327" font-size="13" fill="#55554F">やり方まで言語化できているなら、</text>
   <text x="348" y="346" font-size="13" fill="#55554F">無人のレールに載る</text>
 
   <!-- 03 AGENT -->
   <rect x="592" y="164" width="248" height="270" rx="6" fill="#FFFFFF" stroke="#6B7FC7" stroke-width="1.5"/>
-  <text x="614" y="194" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">03 AGENT</text>
+  <text x="614" y="194" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="2" fill="#8A8A84">③ 委任型エージェント</text>
   <text x="614" y="224" font-size="20" font-weight="700" fill="#0A0A0A">目的を渡す</text>
   <text x="614" y="249" font-size="13" fill="#55554F">進め方は問わない。</text>
   <text x="614" y="268" font-size="13" fill="#55554F">ゴールだけ渡して自走させる</text>

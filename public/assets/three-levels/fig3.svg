@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 506" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif">
-  <title>COPILOTの実例——提案資料Skill</title>
+  <title>伴走型の実例——提案資料Skill</title>
   <rect width="900" height="506" fill="#FAFAF8"/>
-  <text x="60" y="52" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="3" fill="#8A8A84">01 COPILOT — 作業を渡す</text>
+  <text x="60" y="52" font-family="'JetBrains Mono',Menlo,monospace" font-size="12" letter-spacing="3" fill="#8A8A84">① 伴走型 — 作業を渡す</text>
   <text x="60" y="94" font-size="26" font-weight="700" fill="#0A0A0A">実例：提案資料Skill</text>
   <text x="60" y="124" font-size="15" fill="#55554F">過去の提案書の型を一度Skill化すれば、誰が使っても同じ品質で立ち上がる</text>
 

@@ -33,7 +33,7 @@ const articles = [
     number: '05',
     label: 'METHOD',
     title: 'AI委譲の3段階',
-    body: 'AIには、作業か、手順か、目的を渡す。COPILOT／WORKFLOW／AGENTを図解。',
+    body: 'AIには、作業か、手順か、目的を渡す。伴走型・固定ワークフロー・委任型エージェントを図解。',
   },
 ];
 
