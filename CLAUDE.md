@@ -28,4 +28,4 @@ React 18 + Vite 6。SSRプレレンダリングで全ルートを静的HTML化�
 ## 運用
 
 - 開発はfeatureブランチ → プレビュー確認 → ユーザー承認後に `main` へマージ（`main` へのpushが本番反映）
-- `/service/*` はインデックス許可済み。vercel.json にnoindexを再導入しないこと
+- `/service/*` はインデックス許可済み。noindexを再導入しないこと（vercel.jsonのヘッダーだけでなく、`src/main.jsx` 等でのクライアント側メタタグ注入も禁止。GooglebotはJSレンダリング後のDOMを見るため、JS注入のnoindexもインデックス除外の原因になる——2026年7月に実際に発生）

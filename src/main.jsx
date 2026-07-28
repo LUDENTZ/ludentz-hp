@@ -10,13 +10,6 @@ const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
 const route = findRoute(pathname);
 const Page = route.component;
 
-if (pathname.startsWith('/service/')) {
-  const robotsMeta = document.querySelector('meta[name="robots"]') ?? document.createElement('meta');
-  robotsMeta.setAttribute('name', 'robots');
-  robotsMeta.setAttribute('content', 'noindex, nofollow');
-  document.head.appendChild(robotsMeta);
-}
-
 initAnalytics();
 
 const root = document.getElementById('root');
