@@ -4818,3 +4818,73 @@ body[data-lang="ja"] .section-title--bilingual {
   transition: color var(--dur-fast) var(--ease);
 }
 .knowledge-external:hover { color: var(--fg-primary); }
+
+/* Knowledge: note実践ログ（RSS由来・ビルド時焼き込み） */
+.knowledge-note {
+  margin-top: 28px;
+  border: 1px solid var(--border-subtle);
+  background: var(--paper);
+}
+.knowledge-note-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 28px 16px;
+}
+.knowledge-note-head .knowledge-external { margin-top: 0; }
+.knowledge-note-kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--fg-muted);
+}
+.knowledge-note-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.knowledge-note-list li { border-top: 1px solid var(--border-subtle); }
+.knowledge-note-list a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 28px;
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease);
+}
+.knowledge-note-list a:hover { background: var(--ink-9); }
+.knowledge-note-thumb {
+  width: 96px;
+  height: 54px;
+  object-fit: cover;
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  filter: grayscale(100%) contrast(1.08);
+  flex-shrink: 0;
+}
+.knowledge-note-date {
+  flex-shrink: 0;
+  width: 92px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.knowledge-note-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--fg-primary);
+}
+.knowledge-note-arrow { color: var(--fg-muted); flex-shrink: 0; }
+.knowledge-note-list a:hover .knowledge-note-arrow { color: var(--fg-primary); }
+
+@media (max-width: 640px) {
+  .knowledge-note-head { flex-direction: column; gap: 8px; padding: 18px 20px 12px; }
+  .knowledge-note-list a { flex-wrap: wrap; gap: 10px 14px; padding: 14px 20px; }
+  .knowledge-note-thumb { width: 72px; height: 40px; }
+  .knowledge-note-date { width: auto; }
+  .knowledge-note-title { flex-basis: 100%; }
+}

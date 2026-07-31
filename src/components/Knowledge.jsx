@@ -1,3 +1,7 @@
+import noteFeed from '../data/note-feed.json';
+
+const NOTE_URL = 'https://note.com/marketing_ax';
+
 const FEATURED = {
   href: '/marketing-ax/',
   number: '01',
@@ -74,14 +78,43 @@ export default function Knowledge() {
           </a>
         ))}
       </div>
-      <a
-        className="knowledge-external"
-        href="https://note.com/marketing_ax"
-        target="_blank"
-        rel="noopener"
-      >
-        日々のAX実践ログはnoteで公開しています ↗
-      </a>
+      {noteFeed.items.length > 0 ? (
+        <div className="knowledge-note reveal d-2">
+          <div className="knowledge-note-head">
+            <span className="knowledge-note-kicker">PRACTICE LOG — 実践ログ</span>
+            <a className="knowledge-external" href={NOTE_URL} target="_blank" rel="noopener">
+              すべてnoteで読む ↗
+            </a>
+          </div>
+          <ul className="knowledge-note-list">
+            {noteFeed.items.slice(0, 3).map((item) => (
+              <li key={item.url}>
+                <a href={item.url} target="_blank" rel="noopener">
+                  {item.thumbnail && (
+                    <img
+                      className="knowledge-note-thumb"
+                      src={item.thumbnail}
+                      alt=""
+                      loading="lazy"
+                      width="96"
+                      height="54"
+                    />
+                  )}
+                  <span className="knowledge-note-date">
+                    {item.date ? item.date.replaceAll('-', '.') : ''}
+                  </span>
+                  <span className="knowledge-note-title">{item.title}</span>
+                  <span className="knowledge-note-arrow" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <a className="knowledge-external" href={NOTE_URL} target="_blank" rel="noopener">
+          日々のAX実践ログはnoteで公開しています ↗
+        </a>
+      )}
     </section>
   );
 }

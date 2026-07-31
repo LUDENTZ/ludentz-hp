@@ -19,6 +19,12 @@ React 18 + Vite 6。SSRプレレンダリングで全ルートを静的HTML化�
 
 タイトルや `og.lines` を変更したときも `npm run og` の再実行とPNGの再コミットが必要。
 
+## note実践ログ連携
+
+- トップのKnowledgeセクションはnoteのRSS（note.com/marketing_ax/rss）由来の最新記事を表示する
+- `npm run build` の先頭で `scripts/fetch-note-feed.mjs` がRSSを取得し `src/data/note-feed.json` を更新（失敗時は既存スナップショット維持でビルドは通る。ローカルはネットワーク制限で失敗するのが正常）
+- 鮮度はデプロイ時更新＋Vercel Cron（毎日 21:00 UTC = 6:00 JST）が `/api/refresh-note` → Deploy Hook で再デプロイ。要環境変数 `NOTE_DEPLOY_HOOK_URL`（推奨: `CRON_SECRET` も）
+
 ## デザイン
 
 - 新しいスタイルを発明せず、`src/styles/index.css` の既存トークン（`--paper` / `--ink-*` / `--font-ja-mincho` / `--font-mono` / `--border-subtle` 等）とコンポーネントを再利用する
