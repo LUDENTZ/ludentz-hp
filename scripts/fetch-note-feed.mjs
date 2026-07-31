@@ -11,7 +11,7 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 const outFile = path.resolve(dirname, '..', 'src', 'data', 'note-feed.json');
 
 const FEED_URL = 'https://note.com/marketing_ax/rss';
-const MAX_ITEMS = 6;
+const MAX_ITEMS = 9;
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36';
 

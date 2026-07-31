@@ -87,7 +87,7 @@ export default function Knowledge() {
             </a>
           </div>
           <div className="knowledge-note-grid">
-            {noteFeed.items.slice(0, 3).map((item) => (
+            {noteFeed.items.slice(0, 9).map((item) => (
               <a
                 className="knowledge-note-card"
                 href={item.url}
