@@ -4804,3 +4804,17 @@ body[data-lang="ja"] .section-title--bilingual {
   color: var(--fg-muted);
 }
 .article-hero .article-figure { margin: 32px 0 8px; }
+
+/* Knowledge: note外部リンク行 */
+.knowledge-external {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+.knowledge-external:hover { color: var(--fg-primary); }

@@ -5,7 +5,7 @@ export const AUTHOR_JSONLD = {
   jobTitle: '代表取締役',
   image: 'https://ludentz.net/assets/person-k.png',
   worksFor: { '@type': 'Organization', name: 'LUDENTZ株式会社' },
-  // TODO: note・XのURLが確定したら sameAs: ['<note URL>', '<X URL>'] を追加する
+  sameAs: ['https://note.com/marketing_ax'],
 };
 
 export const PUBLISHER_JSONLD = {

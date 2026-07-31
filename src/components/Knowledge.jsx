@@ -74,6 +74,14 @@ export default function Knowledge() {
           </a>
         ))}
       </div>
+      <a
+        className="knowledge-external"
+        href="https://note.com/marketing_ax"
+        target="_blank"
+        rel="noopener"
+      >
+        日々のAX実践ログはnoteで公開しています ↗
+      </a>
     </section>
   );
 }

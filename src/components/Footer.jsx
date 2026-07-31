@@ -30,6 +30,7 @@ export default function Footer() {
             <a href="/marketing-ax/cost">AX支援の費用相場</a>
             <a href="/marketing-ax/comparison">内製 vs 外注 vs AX</a>
             <a href="/marketing-ax/three-levels">AI委譲の3段階</a>
+            <a href="https://note.com/marketing_ax" target="_blank" rel="noopener">実践ログ（note）↗</a>
           </div>
         </div>
         <div

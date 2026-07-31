@@ -444,9 +444,10 @@ export default function MarketingAxArticlePage() {
                     お問い合わせ →
                   </a>
                 </li>
-                {/* TODO: 大平note URLが確定したらリンク化する */}
                 <li>
-                  <span className="article-cta-pending">実践ログはnoteで →（準備中）</span>
+                  <a href="https://note.com/marketing_ax" target="_blank" rel="noopener">
+                    実践ログはnoteで ↗
+                  </a>
                 </li>
               </ul>
             </section>
