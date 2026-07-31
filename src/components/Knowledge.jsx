@@ -83,7 +83,7 @@ export default function Knowledge() {
           <span className="knowledge-note-kicker">PRACTICE LOG — note.com/marketing_ax</span>
           <div className="knowledge-note-head">
             <div className="knowledge-note-lead">
-              <h3 className="knowledge-note-heading">まず、自分たちでやる。</h3>
+              <h3 className="knowledge-note-heading">実践ログ</h3>
               <p className="knowledge-note-copy">
                 自社の業務をAIエージェントで回す、日々の実践記録。うまくいった型も、失敗も、noteでそのまま公開しています。
               </p>
