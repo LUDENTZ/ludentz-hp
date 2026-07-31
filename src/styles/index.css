@@ -4822,22 +4822,39 @@ body[data-lang="ja"] .section-title--bilingual {
 /* Knowledge: note実践ログ（RSS由来・ビルド時焼き込み）
    上のストック記事カードと差別化するためダークバンド＋アイキャッチ主体で組む */
 .knowledge-note {
-  margin-top: 36px;
-  padding: 34px 36px 40px;
+  margin-top: 44px;
+  padding: 44px 44px 48px;
   background: var(--ink-0);
 }
-.knowledge-note-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 26px;
-}
 .knowledge-note-kicker {
+  display: block;
+  margin-bottom: 22px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.14em;
   color: #8A8A86;
+}
+.knowledge-note-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 34px;
+}
+.knowledge-note-heading {
+  margin: 0 0 14px;
+  font-family: var(--font-ja-mincho);
+  font-weight: 900;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.3;
+  color: var(--ink-10);
+}
+.knowledge-note-copy {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 14px;
+  line-height: 1.95;
+  color: #B5B3AD;
 }
 .knowledge-note-all {
   font-family: var(--font-mono);
@@ -4902,7 +4919,8 @@ body[data-lang="ja"] .section-title--bilingual {
 .knowledge-note-card:hover .knowledge-note-title { text-decoration: underline; text-underline-offset: 4px; }
 
 @media (max-width: 900px) {
-  .knowledge-note { padding: 26px 22px 30px; }
+  .knowledge-note { padding: 28px 22px 32px; }
+  .knowledge-note-head { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 26px; }
   .knowledge-note-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 }

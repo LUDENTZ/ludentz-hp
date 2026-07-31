@@ -80,8 +80,14 @@ export default function Knowledge() {
       </div>
       {noteFeed.items.length > 0 ? (
         <div className="knowledge-note reveal d-2">
+          <span className="knowledge-note-kicker">PRACTICE LOG — note.com/marketing_ax</span>
           <div className="knowledge-note-head">
-            <span className="knowledge-note-kicker">PRACTICE LOG — 実践ログ</span>
+            <div className="knowledge-note-lead">
+              <h3 className="knowledge-note-heading">まず、自分たちでやる。</h3>
+              <p className="knowledge-note-copy">
+                自社の業務をAIエージェントで回す、日々の実践記録。うまくいった型も、失敗も、noteでそのまま公開しています。
+              </p>
+            </div>
             <a className="knowledge-note-all" href={NOTE_URL} target="_blank" rel="noopener">
               すべてnoteで読む ↗
             </a>
