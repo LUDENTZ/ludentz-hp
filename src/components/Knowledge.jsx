@@ -82,33 +82,38 @@ export default function Knowledge() {
         <div className="knowledge-note reveal d-2">
           <div className="knowledge-note-head">
             <span className="knowledge-note-kicker">PRACTICE LOG — 実践ログ</span>
-            <a className="knowledge-external" href={NOTE_URL} target="_blank" rel="noopener">
+            <a className="knowledge-note-all" href={NOTE_URL} target="_blank" rel="noopener">
               すべてnoteで読む ↗
             </a>
           </div>
-          <ul className="knowledge-note-list">
+          <div className="knowledge-note-grid">
             {noteFeed.items.slice(0, 3).map((item) => (
-              <li key={item.url}>
-                <a href={item.url} target="_blank" rel="noopener">
-                  {item.thumbnail && (
-                    <img
-                      className="knowledge-note-thumb"
-                      src={item.thumbnail}
-                      alt=""
-                      loading="lazy"
-                      width="96"
-                      height="54"
-                    />
-                  )}
-                  <span className="knowledge-note-date">
-                    {item.date ? item.date.replaceAll('-', '.') : ''}
+              <a
+                className="knowledge-note-card"
+                href={item.url}
+                target="_blank"
+                rel="noopener"
+                key={item.url}
+              >
+                {item.thumbnail ? (
+                  <img
+                    className="knowledge-note-thumb"
+                    src={item.thumbnail}
+                    alt=""
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="knowledge-note-thumb knowledge-note-thumb--empty" aria-hidden="true">
+                    note
                   </span>
-                  <span className="knowledge-note-title">{item.title}</span>
-                  <span className="knowledge-note-arrow" aria-hidden="true">↗</span>
-                </a>
-              </li>
+                )}
+                <span className="knowledge-note-date">
+                  {item.date ? item.date.replaceAll('-', '.') : ''}
+                </span>
+                <h3 className="knowledge-note-title">{item.title}</h3>
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       ) : (
         <a className="knowledge-external" href={NOTE_URL} target="_blank" rel="noopener">
