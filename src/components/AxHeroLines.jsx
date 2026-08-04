@@ -1,4 +1,6 @@
-// hero背景の装飾線画。決定論的パイプラインを思わせるヘアラインが表示時にゆっくり描画される。
+// hero背景の装飾線画：オーケストレーションのメタファー。
+// 左からの入力が中央のオーケストレーター（二重円）に届き、
+// そこから3本のスポークがワーカーノードへ伸び、各ワーカーが右へ走り続ける。
 // pathLength=1 でCSS側のdashアニメーションを正規化している
 export default function AxHeroLines() {
   return (
@@ -9,14 +11,22 @@ export default function AxHeroLines() {
       aria-hidden="true"
       preserveAspectRatio="xMidYMax slice"
     >
-      <path className="l1" pathLength="1" d="M -40 520 H 250 L 330 440 H 620" />
-      <path className="l2" pathLength="1" d="M 620 440 H 810 L 878 372 H 1240" />
-      <path className="l3" pathLength="1" d="M 330 440 V 250 L 404 176 H 750" />
-      <path className="l4" pathLength="1" d="M 750 176 L 816 110 H 1240" />
-      <circle className="n1" cx="250" cy="520" r="4" />
-      <circle className="n2" cx="620" cy="440" r="4" />
-      <circle className="n3" cx="750" cy="176" r="4" />
-      <rect className="n4" x="873" y="367" width="10" height="10" />
+      {/* 入力：左から中央のオーケストレーターへ */}
+      <path className="p-in" pathLength="1" d="M -40 560 H 320 L 430 470 H 540 L 600 408" />
+      {/* スポーク：オーケストレーター → 各ワーカー */}
+      <path className="p-s1" pathLength="1" d="M 600 400 V 250 L 665 185 H 800" />
+      <path className="p-s2" pathLength="1" d="M 594 394 L 460 260 V 200 L 415 155" />
+      <path className="p-s3" pathLength="1" d="M 600 400 L 700 500 H 810" />
+      {/* ワーカーから先へ走る線 */}
+      <path className="p-e1" pathLength="1" d="M 800 185 H 950 L 1010 125 H 1240" />
+      <path className="p-e2" pathLength="1" d="M 810 500 H 990 L 1050 560 H 1240" />
+      {/* オーケストレーター（二重円） */}
+      <circle className="n-hub-ring" cx="600" cy="400" r="12" />
+      <circle className="n-hub" cx="600" cy="400" r="4.5" />
+      {/* ワーカー */}
+      <circle className="n-w1" cx="800" cy="185" r="4" />
+      <rect className="n-w2" x="410" y="150" width="9" height="9" transform="rotate(45 414.5 154.5)" />
+      <circle className="n-w3" cx="810" cy="500" r="4" />
     </svg>
   );
 }
