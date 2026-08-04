@@ -5014,7 +5014,7 @@ body[data-lang="ja"] .section-title--bilingual {
 @keyframes hero-draw { to { stroke-dashoffset: 0; } }
 @keyframes hero-node-in { to { opacity: 1; } }
 .ax-hero-lines path {
-  stroke: var(--border-strong);
+  stroke: #B5B3AD;
   stroke-width: 1;
 }
 .ax-hero-lines .p-in,
@@ -5037,7 +5037,7 @@ body[data-lang="ja"] .section-title--bilingual {
   opacity: 0;
   animation: hero-node-in 0.5s var(--ease) 1.05s forwards;
 }
-.ax-hero-lines .p-ray { stroke: #8A8A84; animation-duration: 0.7s; }
+.ax-hero-lines .p-ray { animation-duration: 0.7s; }
 .ax-hero-lines .p-r1 { animation-delay: 1.15s; }
 .ax-hero-lines .p-r2 { animation-delay: 1.25s; }
 .ax-hero-lines .p-r3 { animation-delay: 1.35s; }
@@ -5054,15 +5054,13 @@ body[data-lang="ja"] .section-title--bilingual {
 .ax-hero-lines .n-r2 { animation-delay: 1.95s; }
 .ax-hero-lines .n-r3 { animation-delay: 2.05s; }
 .ax-hero-lines .n-r4 { animation-delay: 2.15s; }
-.ax-hero-lines .n-r5 { animation-delay: 2.25s; }
-.ax-hero-lines .p-cont { stroke: #C9C7C1; animation-duration: 0.9s; }
+.ax-hero-lines .p-cont { animation-duration: 0.9s; }
 .ax-hero-lines .p-c1 { animation-delay: 2.05s; }
 .ax-hero-lines .p-c2 { animation-delay: 2.15s; }
 .ax-hero-lines .p-c3 { animation-delay: 2.25s; }
 .ax-hero-lines .p-c4 { animation-delay: 2.35s; }
-.ax-hero-lines .p-c5 { animation-delay: 2.45s; }
 .ax-hero-lines .n-dust {
-  fill: #B5B3AD;
+  fill: #8A8A84;
   opacity: 0;
   animation: hero-node-in 0.6s var(--ease) forwards;
 }
