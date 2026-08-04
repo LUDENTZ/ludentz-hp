@@ -1,6 +1,6 @@
-// hero背景の装飾線画：AIエージェントのメタファー（シャープな計器調）。
-// 点線の境界の中で、クロスヘア付きのモデルノード3つを45°ベンドの直線回路が循環し、
-// 左から入力を受け、右へアクションが出ていく。pathLength=1 でdashアニメーションを正規化
+// hero背景の装飾線画：左からの1本の入力が起点（二重円）に届き、
+// そこから右へ放射状に5本の線が拡散していく。遠ざかるほど線は薄くなり、
+// 先端に小さなノード、さらに先に微粒子が散る。pathLength=1 でdashアニメーションを正規化
 export default function AxHeroLines() {
   return (
     <svg
@@ -10,51 +10,39 @@ export default function AxHeroLines() {
       aria-hidden="true"
       preserveAspectRatio="xMidYMax slice"
     >
-      {/* 入力：左から境界へ（交点にティック） */}
-      <path className="p-in" pathLength="1" d="M -40 585 H 300 L 380 505 H 480" />
-      <line className="tick t-in" x1="480" y1="497" x2="480" y2="513" />
+      {/* 入力：左から起点へ */}
+      <path className="p-in" pathLength="1" d="M -40 570 H 190 L 260 500 H 314" />
 
-      {/* エージェント境界（点線・直角） */}
-      <rect className="b-box" x="480" y="236" width="360" height="368" />
+      {/* 起点（二重円） */}
+      <circle className="n-hub-ring" cx="330" cy="500" r="12" />
+      <circle className="n-hub" cx="330" cy="500" r="4.5" />
 
-      {/* モデルノード：クロスヘア付きの円 */}
-      <g className="c-m g-a">
-        <circle cx="600" cy="292" r="12" />
-        <circle className="dot" cx="600" cy="292" r="2.5" />
-        <line x1="600" y1="274" x2="600" y2="282" />
-        <line x1="600" y1="302" x2="600" y2="310" />
-        <line x1="582" y1="292" x2="590" y2="292" />
-        <line x1="610" y1="292" x2="618" y2="292" />
-      </g>
-      <g className="c-m g-b">
-        <circle cx="762" cy="552" r="12" />
-        <circle className="dot" cx="762" cy="552" r="2.5" />
-        <line x1="762" y1="534" x2="762" y2="542" />
-        <line x1="762" y1="562" x2="762" y2="570" />
-        <line x1="744" y1="552" x2="752" y2="552" />
-        <line x1="772" y1="552" x2="780" y2="552" />
-      </g>
-      <g className="c-m g-c">
-        <circle cx="533" cy="483" r="12" />
-        <circle className="dot" cx="533" cy="483" r="2.5" />
-        <line x1="533" y1="465" x2="533" y2="473" />
-        <line x1="533" y1="493" x2="533" y2="501" />
-        <line x1="515" y1="483" x2="523" y2="483" />
-        <line x1="543" y1="483" x2="551" y2="483" />
-      </g>
+      {/* 放射：起点から右へ拡散する5本 */}
+      <path className="p-ray p-r1" pathLength="1" d="M 347 489 L 562 344" />
+      <path className="p-ray p-r2" pathLength="1" d="M 349 494 L 644 398" />
+      <path className="p-ray p-r3" pathLength="1" d="M 350 499 L 709 473" />
+      <path className="p-ray p-r4" pathLength="1" d="M 350 503 L 677 549" />
+      <path className="p-ray p-r5" pathLength="1" d="M 348 508 L 596 587" />
 
-      {/* 循環回路：A→B→C→A（45°ベンドの直線） */}
-      <path className="p-arc p-arc1" pathLength="1" d="M 612 304 L 700 392 V 470 L 754 524" />
-      <path className="p-arc p-arc2" pathLength="1" d="M 744 552 H 620 L 553 496" />
-      <path className="p-arc p-arc3" pathLength="1" d="M 533 465 V 390 L 588 316" />
-      {/* 矢じり */}
-      <path className="a-h a-h1" d="M 754 524 l -10 -3 l 3 -7 z" />
-      <path className="a-h a-h2" d="M 553 496 l 3 -10 l 7 4 z" />
-      <path className="a-h a-h3" d="M 588 316 l -10 3 l 3 7 z" />
+      {/* 各線の先端ノード */}
+      <circle className="n-ray n-r1" cx="562" cy="344" r="3" />
+      <circle className="n-ray n-r2" cx="644" cy="398" r="3" />
+      <rect className="n-ray n-r3" x="704.5" y="468.5" width="9" height="9" transform="rotate(45 709 473)" />
+      <circle className="n-ray n-r4" cx="677" cy="549" r="3" />
+      <circle className="n-ray n-r5" cx="596" cy="587" r="3" />
 
-      {/* 出力：境界から右へ（交点にティック） */}
-      <path className="p-out" pathLength="1" d="M 774 552 H 1000 L 1062 610 H 1240" />
-      <line className="tick t-out" x1="840" y1="544" x2="840" y2="560" />
+      {/* 拡散の続き：ノードの先へ、薄く伸びる */}
+      <path className="p-cont p-c1" pathLength="1" d="M 572 337 L 794 187" />
+      <path className="p-cont p-c2" pathLength="1" d="M 655 394 L 948 299" />
+      <path className="p-cont p-c3" pathLength="1" d="M 721 472 L 1069 448" />
+      <path className="p-cont p-c4" pathLength="1" d="M 688 550 L 1023 597" />
+      <path className="p-cont p-c5" pathLength="1" d="M 608 590 L 761 640" />
+
+      {/* 微粒子：さらに先で散る */}
+      <circle className="n-dust n-d1" cx="838" cy="152" r="2" />
+      <circle className="n-dust n-d2" cx="1000" cy="278" r="2" />
+      <circle className="n-dust n-d3" cx="1120" cy="442" r="2.5" />
+      <circle className="n-dust n-d4" cx="1072" cy="608" r="2" />
     </svg>
   );
 }
