@@ -4865,6 +4865,13 @@ body[data-lang="ja"] .section-title--bilingual {
   transition: color var(--dur-fast) var(--ease);
 }
 .knowledge-note-all:hover { color: var(--ink-10); }
+.knowledge-note-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  white-space: nowrap;
+}
 .knowledge-note-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -4921,6 +4928,7 @@ body[data-lang="ja"] .section-title--bilingual {
 @media (max-width: 900px) {
   .knowledge-note { padding: 28px 22px 32px; }
   .knowledge-note-head { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 26px; }
+  .knowledge-note-links { flex-direction: row; align-items: flex-start; gap: 22px; }
   .knowledge-note-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 }

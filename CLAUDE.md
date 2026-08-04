@@ -21,9 +21,10 @@ React 18 + Vite 6。SSRプレレンダリングで全ルートを静的HTML化�
 
 ## note実践ログ連携
 
-- トップのKnowledgeセクションはnoteのRSS（note.com/marketing_ax/rss）由来の最新記事を表示する
-- `npm run build` の先頭で `scripts/fetch-note-feed.mjs` がRSSを取得し `src/data/note-feed.json` を更新（失敗時は既存スナップショット維持でビルドは通る。ローカルはネットワーク制限で失敗するのが正常）
-- 鮮度はデプロイ時更新＋Vercel Cron（毎日 21:00 UTC = 6:00 JST）が `/api/refresh-note` → Deploy Hook で再デプロイ。要環境変数 `NOTE_DEPLOY_HOOK_URL`（推奨: `CRON_SECRET` も）
+- 実践ログ（トップKnowledge内＋/service/ad-operations-ax）はnoteのRSS由来の最新6件を表示する。対象は2アカウント: `marketing_ax`（表示ラベル: LUDENTZ）と `yyy_018`（小林・共同創業者）。アカウント追加時は `scripts/fetch-note-feed.mjs` の `FEEDS` と `src/components/PracticeLog.jsx` の `ACCOUNTS` を揃えて更新する
+- `npm run build` の先頭で `scripts/fetch-note-feed.mjs` が全RSSを取得し `src/data/note-feed.json` を更新（片方失敗はそのアカウント分だけ既存維持、全失敗はスナップショット維持でビルドは通る。ローカルはネットワーク制限で失敗するのが正常）
+- 自動反映: GitHub Actions（`.github/workflows/refresh-note-feed.yml`、6時間ごと）がRSSを取得し、記事に変化があれば `note-feed.json` をmainにpush → Vercelが自動デプロイ。手動で即時反映したいときはActionsの workflow_dispatch 実行か、mainへの空コミットでよい
+- Vercel Cron（`/api/refresh-note`、毎日 21:00 UTC）は補助経路として残置。環境変数 `NOTE_DEPLOY_HOOK_URL` 未設定なら何もしない
 
 ## デザイン
 
