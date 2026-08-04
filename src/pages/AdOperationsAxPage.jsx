@@ -1,4 +1,6 @@
 import AxCategoryPage from '../components/AxCategoryPage';
+import PracticeLog from '../components/PracticeLog';
+import ConsultantProfile from '../components/ConsultantProfile';
 
 const CONFIG = {
   meta: ['01', '広告運用AX', 'AD OPERATIONS'],
@@ -63,6 +65,12 @@ export default function AdOperationsAxPage() {
           <p className="ax-usecase-disclaimer">※ 工数は業界一般の目安です。導入時は御社の実測値でBeforeを置き換え、効果を測定します。</p>
         </div>
       </section>
+
+      <section className="business-band practice-log-band">
+        <PracticeLog />
+      </section>
+
+      <ConsultantProfile />
     </AxCategoryPage>
   );
 }

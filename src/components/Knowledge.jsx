@@ -1,6 +1,4 @@
-import noteFeed from '../data/note-feed.json';
-
-const NOTE_URL = 'https://note.com/marketing_ax';
+import PracticeLog, { NOTE_URL } from './PracticeLog';
 
 const FEATURED = {
   href: '/marketing-ax/',
@@ -78,54 +76,14 @@ export default function Knowledge() {
           </a>
         ))}
       </div>
-      {noteFeed.items.length > 0 ? (
-        <div className="knowledge-note reveal d-2">
-          <span className="knowledge-note-kicker">PRACTICE LOG — note.com/marketing_ax</span>
-          <div className="knowledge-note-head">
-            <div className="knowledge-note-lead">
-              <h3 className="knowledge-note-heading">実践ログ</h3>
-              <p className="knowledge-note-copy">
-                自社の業務をAIエージェントで回す、日々の実践記録。うまくいった型も、失敗も、noteでそのまま公開しています。
-              </p>
-            </div>
-            <a className="knowledge-note-all" href={NOTE_URL} target="_blank" rel="noopener">
-              すべてnoteで読む ↗
-            </a>
-          </div>
-          <div className="knowledge-note-grid">
-            {noteFeed.items.slice(0, 6).map((item) => (
-              <a
-                className="knowledge-note-card"
-                href={item.url}
-                target="_blank"
-                rel="noopener"
-                key={item.url}
-              >
-                {item.thumbnail ? (
-                  <img
-                    className="knowledge-note-thumb"
-                    src={item.thumbnail}
-                    alt=""
-                    loading="lazy"
-                  />
-                ) : (
-                  <span className="knowledge-note-thumb knowledge-note-thumb--empty" aria-hidden="true">
-                    note
-                  </span>
-                )}
-                <span className="knowledge-note-date">
-                  {item.date ? item.date.replaceAll('-', '.') : ''}
-                </span>
-                <h3 className="knowledge-note-title">{item.title}</h3>
-              </a>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <a className="knowledge-external" href={NOTE_URL} target="_blank" rel="noopener">
-          日々のAX実践ログはnoteで公開しています ↗
-        </a>
-      )}
+      <PracticeLog
+        className="reveal d-2"
+        fallback={
+          <a className="knowledge-external" href={NOTE_URL} target="_blank" rel="noopener">
+            日々のAX実践ログはnoteで公開しています ↗
+          </a>
+        }
+      />
     </section>
   );
 }

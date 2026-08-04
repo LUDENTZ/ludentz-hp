@@ -4924,3 +4924,49 @@ body[data-lang="ja"] .section-title--bilingual {
   .knowledge-note-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 }
+
+/* ── Service pages · practice log band + consultant profile ── */
+.practice-log-band .knowledge-note { margin-top: 0; }
+.consultant-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+  padding: 36px;
+  border: 1px solid var(--border-subtle);
+  background: var(--paper);
+}
+.consultant-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  filter: grayscale(100%) contrast(1.08);
+}
+.consultant-body p {
+  margin: 0 0 1.2em;
+  font-size: 14px;
+  line-height: 2;
+  color: var(--fg-body);
+}
+.consultant-body p:last-child { margin-bottom: 0; }
+.consultant-name {
+  font-family: var(--font-ja-mincho);
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--fg-primary);
+  margin-bottom: 2px !important;
+}
+.consultant-role {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+  margin-bottom: 18px !important;
+}
+
+@media (max-width: 640px) {
+  .consultant-card { grid-template-columns: 1fr; gap: 22px; padding: 24px 20px; }
+  .consultant-photo { width: 120px; height: 120px; }
+}
