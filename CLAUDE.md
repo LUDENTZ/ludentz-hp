@@ -21,7 +21,7 @@ React 18 + Vite 6。SSRプレレンダリングで全ルートを静的HTML化�
 
 ## note実践ログ連携
 
-- 実践ログ（トップKnowledge内＋/service/ad-operations-ax）はnoteのRSS由来の最新6件を表示する。対象は2アカウント: `marketing_ax`（表示ラベル: LUDENTZ）と `yyy_018`（小林・共同創業者）。アカウント追加時は `scripts/fetch-note-feed.mjs` の `FEEDS` と `src/components/PracticeLog.jsx` の `ACCOUNTS` を揃えて更新する
+- 実践ログ（トップKnowledge内＋/service/ad-operations-ax）はnoteのRSS由来の最新6件を表示する。対象は2アカウント: `marketing_ax`（表示ラベル: 大平）と `yyy_018`（小林・共同創業者）。アカウント追加時は `scripts/fetch-note-feed.mjs` の `FEEDS` と `src/components/PracticeLog.jsx` の `ACCOUNTS` を揃えて更新する
 - `npm run build` の先頭で `scripts/fetch-note-feed.mjs` が全RSSを取得し `src/data/note-feed.json` を更新（片方失敗はそのアカウント分だけ既存維持、全失敗はスナップショット維持でビルドは通る。ローカルはネットワーク制限で失敗するのが正常）
 - 自動反映: GitHub Actions（`.github/workflows/refresh-note-feed.yml`、6時間ごと）がRSSを取得し、記事に変化があれば `note-feed.json` をmainにpush → Vercelが自動デプロイ。手動で即時反映したいときはActionsの workflow_dispatch 実行か、mainへの空コミットでよい
 - Vercel Cron（`/api/refresh-note`、毎日 21:00 UTC）は補助経路として残置。環境変数 `NOTE_DEPLOY_HOOK_URL` 未設定なら何もしない

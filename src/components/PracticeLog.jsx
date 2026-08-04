@@ -4,7 +4,7 @@ export const NOTE_URL = 'https://note.com/marketing_ax';
 
 // フィードのaccount → 表示ラベルとリンク先
 const ACCOUNTS = {
-  marketing_ax: { label: 'LUDENTZ', url: 'https://note.com/marketing_ax' },
+  marketing_ax: { label: '大平', url: 'https://note.com/marketing_ax' },
   yyy_018: { label: '小林', url: 'https://note.com/yyy_018' },
 };
 
@@ -24,7 +24,7 @@ export default function PracticeLog({ fallback = null, className = '' }) {
         </div>
         <div className="knowledge-note-links">
           <a className="knowledge-note-all" href={ACCOUNTS.marketing_ax.url} target="_blank" rel="noopener">
-            LUDENTZのnote ↗
+            大平のnote ↗
           </a>
           <a className="knowledge-note-all" href={ACCOUNTS.yyy_018.url} target="_blank" rel="noopener">
             小林のnote ↗
