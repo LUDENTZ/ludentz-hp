@@ -1,4 +1,17 @@
 {
-  "fetchedAt": null,
-  "items": []
+  "fetchedAt": "2026-08-04T07:19:50.527Z",
+  "items": [
+    {
+      "title": "AIでLPをアジャイルに回したら、爆速改善が回りリードが取れるようになった話",
+      "url": "https://note.com/marketing_ax/n/nea4b25385976",
+      "date": "2026-08-04",
+      "thumbnail": "https://assets.st-note.com/production/uploads/images/300369992/rectangle_large_type_2_72c115ef82acc9f31a7c7225eb164de5.png?width=800"
+    },
+    {
+      "title": "Google広告の配信準備、AIの言いなりになってわかったベストプラクティス【言いなり編】",
+      "url": "https://note.com/marketing_ax/n/n5190f3c89ee2",
+      "date": "2026-07-30",
+      "thumbnail": "https://assets.st-note.com/production/uploads/images/299067098/rectangle_large_type_2_5716074a1fa72e08f701e841093a67c2.png?width=800"
+    }
+  ]
 }
