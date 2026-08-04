@@ -4,6 +4,7 @@ import CTA from './CTA';
 import Footer from './Footer';
 import ContactModal from './ContactModal';
 import AxIntro from './AxIntro';
+import AxHeroLines from './AxHeroLines';
 import AxServiceModel from './AxServiceModel';
 import AxStack from './AxStack';
 import AxPricing from './AxPricing';
@@ -46,6 +47,7 @@ export default function AxCategoryPage({ config, children, afterIntro = null, af
 
       <main>
         <section className="business-hero" id="top">
+          <AxHeroLines />
           <div className="business-hero-layout">
             <div className="business-hero-copy">
               <div className="business-hero-meta">

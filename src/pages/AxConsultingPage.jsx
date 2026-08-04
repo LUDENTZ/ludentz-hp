@@ -4,6 +4,7 @@ import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import AxIntro from '../components/AxIntro';
+import AxHeroLines from '../components/AxHeroLines';
 import AxServiceModel from '../components/AxServiceModel';
 import AxStack from '../components/AxStack';
 import AxPricing from '../components/AxPricing';
@@ -80,6 +81,7 @@ export default function AxConsultingPage() {
 
       <main>
         <section className="business-hero" id="top">
+          <AxHeroLines />
           <div className="business-hero-layout">
             <div className="business-hero-copy">
               <div className="business-hero-meta">

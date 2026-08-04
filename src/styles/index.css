@@ -4970,3 +4970,87 @@ body[data-lang="ja"] .section-title--bilingual {
   .consultant-card { grid-template-columns: 1fr; gap: 22px; padding: 24px 20px; }
   .consultant-photo { width: 120px; height: 120px; }
 }
+
+/* ── Hero motion（下層LP共通・CSSのみ／CLSゼロ） ─────────── */
+/* ① タイトル行のリビール：ブラー解除しながら立ち上がる */
+@keyframes hero-line-in {
+  from { opacity: 0; transform: translateY(0.38em); filter: blur(7px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+.business-hero .business-title .nowrap {
+  display: inline-block;
+  opacity: 0;
+  animation: hero-line-in 0.85s var(--ease) forwards;
+}
+.business-hero .business-title .nowrap:nth-child(1) { animation-delay: 0.1s; }
+.business-hero .business-title .nowrap:nth-child(2) { animation-delay: 0.24s; }
+.business-hero .business-title .nowrap:nth-child(3) { animation-delay: 0.38s; }
+.business-hero .business-hero-meta,
+.business-hero .business-lead {
+  opacity: 0;
+  animation: hero-fade-up 0.8s var(--ease) 0.5s forwards;
+}
+.business-hero .business-hero-meta { animation-delay: 0.05s; }
+.business-hero .business-hero-panel {
+  opacity: 0;
+  animation: hero-fade-up 0.85s var(--ease) 0.66s forwards;
+}
+
+/* ② 背景の描画線：ヘアラインがゆっくり引かれ、描き終わると静止する */
+.ax-hero-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.business-hero .business-hero-layout { position: relative; z-index: 1; }
+@keyframes hero-draw { to { stroke-dashoffset: 0; } }
+@keyframes hero-node-in { to { opacity: 1; } }
+.ax-hero-lines path {
+  stroke: var(--border-strong);
+  stroke-width: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: hero-draw 1.3s var(--ease) forwards;
+}
+.ax-hero-lines .l1 { animation-delay: 0.25s; }
+.ax-hero-lines .l2 { animation-delay: 1.1s; }
+.ax-hero-lines .l3 { animation-delay: 1.35s; }
+.ax-hero-lines .l4 { animation-delay: 2.2s; }
+.ax-hero-lines circle,
+.ax-hero-lines rect {
+  fill: var(--paper);
+  stroke: var(--border-strong);
+  stroke-width: 1;
+  opacity: 0;
+  animation: hero-node-in 0.5s var(--ease) forwards;
+}
+.ax-hero-lines .n1 { animation-delay: 0.3s; }
+.ax-hero-lines .n2 { animation-delay: 1.15s; }
+.ax-hero-lines .n3 { animation-delay: 2.25s; }
+.ax-hero-lines .n4 { animation-delay: 2.3s; }
+
+@media (max-width: 900px) {
+  .ax-hero-lines { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .business-hero .business-title .nowrap,
+  .business-hero .business-hero-meta,
+  .business-hero .business-lead,
+  .business-hero .business-hero-panel {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  .ax-hero-lines path { animation: none; stroke-dashoffset: 0; }
+  .ax-hero-lines circle,
+  .ax-hero-lines rect { animation: none; opacity: 1; }
+}
