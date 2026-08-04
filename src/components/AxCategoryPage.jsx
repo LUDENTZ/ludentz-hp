@@ -11,7 +11,7 @@ import { trackEvent } from '../lib/analytics';
 
 const DEFAULTS = { lang: 'ja', theme: 'light', intensity: 'normal' };
 
-export default function AxCategoryPage({ config, children, afterIntro = null }) {
+export default function AxCategoryPage({ config, children, afterIntro = null, afterPricing = null }) {
   const [modal, setModal] = useState(false);
 
   useEffect(() => {
@@ -89,6 +89,8 @@ export default function AxCategoryPage({ config, children, afterIntro = null }) 
         <AxStack />
 
         <AxPricing />
+
+        {afterPricing}
 
         <CTA />
       </main>

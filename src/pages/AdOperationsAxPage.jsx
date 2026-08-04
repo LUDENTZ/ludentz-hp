@@ -26,7 +26,13 @@ const useCases = [
 
 export default function AdOperationsAxPage() {
   return (
-    <AxCategoryPage config={CONFIG} afterIntro={<ConsultantProfile />}>
+    <AxCategoryPage config={CONFIG} afterIntro={<ConsultantProfile />}
+      afterPricing={
+        <section className="business-band practice-log-band">
+          <PracticeLog />
+        </section>
+      }
+    >
       <section className="business-band ax-usecase">
         <div className="business-section-head">
           <p className="business-kicker">USE CASE</p>
@@ -64,10 +70,6 @@ export default function AdOperationsAxPage() {
           </div>
           <p className="ax-usecase-disclaimer">※ 工数は業界一般の目安です。導入時は御社の実測値でBeforeを置き換え、効果を測定します。</p>
         </div>
-      </section>
-
-      <section className="business-band practice-log-band">
-        <PracticeLog />
       </section>
 
     </AxCategoryPage>

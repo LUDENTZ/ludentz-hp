@@ -4,7 +4,7 @@ export default function ConsultantProfile() {
     <section className="business-band consultant">
       <div className="business-section-head">
         <p className="business-kicker">CONSULTANT — 担当</p>
-        <h2>全ての案件に、代表が直接入ります。</h2>
+        <h2>全案件、代表が直接入ります。</h2>
         <p className="business-section-copy">
           （創業1期目限定）業務の棚卸しから設計・実装・定着まで、代表の大平が一貫して担当します。
         </p>
