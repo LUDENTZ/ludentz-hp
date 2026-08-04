@@ -26,7 +26,7 @@ const useCases = [
 
 export default function AdOperationsAxPage() {
   return (
-    <AxCategoryPage config={CONFIG}>
+    <AxCategoryPage config={CONFIG} afterIntro={<ConsultantProfile />}>
       <section className="business-band ax-usecase">
         <div className="business-section-head">
           <p className="business-kicker">USE CASE</p>
@@ -70,7 +70,6 @@ export default function AdOperationsAxPage() {
         <PracticeLog />
       </section>
 
-      <ConsultantProfile />
     </AxCategoryPage>
   );
 }
