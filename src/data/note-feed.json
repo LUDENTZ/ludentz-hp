@@ -1,6 +1,13 @@
 {
-  "fetchedAt": "2026-08-05T09:10:48.753Z",
+  "fetchedAt": "2026-08-05T14:38:06.525Z",
   "items": [
+    {
+      "account": "marketing_ax",
+      "title": "広告レポート自動化。Windsor.ai＋BigQuery＋Vercelで作ってみた",
+      "url": "https://note.com/marketing_ax/n/nd7358b11a5b7",
+      "date": "2026-08-05",
+      "thumbnail": "https://assets.st-note.com/production/uploads/images/300691176/rectangle_large_type_2_dd22308d1922b82f08a2c6199945afc4.png?width=800"
+    },
     {
       "account": "yyy_018",
       "title": "フォーム営業のAI化、詰まったのは文面じゃなかった【送れないフォーム編】",
