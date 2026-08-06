@@ -1,6 +1,13 @@
 {
-  "fetchedAt": "2026-08-05T14:38:06.525Z",
+  "fetchedAt": "2026-08-06T14:38:44.954Z",
   "items": [
+    {
+      "account": "yyy_018",
+      "title": "「成功率が落ちた」の正体は、測り方が直っただけだった【測ったつもり編】",
+      "url": "https://note.com/yyy_018/n/nb8570a4d3c71",
+      "date": "2026-08-06",
+      "thumbnail": "https://assets.st-note.com/production/uploads/images/300980693/rectangle_large_type_2_d32591f657bf394c088ce2fe08452a5f.png?width=800"
+    },
     {
       "account": "marketing_ax",
       "title": "広告レポート自動化。Windsor.ai＋BigQuery＋Vercelで作ってみた",
