@@ -1,6 +1,13 @@
 {
-  "fetchedAt": "2026-08-10T08:08:45.708Z",
+  "fetchedAt": "2026-08-10T13:48:46.308Z",
   "items": [
+    {
+      "account": "marketing_ax",
+      "title": "Google広告の配信準備、AIの言いなりになってわかったベストプラクティス【ベスプラ編】",
+      "url": "https://note.com/marketing_ax/n/n990244ad4c25",
+      "date": "2026-08-10",
+      "thumbnail": "https://assets.st-note.com/production/uploads/images/302256973/rectangle_large_type_2_c738d5d51427e5ee43cc161d718360af.png?width=800"
+    },
     {
       "account": "marketing_ax",
       "title": "広告ダッシュボードにAIを組み込み、改善提案からGoogle広告への反映まで繋げてみた",
@@ -35,13 +42,6 @@
       "url": "https://note.com/marketing_ax/n/nea4b25385976",
       "date": "2026-08-04",
       "thumbnail": "https://assets.st-note.com/production/uploads/images/300369992/rectangle_large_type_2_72c115ef82acc9f31a7c7225eb164de5.png?width=800"
-    },
-    {
-      "account": "yyy_018",
-      "title": "フォーム営業の自動化、一番悩んだのはAIに何をさせないかだった【設計編】",
-      "url": "https://note.com/yyy_018/n/n82577abf8f72",
-      "date": "2026-08-04",
-      "thumbnail": "https://assets.st-note.com/production/uploads/images/300685033/rectangle_large_type_2_5137a09a77b9ce3696db548543536c2f.png?width=800"
     }
   ]
 }
