@@ -1,6 +1,13 @@
 {
-  "fetchedAt": "2026-08-06T14:38:44.954Z",
+  "fetchedAt": "2026-08-10T08:08:45.708Z",
   "items": [
+    {
+      "account": "marketing_ax",
+      "title": "広告ダッシュボードにAIを組み込み、改善提案からGoogle広告への反映まで繋げてみた",
+      "url": "https://note.com/marketing_ax/n/n6b34ecf49642",
+      "date": "2026-08-10",
+      "thumbnail": "https://assets.st-note.com/production/uploads/images/302144976/rectangle_large_type_2_f5e7849f5be32fc3fede14512271ac5e.png?width=800"
+    },
     {
       "account": "yyy_018",
       "title": "「成功率が落ちた」の正体は、測り方が直っただけだった【測ったつもり編】",
@@ -35,13 +42,6 @@
       "url": "https://note.com/yyy_018/n/n82577abf8f72",
       "date": "2026-08-04",
       "thumbnail": "https://assets.st-note.com/production/uploads/images/300685033/rectangle_large_type_2_5137a09a77b9ce3696db548543536c2f.png?width=800"
-    },
-    {
-      "account": "marketing_ax",
-      "title": "Google広告の配信準備、AIの言いなりになってわかったベストプラクティス【言いなり編】",
-      "url": "https://note.com/marketing_ax/n/n5190f3c89ee2",
-      "date": "2026-07-30",
-      "thumbnail": "https://assets.st-note.com/production/uploads/images/299067098/rectangle_large_type_2_5716074a1fa72e08f701e841093a67c2.png?width=800"
     }
   ]
 }
