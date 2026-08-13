@@ -10,6 +10,7 @@ import AxConsultingPage from './pages/AxConsultingPage';
 import AdOperationsAxPage from './pages/AdOperationsAxPage';
 import ProspectingAxPage from './pages/ProspectingAxPage';
 import PublishingAxPage from './pages/PublishingAxPage';
+import SalesAxPage from './pages/SalesAxPage';
 
 export const SITE_URL = 'https://ludentz.net';
 
@@ -182,6 +183,23 @@ export const routes = [
       title: '情報発信AX — LUDENTZ',
       description:
         '事例記事・オウンドメディア・社内報まで。素材の集約から初稿生成、配信・多面展開までAIエージェント化し、続けられる発信体制をつくります。',
+    },
+  },
+  {
+    path: '/service/sales-ax',
+    component: SalesAxPage,
+    file: 'service/sales-ax/index.html',
+    og: {
+      kicker: 'SALES AX — 営業AX',
+      lines: ['商談後の仕事を減らし、', '次の一手を早くする。'],
+      title: '営業AX — LUDENTZ',
+      description: '商談後の仕事を減らし、次の一手を早くする。HubSpotを活かした営業プロセスの設計・実装・定着を支援します。',
+    },
+    seo: {
+      title: '営業AX｜HubSpotを活かし、商談後業務をAIで支援｜LUDENTZ',
+      description:
+        '商談後のHubSpot入力、フォローメール、タスク作成、次回準備を、既存のHubSpotとGoogle Workspace等を活かしてAIで支援。営業プロセスの設計から実装・定着まで伴走します。',
+      canonical: 'https://ludentz.net/service/sales-ax',
     },
   },
 ];

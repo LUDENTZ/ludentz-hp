@@ -24,8 +24,12 @@ const escapeHtml = (value) =>
 // than a duplicate of the homepage.
 function applySeo(html, route) {
   const { title, description } = route.seo;
+  const ogTitle = route.og?.title || title;
+  const ogDescription = route.og?.description || description;
   const t = escapeHtml(title);
   const d = escapeHtml(description);
+  const ot = escapeHtml(ogTitle);
+  const od = escapeHtml(ogDescription);
   const url = escapeHtml(canonicalFor(route));
 
   return html
@@ -40,11 +44,11 @@ function applySeo(html, route) {
     )
     .replace(
       /<meta property="og:title" content="[\s\S]*?" \/>/,
-      `<meta property="og:title" content="${t}" />`
+      `<meta property="og:title" content="${ot}" />`
     )
     .replace(
       /<meta property="og:description" content="[\s\S]*?" \/>/,
-      `<meta property="og:description" content="${d}" />`
+      `<meta property="og:description" content="${od}" />`
     )
     .replace(
       /<meta property="og:url" content="[\s\S]*?" \/>/,
@@ -56,11 +60,11 @@ function applySeo(html, route) {
     )
     .replace(
       /<meta name="twitter:title" content="[\s\S]*?" \/>/,
-      `<meta name="twitter:title" content="${t}" />`
+      `<meta name="twitter:title" content="${ot}" />`
     )
     .replace(
       /<meta name="twitter:description" content="[\s\S]*?" \/>/,
-      `<meta name="twitter:description" content="${d}" />`
+      `<meta name="twitter:description" content="${od}" />`
     )
     .replace(
       /<meta name="twitter:image:alt" content="[\s\S]*?" \/>/,
