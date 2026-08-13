@@ -1,6 +1,7 @@
 import AxCategoryPage from '../components/AxCategoryPage';
 import PracticeLog from '../components/PracticeLog';
 import ConsultantProfile from '../components/ConsultantProfile';
+import AdOperationsDashboardDemo from '../components/AdOperationsDashboardDemo';
 
 const CONFIG = {
   meta: ['01', '広告運用AX', 'AD OPERATIONS'],
@@ -26,7 +27,10 @@ const useCases = [
 
 export default function AdOperationsAxPage() {
   return (
-    <AxCategoryPage config={CONFIG} afterIntro={<ConsultantProfile />}
+    <AxCategoryPage config={CONFIG} afterIntro={<>
+      <AdOperationsDashboardDemo />
+      <ConsultantProfile />
+    </>}
       afterPricing={
         <section className="business-band practice-log-band">
           <PracticeLog />
