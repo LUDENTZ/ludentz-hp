@@ -4693,6 +4693,42 @@ body[data-lang="ja"] .show-en { display: none !important; }
 .pillar-knowledge-link:hover { background: var(--ink-0); color: var(--paper); }
 .pillar-knowledge-link:hover .pillar-service-arrow { color: var(--paper); transform: translateX(3px); }
 
+.ad-ops-demo {
+  padding-top: 88px;
+}
+.ad-ops-demo .business-section-head {
+  max-width: 820px;
+}
+.ad-ops-demo-frame {
+  background: #111317;
+  border: 1px solid rgba(17, 19, 23, .14);
+  border-radius: 20px;
+  box-shadow: 0 24px 70px rgba(17, 19, 23, .16);
+  margin: 34px 0 0;
+  overflow: hidden;
+}
+.ad-ops-demo-frame video {
+  aspect-ratio: 16 / 10;
+  background: #f5f6f7;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+.ad-ops-demo-frame figcaption {
+  color: rgba(255,255,255,.62);
+  font-size: 11px;
+  letter-spacing: .02em;
+  line-height: 1.7;
+  margin: 0;
+  padding: 13px 18px 15px;
+}
+@media (max-width: 700px) {
+  .ad-ops-demo { padding-top: 60px; }
+  .ad-ops-demo-frame { border-radius: 12px; margin-top: 24px; }
+  .ad-ops-demo-frame figcaption { font-size: 10px; padding: 11px 13px 13px; }
+}
+
 @media (max-width: 640px) {
   .article { padding-top: 96px; }
   .article-toc { padding: 20px; }
