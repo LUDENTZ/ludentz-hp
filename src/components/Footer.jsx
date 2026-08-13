@@ -1,28 +1,19 @@
 export default function Footer() {
-  const scrollTo = (id) => {
-    if (id === 'top') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
-    const el = document.getElementById(id);
-    if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 56;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-cols">
           <div className="footer-col">
             <div className="h">Studio</div>
-            <a onClick={() => scrollTo('top')}>About</a>
-            <a onClick={() => scrollTo('company')}>Company</a>
-            <a onClick={() => scrollTo('contact')}>Contact</a>
+            <a href="/">About</a>
+            <a href="/#company">Company</a>
+            <a href="/#contact">Contact</a>
           </div>
           <div className="footer-col">
             <div className="h">Work</div>
-            <a onClick={() => scrollTo('work')}>Marketing AX</a>
+            <a href="/service/ax-consulting">Marketing AX</a>
             <a href="/service/sales-ax">営業AX</a>
-            <a onClick={() => scrollTo('work')}>Business Development</a>
+            <a href="/service/business-development">Business Development</a>
           </div>
           <div className="footer-col">
             <div className="h">Knowledge</div>
@@ -36,13 +27,12 @@ export default function Footer() {
         </div>
         <div
           className="footer-wordmark"
-          onClick={() => scrollTo('top')}
-          style={{ cursor: 'pointer' }}
         >
-          LUDENTZ
+          <a href="/" aria-label="LUDENTZ トップページ">LUDENTZ</a>
         </div>
         <div className="footer-bottom">
           <span>© 2026 LUDENTZ</span>
+          <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
     </footer>

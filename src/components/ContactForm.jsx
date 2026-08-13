@@ -21,6 +21,7 @@ export default function ContactForm({
   const [errorMsg, setErrorMsg] = useState('');
   const [fieldErrors, setFieldErrors] = useState({});
   const started = useRef(false);
+  const submitting = useRef(false);
   const id = useId().replace(/:/g, '');
 
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function ContactForm({
     setFieldErrors({});
     setForm(INITIAL);
     started.current = false;
+    submitting.current = false;
   }, [resetKey]);
 
   const noteStart = () => {
@@ -70,6 +72,8 @@ export default function ContactForm({
       setStatus('error');
       return;
     }
+    if (submitting.current) return;
+    submitting.current = true;
     setStatus('sending');
     setErrorMsg('');
     try {
@@ -92,6 +96,7 @@ export default function ContactForm({
       setStatus('sent');
       onSuccess?.(form);
     } catch (err) {
+      submitting.current = false;
       trackEvent('contact_form_submit_error', {
         page_path: window.location.pathname,
         form_location: showCancel ? 'modal' : 'page',

@@ -11,6 +11,7 @@ import AdOperationsAxPage from './pages/AdOperationsAxPage';
 import ProspectingAxPage from './pages/ProspectingAxPage';
 import PublishingAxPage from './pages/PublishingAxPage';
 import SalesAxPage from './pages/SalesAxPage';
+import PrivacyPage from './pages/PrivacyPage';
 
 export const SITE_URL = 'https://ludentz.net';
 
@@ -200,6 +201,16 @@ export const routes = [
       description:
         '商談後のHubSpot入力、フォローメール、タスク作成、次回準備を、既存のHubSpotとGoogle Workspace等を活かしてAIで支援。営業プロセスの設計から実装・定着まで伴走します。',
       canonical: 'https://ludentz.net/service/sales-ax',
+    },
+  },
+  {
+    path: '/privacy',
+    component: PrivacyPage,
+    file: 'privacy/index.html',
+    seo: {
+      title: 'プライバシーポリシー｜LUDENTZ',
+      description: 'LUDENTZ株式会社の個人情報保護方針です。',
+      canonical: 'https://ludentz.net/privacy',
     },
   },
 ];
