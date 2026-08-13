@@ -44,6 +44,12 @@ const categories = [
     label: '情報発信AX',
     body: '事例記事・オウンドメディア・社内報まで。素材を投げれば初稿まで自動で仕上がり、人は最終調整に集中する。',
   },
+  {
+    href: '/service/sales-ax',
+    number: '04',
+    label: '営業AX',
+    body: '商談後のHubSpot更新、フォローメール、タスク、次回準備を一つの流れに。営業担当者とマネージャーの判断を前へ進める。',
+  },
 ];
 
 export default function AxConsultingPage() {
@@ -121,7 +127,7 @@ export default function AxConsultingPage() {
         <section className="business-band ax-categories">
           <div className="business-section-head">
             <p className="business-kicker">CATEGORIES</p>
-            <h2>いま提供している、3つのAX。</h2>
+            <h2>いま提供している、4つのAX。</h2>
             <p className="business-section-copy">マーケの獲得・営業・発信の実務から着手します。詳細は各ページをご覧ください。</p>
           </div>
           <div className="pillar-service-links ax-category-links" aria-label="Marketing AXのカテゴリ">

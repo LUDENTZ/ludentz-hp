@@ -25,6 +25,12 @@ export default function Pillars() {
         label: '情報発信AX',
         body: '事例記事・オウンドメディア・社内報まで、発信業務をAIエージェント化。取材音源や実績データを投げれば、記事の初稿まで自動で仕上がる。',
       },
+      {
+        href: '/service/sales-ax',
+        number: '04',
+        label: '営業AX',
+        body: '商談後のHubSpot更新、フォローメール、タスク、次回準備を一つの流れに。営業と管理の両方に価値が返る運用を設計する。',
+      },
     ],
   };
 
