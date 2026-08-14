@@ -191,13 +191,13 @@ export const routes = [
     component: SalesAxPage,
     file: 'service/sales-ax/index.html',
     og: {
-      kicker: 'SALES AX — 営業AX',
+      kicker: 'SALES AX — セールスAX',
       lines: ['商談後の仕事を減らし、', '次の一手を早くする。'],
-      title: '営業AX — LUDENTZ',
+      title: 'セールスAX — LUDENTZ',
       description: '商談後の仕事を減らし、次の一手を早くする。HubSpotを活かした営業プロセスの設計・実装・定着を支援します。',
     },
     seo: {
-      title: '営業AX｜HubSpotを活かし、商談後業務をAIで支援｜LUDENTZ',
+      title: 'セールスAX｜HubSpotを活かし、商談後業務をAIで支援｜LUDENTZ',
       description:
         '商談後のHubSpot入力、フォローメール、タスク作成、次回準備を、既存のHubSpotとGoogle Workspace等を活かしてAIで支援。営業プロセスの設計から実装・定着まで伴走します。',
       canonical: 'https://ludentz.net/service/sales-ax',

@@ -43,13 +43,13 @@ export default async function handler(req, res) {
 
   const to = CONTACT_TO_EMAILS.split(',').map((s) => s.trim()).filter(Boolean);
 
-  const subject = `[LUDENTZ LP${isSalesAx ? ' / 営業AX' : ''}] ${company} / ${name} — ${String(intent).slice(0, 60).replace(/\s+/g, ' ')}`;
+  const subject = `[LUDENTZ LP${isSalesAx ? ' / セールスAX' : ''}] ${company} / ${name} — ${String(intent).slice(0, 60).replace(/\s+/g, ' ')}`;
   const text = [
     `Company: ${company}`,
     `Name:   ${name}`,
     `Email:  ${email}`,
     `Phone:  ${phone || '(none)'}`,
-    `Source: ${isSalesAx ? '営業AX LP' : source || 'general'}`,
+    `Source: ${isSalesAx ? 'セールスAX LP' : source || 'general'}`,
     '',
     'Intent:',
     intent,
@@ -60,7 +60,7 @@ export default async function handler(req, res) {
       <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Name</td><td>${escapeHtml(name)}</td></tr>
       <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Email</td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
       <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Phone</td><td>${escapeHtml(phone || '(none)')}</td></tr>
-      <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Source</td><td>${escapeHtml(isSalesAx ? '営業AX LP' : source || 'general')}</td></tr>
+      <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Source</td><td>${escapeHtml(isSalesAx ? 'セールスAX LP' : source || 'general')}</td></tr>
       <tr><td style="padding: 12px 12px 4px 0; color: #6B6B6B; vertical-align: top;">Intent</td><td style="padding-top: 12px; white-space: pre-wrap;">${escapeHtml(intent)}</td></tr>
     </table>`;
 
@@ -95,9 +95,9 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           from: CONTACT_FROM_EMAIL,
           to: [email],
-          subject: '【LUDENTZ】営業AXのご相談を受け付けました',
-          text: `${name} 様\n\n営業AXへのお問い合わせありがとうございます。\n続けて、以下より30分のご相談日時をお選びください。\n\n${SALES_AX_SCHEDULE_URL}\n\n日程を選択されなかった場合も、担当者よりご連絡いたします。\n\nLUDENTZ株式会社`,
-          html: `<div style="font-family:-apple-system,sans-serif;font-size:14px;line-height:1.9;color:#0A0A0A;"><p>${escapeHtml(name)} 様</p><p>営業AXへのお問い合わせありがとうございます。<br>続けて、以下より30分のご相談日時をお選びください。</p><p><a href="${SALES_AX_SCHEDULE_URL}" style="display:inline-block;padding:12px 18px;background:#0A0A0A;color:#fff;text-decoration:none;">30分の相談日時を選ぶ</a></p><p>日程を選択されなかった場合も、担当者よりご連絡いたします。</p><p>LUDENTZ株式会社</p></div>`,
+          subject: '【LUDENTZ】セールスAXのご相談を受け付けました',
+          text: `${name} 様\n\nセールスAXへのお問い合わせありがとうございます。\n続けて、以下より30分のご相談日時をお選びください。\n\n${SALES_AX_SCHEDULE_URL}\n\n日程を選択されなかった場合も、担当者よりご連絡いたします。\n\nLUDENTZ株式会社`,
+          html: `<div style="font-family:-apple-system,sans-serif;font-size:14px;line-height:1.9;color:#0A0A0A;"><p>${escapeHtml(name)} 様</p><p>セールスAXへのお問い合わせありがとうございます。<br>続けて、以下より30分のご相談日時をお選びください。</p><p><a href="${SALES_AX_SCHEDULE_URL}" style="display:inline-block;padding:12px 18px;background:#0A0A0A;color:#fff;text-decoration:none;">30分の相談日時を選ぶ</a></p><p>日程を選択されなかった場合も、担当者よりご連絡いたします。</p><p>LUDENTZ株式会社</p></div>`,
         }),
       });
       if (!autoReply.ok) {

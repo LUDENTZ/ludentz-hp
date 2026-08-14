@@ -109,7 +109,7 @@ const notFitItems = [
 ];
 
 const plans = [
-  ['ADVISORY', '助言のみ', '月20万円〜', '営業AXの方針、HubSpot活用、対象業務の優先順位に関する助言・壁打ちを中心としたプランです。実働は含みません。'],
+  ['ADVISORY', '助言のみ', '月20万円〜', 'セールスAXの方針、HubSpot活用、対象業務の優先順位に関する助言・壁打ちを中心としたプランです。実働は含みません。'],
   ['HANDS-ON', '伴走支援', '月50万円〜200万円', '週次ミーティングと、業務の棚卸し、設計、実装、定着の実行支援。支援範囲は内容に応じて調整します。'],
 ];
 
@@ -136,7 +136,7 @@ function buildScheduleUrl() {
 
 function SalesAxNav({ onCta }) {
   return (
-    <nav className="nav sales-ax-nav" aria-label="営業AXページ内ナビゲーション">
+    <nav className="nav sales-ax-nav" aria-label="セールスAXページ内ナビゲーション">
       <a className="nav-logo" href="/">LUDENTZ</a>
       <div className="sales-ax-nav-links">
         {anchorLinks.map(([id, label]) => <a href={`#${id}`} key={id}>{label}</a>)}
@@ -187,15 +187,15 @@ export default function SalesAxPage() {
               <h1><span className="nowrap">商談後の仕事を減らし、</span><span className="nowrap">次の一手を早くする。</span></h1>
               <p className="sales-ax-hero-lead">商談内容を該当案件へひもづけ、HubSpotの更新案、フォローメール、タスク、次回準備を根拠付きで整理。標準機能を活かし、貴社に必要な差分だけを設計・実装します。</p>
               <SalesAxCta position="hero" onClick={scrollToContact} />
-              <p className="sales-ax-cta-note">HubSpotへの接続や事前準備は不要です。現在の運用を伺い、営業AXとの適合性を整理します。</p>
+              <p className="sales-ax-cta-note">HubSpotへの接続や事前準備は不要です。現在の運用を伺い、セールスAXとの適合性を整理します。</p>
             </div>
-            <aside className="sales-ax-hero-panel" aria-label="営業AXの3つの特徴">
-              <span className="sales-ax-panel-label">営業AXの3つの特徴</span>
+            <aside className="sales-ax-hero-panel" aria-label="セールスAXの3つの特徴">
+              <span className="sales-ax-panel-label">セールスAXの3つの特徴</span>
               <ol>{heroHighlights.map(([num, title, body]) => <li key={num}><span>{num}</span><div><strong>{title}</strong><p>{body}</p></div></li>)}</ol>
               <p className="sales-ax-panel-note">更新案は根拠とともに提示し、重要な反映や顧客への送信は人が判断します。</p>
             </aside>
           </div>
-          <div className="sales-ax-hero-route" aria-hidden="true"><span>商談・メール・資料</span><i>→</i><strong>営業AX</strong><i>→</i><span>HubSpot・次のアクション</span></div>
+          <div className="sales-ax-hero-route" aria-hidden="true"><span>商談・メール・資料</span><i>→</i><strong>セールスAX</strong><i>→</i><span>HubSpot・次のアクション</span></div>
         </section>
 
         <section className="business-band sales-ax-issues" id="issues">
@@ -206,9 +206,9 @@ export default function SalesAxPage() {
         </section>
 
         <section className="business-band sales-ax-solution">
-          <SectionHead kicker="SOLUTION — 営業AXとは" title={<><span className="nowrap">商談後の仕事をAIが進め、</span><span className="nowrap">営業担当者は判断と顧客対応へ。</span></>} />
-          <p className="sales-ax-solution-copy">営業AXは、商談内容を正しい案件へ整理し、HubSpotの更新案、フォローメール、タスク、次回商談の確認事項までを連続して準備します。営業担当者が一から作るのではなく、AIの案を確認し、必要な判断をして次のアクションへ進める状態を作ります。</p>
-          <p className="sales-ax-definition">営業AXとは、営業プロセス、SFA、AI、人の判断を、<span>一つの運用として再設計する取り組み</span>です。</p>
+          <SectionHead kicker="SOLUTION — セールスAXとは" title={<><span className="nowrap">商談後の仕事をAIが進め、</span><span className="nowrap">営業担当者は判断と顧客対応へ。</span></>} />
+          <p className="sales-ax-solution-copy">セールスAXは、商談内容を正しい案件へ整理し、HubSpotの更新案、フォローメール、タスク、次回商談の確認事項までを連続して準備します。営業担当者が一から作るのではなく、AIの案を確認し、必要な判断をして次のアクションへ進める状態を作ります。</p>
+          <p className="sales-ax-definition">セールスAXとは、営業プロセス、SFA、AI、人の判断を、<span>一つの運用として再設計する取り組み</span>です。</p>
         </section>
 
         <section className="business-band sales-ax-capabilities" id="capabilities">
@@ -228,12 +228,12 @@ export default function SalesAxPage() {
         <section className="business-band sales-ax-difference">
           <SectionHead kicker="DIFFERENCE — 違い" title={<><span className="nowrap">標準機能を入れて終わらない。</span><span className="nowrap">営業担当者の手間が減るところまで、</span><span className="nowrap">業務をつなぎ直す。</span></>} copy="HubSpotや既存AIでできることはそのまま活用し、会議、メール、資料、人の判断にまたがる貴社固有の業務だけを設計・実装。商談後の手作業が減り、HubSpotに判断に使える情報が蓄積される運用まで定着させます。" />
           <div className="sales-ax-difference-grid">{differences.map(([num, title, body]) => <article key={num}><span>{num}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
-          <div className="sales-ax-comparison-wrap"><table className="sales-ax-comparison"><thead><tr><th>比較軸</th><th>AI議事録</th><th>HubSpot導入支援</th><th>単体エージェント開発</th><th>LUDENTZ 営業AX</th></tr></thead><tbody>{comparisons.map(([axis, ...values]) => <tr key={axis}><th>{axis}</th>{values.map((value, index) => <td data-label={['AI議事録', 'HubSpot導入支援', '単体エージェント開発', 'LUDENTZ 営業AX'][index]} className={index === 3 ? 'is-ludentz' : ''} key={value}>{value}</td>)}</tr>)}</tbody></table><p>上記は一般的な支援範囲の傾向です。各サービス・提供会社によって対応範囲は異なります。</p></div>
+          <div className="sales-ax-comparison-wrap"><table className="sales-ax-comparison"><thead><tr><th>比較軸</th><th>AI議事録</th><th>HubSpot導入支援</th><th>単体エージェント開発</th><th>LUDENTZ セールスAX</th></tr></thead><tbody>{comparisons.map(([axis, ...values]) => <tr key={axis}><th>{axis}</th>{values.map((value, index) => <td data-label={['AI議事録', 'HubSpot導入支援', '単体エージェント開発', 'LUDENTZ セールスAX'][index]} className={index === 3 ? 'is-ludentz' : ''} key={value}>{value}</td>)}</tr>)}</tbody></table><p>上記は一般的な支援範囲の傾向です。各サービス・提供会社によって対応範囲は異なります。</p></div>
           <div className="sales-ax-safety"><p className="sales-ax-safety-principle">重要な更新、顧客への約束・送信、価格・契約に関する判断は、人が行います。</p><details><summary>安全性と責任分界の詳細 <i aria-hidden="true">＋</i></summary><div><p>AIの確信度が高くても、顧客への約束や重要な意思決定を無条件に自動化しません。情報の種類とリスクに応じて、追記、条件付き自動、必須承認、AI実行禁止を分けます。</p><dl>{decisions.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><small>最小権限、データ取得範囲の制限、根拠の表示、変更履歴、ロールバック、緊急停止、録音・文字起こしの同意ルールを設計します。</small></div></details></div>
         </section>
 
         <section className="business-band sales-ax-consultant">
-          <SectionHead kicker="CONSULTANT — 担当" title="営業を知る人間が、営業AXを設計する。" />
+          <SectionHead kicker="CONSULTANT — 担当" title="営業を知る人間が、セールスAXを設計する。" />
           <div className="consultant-card"><img className="consultant-photo sales-ax-consultant-photo" src="/assets/sales-ax/kobayashi-yudai.png" alt="小林 勇大" width="180" height="180" loading="lazy" /><div className="consultant-body"><p className="consultant-name">小林 勇大</p><p className="consultant-role">LUDENTZ株式会社 取締役</p><p>エルメスで販売員全体の上位1％、人材系スタートアップでマッチングプラットフォームの法人営業・事業立ち上げ、新規事業開発支援で営業成績トップを経験。</p><p>toC・toB双方の営業現場で培った顧客理解と提案力をもとに、業務の棚卸しから営業プロセスとHubSpotの設計、AIエージェントの実装・定着まで、小林が一貫して担当します。</p></div></div>
         </section>
 
@@ -246,7 +246,7 @@ export default function SalesAxPage() {
         </section>
 
         <section className="business-band sales-ax-fit">
-          <SectionHead kicker="FIT — 対象企業" title="営業AXが適合しやすい営業組織。" />
+          <SectionHead kicker="FIT — 対象企業" title="セールスAXが適合しやすい営業組織。" />
           <div className="sales-ax-fit-grid"><article><h3>適合しやすい条件</h3><ul>{fitItems.map((item) => <li key={item}>{item}</li>)}</ul></article><article><h3>まずは別の改善が必要な可能性があるケース</h3><ul>{notFitItems.map((item) => <li key={item}>{item}</li>)}</ul></article></div>
           <div className="sales-ax-fit-cta"><div><h3>対象に合うか、30分で確認できます。</h3><p>商談後業務の負担、標準機能で解決できる範囲、最初に検証すべき一業務を整理します。無理な導入はお勧めしません。</p></div><SalesAxCta position="fit" onClick={scrollToContact} /></div>
         </section>
