@@ -271,6 +271,10 @@ body[data-lang="ja"] .section-title { font-family: var(--font-ja-mincho); font-s
 .pillar--secondary .pillar-en {
   font-size: clamp(30px, 3.2vw, 46px);
 }
+.pillar--secondary.pillar--featured .pillar-en {
+  font-size: clamp(56px, 7vw, 104px);
+  line-height: 0.9;
+}
 .pillar--secondary .pillar-ja {
   font-size: 16px;
 }
@@ -3761,6 +3765,7 @@ body[data-lang="ja"] .show-en { display: none !important; }
   .pillar-secondary-stack { grid-template-columns: 1fr; gap: 16px; }
   .pillar-en { font-size: 28px; }
   .pillar--primary .pillar-en { font-size: clamp(44px, 14vw, 64px); }
+  .pillar--secondary.pillar--featured .pillar-en { font-size: clamp(44px, 14vw, 64px); }
   .pillar-ja { font-size: 13px; }
   .pillar--primary .pillar-ja { font-size: 22px; }
   .pillar--primary .pillar-body { font-size: 14px; }

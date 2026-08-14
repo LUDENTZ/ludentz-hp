@@ -25,18 +25,22 @@ export default function Pillars() {
         label: '情報発信AX',
         body: '事例記事・オウンドメディア・社内報まで、発信業務をAIエージェント化。取材音源や実績データを投げれば、記事の初稿まで自動で仕上がる。',
       },
-      {
-        href: '/service/sales-ax',
-        number: '04',
-        label: '営業AX',
-        body: '商談後のHubSpot更新、フォローメール、タスク、次回準備を一つの流れに。営業と管理の両方に価値が返る運用を設計する。',
-      },
     ],
   };
 
   const secondary = [
     {
       n: '002',
+      en: <>Sales<br />AX</>,
+      ja: 'セールスAX',
+      tag: 'Active',
+      href: '/service/sales-ax',
+      featured: true,
+      body_en: 'Reduce the work after every sales meeting. We connect HubSpot updates, follow-up emails, tasks, and next-meeting preparation into one operating flow.',
+      body_ja: '商談後のHubSpot更新、フォローメール、タスク、次回準備を一つの流れに。営業担当者の手間を減らし、判断と顧客対応に集中できる運用を設計します。',
+    },
+    {
+      n: '003',
       en: <>Business<br />Development</>,
       ja: '新規事業開発',
       tag: 'Active',
@@ -96,7 +100,7 @@ export default function Pillars() {
           {secondary.map((it, i) => {
           const teaser = it.tag === 'Coming soon';
           return (
-            <article key={it.n} className={'pillar pillar--secondary reveal d-' + (i + 2) + (teaser ? ' pillar--teaser' : '')}>
+            <article key={it.n} className={'pillar pillar--secondary reveal d-' + (i + 2) + (it.featured ? ' pillar--featured' : '') + (teaser ? ' pillar--teaser' : '')}>
               <div className="pillar-head">
                 <span className="pillar-num">{it.n}</span>
                 <span className={'pillar-tag' + (teaser ? '' : ' active')}>{teaser ? 'Coming soon' : 'Active'}</span>
