@@ -36,8 +36,8 @@ function Company() {
       k_ja: '所在地',
       v: (
         <>
-          <span className="show-en">Park Front Shinjuku 202,<br/>2-8-15 Shinjuku, Shinjuku-ku, Tokyo</span>
-          <span className="show-ja">東京都新宿区新宿2丁目8番15号<br/>パークフロント新宿202号室</span>
+          <span className="show-en">3-51-10 Sendagaya,<br/>Shibuya-ku, Tokyo 151-0051</span>
+          <span className="show-ja">〒151-0051<br/>東京都渋谷区千駄ヶ谷３丁目５１番１０号</span>
         </>
       ),
     },
