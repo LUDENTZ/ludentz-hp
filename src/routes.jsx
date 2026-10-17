@@ -4,7 +4,6 @@ import AdOperationsArticlePage from './pages/AdOperationsArticlePage';
 import CostArticlePage from './pages/CostArticlePage';
 import ComparisonArticlePage from './pages/ComparisonArticlePage';
 import ThreeLevelsArticlePage from './pages/ThreeLevelsArticlePage';
-import BusinessGrowthPage from './pages/BusinessGrowthPage';
 import AxConsultingPage from './pages/AxConsultingPage';
 import AdOperationsAxPage from './pages/AdOperationsAxPage';
 import ProspectingAxPage from './pages/ProspectingAxPage';
@@ -99,20 +98,6 @@ export const routes = [
     og: {
       // OG画像はテキストカードではなく図1（委譲の階段）をそのまま使う
       svgSource: 'public/assets/three-levels/fig1.svg',
-    },
-  },
-  {
-    path: '/service/business-growth',
-    component: BusinessGrowthPage,
-    file: 'service/business-growth/index.html',
-    og: {
-      kicker: 'SERVICE — 新規事業グロース支援',
-      lines: ['立ち上がった事業を、', '成長の軌道へ。'],
-    },
-    seo: {
-      title: '新規事業グロース支援 — LUDENTZ',
-      description:
-        '立ち上がった新規事業を、売上成長の軌道へ。GTM設計から営業・マーケの型づくりまで、再現性のある成長を伴走支援します。',
     },
   },
   {

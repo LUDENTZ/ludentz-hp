@@ -5,7 +5,9 @@
   ],
   "redirects": [
     { "source": "/service/business-development", "destination": "/", "permanent": true },
-    { "source": "/service/business-development/", "destination": "/", "permanent": true }
+    { "source": "/service/business-development/", "destination": "/", "permanent": true },
+    { "source": "/service/business-growth", "destination": "/", "permanent": true },
+    { "source": "/service/business-growth/", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/:path*" },
