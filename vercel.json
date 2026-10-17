@@ -3,6 +3,10 @@
   "crons": [
     { "path": "/api/refresh-note", "schedule": "0 21 * * *" }
   ],
+  "redirects": [
+    { "source": "/service/business-development", "destination": "/", "permanent": true },
+    { "source": "/service/business-development/", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }

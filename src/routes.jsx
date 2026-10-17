@@ -4,7 +4,6 @@ import AdOperationsArticlePage from './pages/AdOperationsArticlePage';
 import CostArticlePage from './pages/CostArticlePage';
 import ComparisonArticlePage from './pages/ComparisonArticlePage';
 import ThreeLevelsArticlePage from './pages/ThreeLevelsArticlePage';
-import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage';
 import BusinessGrowthPage from './pages/BusinessGrowthPage';
 import AxConsultingPage from './pages/AxConsultingPage';
 import AdOperationsAxPage from './pages/AdOperationsAxPage';
@@ -100,20 +99,6 @@ export const routes = [
     og: {
       // OG画像はテキストカードではなく図1（委譲の階段）をそのまま使う
       svgSource: 'public/assets/three-levels/fig1.svg',
-    },
-  },
-  {
-    path: '/service/business-development',
-    component: BusinessDevelopmentPage,
-    file: 'service/business-development/index.html',
-    og: {
-      kicker: 'SERVICE — 新規事業開発',
-      lines: ['AIプロダクトで、', '次の柱をつくる。'],
-    },
-    seo: {
-      title: '新規事業開発 — LUDENTZ',
-      description:
-        '中小企業の既存事業資産をもとに、AI × バーティカル（特定領域特化）の新規事業を設計・開発・検証。次の柱づくりを伴走します。',
     },
   },
   {

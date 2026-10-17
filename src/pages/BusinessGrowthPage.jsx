@@ -12,9 +12,8 @@ const growthStages = [
     number: '01',
     label: '0→1',
     title: '新規事業開発支援',
-    status: '別サービス',
+    status: '対象外',
     body: '構想、仮説検証、MVP、初期顧客獲得まで。まだ事業として立ち上がっていない段階。',
-    href: '/service/business-development',
   },
   {
     number: '02',
@@ -126,20 +125,6 @@ const growthExperts = [
     body: '上場企業十数社の新規事業開発を支援。自ら人材・不動産・M&A仲介の3事業を立ち上げた経験を持ち、顧客インタビューから営業戦略まで伴走します。',
     strengths: ['顧客検証', '営業戦略・商談設計', 'ピボット判断'],
   },
-];
-
-const growthTrackRecords = [
-  ['9', '社', '累計伴走実績'],
-  ['7', '社', 'うち上場企業'],
-];
-
-const growthTrackCases = [
-  ['リース会社', '既存顧客網を活用した新サービス開発', ['上場']],
-  ['電子機器メーカー', '自社製品を活かした新サービス開発', ['上場']],
-  ['顧客接点インフラ企業', '既存サービスを統合した新サービス開発', ['上場']],
-  ['不動産デベロッパー', '個人投資家向け収益管理ツール開発', ['中堅']],
-  ['人材会社', '接客特化スキマバイトサービス開発', ['中堅']],
-  ['交通インフラ会社', '農業領域の新規事業開発', ['上場']],
 ];
 
 const contractSteps = [
@@ -484,37 +469,6 @@ export default function BusinessGrowthPage() {
                 </div>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="business-band growth-record">
-          <div className="business-section-head">
-            <p className="business-kicker">TRACK RECORD</p>
-            <h2>上場企業を中心に、新規事業の検証・成長支援を伴走。</h2>
-            <p className="business-section-copy">顧客検証、GTM、営業・改善運用まで、PMF前の論点を横断して支援しています。</p>
-          </div>
-          <div className="growth-record-layout">
-            <div className="growth-record-stats" aria-label="支援実績">
-              {growthTrackRecords.map(([num, unit, label]) => (
-                <div className="growth-record-stat" key={label}>
-                  <strong>{num}</strong>
-                  <span>{unit}</span>
-                  <small>{label}</small>
-                </div>
-              ))}
-            </div>
-            <div className="growth-record-cases">
-              {growthTrackCases.map(([company, body, tags], index) => (
-                <article className="growth-record-case" key={company}>
-                  <span className="growth-record-number">{String(index + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3>{company}</h3>
-                    <p>{body}</p>
-                  </div>
-                  <small>{tags.join(' / ')}</small>
-                </article>
-              ))}
-            </div>
           </div>
         </section>
 

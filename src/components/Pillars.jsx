@@ -39,15 +39,6 @@ export default function Pillars() {
       body_en: 'Reduce the work after every sales meeting. We connect HubSpot updates, follow-up emails, tasks, and next-meeting preparation into one operating flow.',
       body_ja: '商談後のHubSpot更新、フォローメール、タスク、次回準備を一つの流れに。営業担当者の手間を減らし、判断と顧客対応に集中できる運用を設計します。',
     },
-    {
-      n: '003',
-      en: <>Business<br />Development</>,
-      ja: '新規事業開発',
-      tag: 'Active',
-      href: '/service/business-development',
-      body_en: 'Zero-to-one with operators and founders. Concept, validation, MVP, and first customers — we ship the next pillar from scratch.',
-      body_ja: '構想・仮説検証・MVP・初期顧客獲得まで。AIプロダクトで、次の柱をゼロから形にする0→1支援。',
-    },
   ];
 
   return (
