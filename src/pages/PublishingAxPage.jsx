@@ -1,7 +1,7 @@
 import AxCategoryPage from '../components/AxCategoryPage';
 
 const CONFIG = {
-  meta: ['03', '情報発信AX', 'PUBLISHING'],
+  meta: ['02', '情報発信AX', 'PUBLISHING'],
   title: ['発信を、', '続けられる体制に。'],
   lead: '事例記事からオウンドメディア、社内報まで。素材の集約から初稿生成、配信・多面展開までをAIエージェント化し、「書く時間がない」で止まらない発信体制をつくります。',
   panelLabel: 'ハイライト',

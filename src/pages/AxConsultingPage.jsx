@@ -33,14 +33,8 @@ const categories = [
     body: '提案資料・レポーティング・入稿・運用改善まで、広告運用の実務をAIエージェント化。人はレビューと承認に集中する。',
   },
   {
-    href: '/service/prospecting-ax',
-    number: '02',
-    label: '新規開拓AX',
-    body: 'リスト作成から文面生成、送信、返信対応まで。フォーム・メール・手紙・FAX・テレアポ（検証中）を自動で回し、人は商談に集中する。',
-  },
-  {
     href: '/service/publishing-ax',
-    number: '03',
+    number: '02',
     label: '情報発信AX',
     body: '事例記事・オウンドメディア・社内報まで。素材を投げれば初稿まで自動で仕上がり、人は最終調整に集中する。',
   },
@@ -121,8 +115,8 @@ export default function AxConsultingPage() {
         <section className="business-band ax-categories">
           <div className="business-section-head">
             <p className="business-kicker">CATEGORIES</p>
-            <h2>いま提供している、3つのMarketing AX。</h2>
-            <p className="business-section-copy">広告運用・新規開拓・情報発信の実務から着手します。詳細は各ページをご覧ください。</p>
+            <h2>いま提供している、<span className="nowrap">2つのMarketing AX。</span></h2>
+            <p className="business-section-copy">広告運用・情報発信の実務から着手します。詳細は各ページをご覧ください。</p>
           </div>
           <div className="pillar-service-links ax-category-links" aria-label="Marketing AXのカテゴリ">
             {categories.map((category) => (

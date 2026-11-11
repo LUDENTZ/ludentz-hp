@@ -251,11 +251,6 @@ export default function MarketingAxArticlePage() {
                   <a href="/marketing-ax/ad-operations">→ 広告運用AXとは</a>
                 </li>
                 <li>
-                  <strong>新規開拓AX</strong> —
-                  ターゲットリストの作成から文面生成、送信、返信対応までをパイプラインとして自動化する。
-                  <a href="/service/prospecting-ax">→ 新規開拓AX</a>
-                </li>
-                <li>
                   <strong>情報発信AX</strong> —
                   事例記事・オウンドメディア・社内報など、発信業務の素材集約から初稿生成、多面展開までを自動化する。
                   <a href="/service/publishing-ax">→ 情報発信AX</a>
