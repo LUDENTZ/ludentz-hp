@@ -7,11 +7,18 @@
 //   CONTACT_TO_EMAILS   — comma-separated recipients
 
 import { SALES_AX_SCHEDULE_URL, SALES_AX_SOURCE } from '../src/config/salesAx.js';
+import {
+  LEAD_GEN_CHECK_SOURCE,
+  LEAD_GEN_SOURCE,
+  LEAD_GEN_VARIANTS,
+} from '../src/config/leadGeneration.js';
 
 const escapeHtml = (s = '') =>
   String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 const ok = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+const oneLine = (s) => String(s).slice(0, 60).replace(/\s+/g, ' ');
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -19,20 +26,30 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { company, name, email, phone, intent, hp, source } = req.body || {};
+  const { company, name, email, phone, intent, hp, source, product, variant, score } = req.body || {};
   const isSalesAx = source === SALES_AX_SOURCE;
+  // リード獲得代行LP：申し込みフォーム（会社名・お名前・メール・商材）と、
+  // 紹介依存度チェック後の簡易版仮説の申し込み（メール・商材のみ）
+  const isLeadGen = source === LEAD_GEN_SOURCE;
+  const isLeadGenCheck = source === LEAD_GEN_CHECK_SOURCE;
+  const usesProduct = isLeadGen || isLeadGenCheck;
 
   // honeypot — real users leave this empty
   if (hp) return res.status(200).json({ ok: true });
 
-  if (!company || !name || !email || !intent) {
+  const required = isLeadGenCheck
+    ? [email, product]
+    : isLeadGen
+      ? [company, name, email, product]
+      : [company, name, email, intent];
+  if (required.some((value) => !value)) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
   if (!ok(email)) {
     return res.status(400).json({ error: 'Invalid email' });
   }
-  if (String(intent).length > 5000) {
-    return res.status(400).json({ error: 'Intent too long' });
+  if (usesProduct ? String(product).length > 2000 : String(intent).length > 5000) {
+    return res.status(400).json({ error: usesProduct ? 'Product too long' : 'Intent too long' });
   }
 
   const { RESEND_API_KEY, CONTACT_FROM_EMAIL, CONTACT_TO_EMAILS } = process.env;
@@ -43,25 +60,50 @@ export default async function handler(req, res) {
 
   const to = CONTACT_TO_EMAILS.split(',').map((s) => s.trim()).filter(Boolean);
 
-  const subject = `[LUDENTZ LP${isSalesAx ? ' / セールスAX' : ''}] ${company} / ${name} — ${String(intent).slice(0, 60).replace(/\s+/g, ' ')}`;
+  const sourceLabel = isSalesAx
+    ? 'セールスAX LP'
+    : isLeadGen
+      ? 'リード獲得代行 LP'
+      : isLeadGenCheck
+        ? 'リード獲得代行 LP（紹介依存度チェック）'
+        : source || 'general';
+  const variantLabel = LEAD_GEN_VARIANTS.includes(variant) ? variant : '(none)';
+  const scoreNumber = Number(score);
+  const scoreLabel =
+    score !== '' && score != null && Number.isInteger(scoreNumber) && scoreNumber >= 0 && scoreNumber <= 5
+      ? `${scoreNumber}/5`
+      : '(未回答)';
+
+  const subject = isLeadGenCheck
+    ? `[LUDENTZ LP / リード獲得代行・依存度チェック] ${email} — ${oneLine(product)}`
+    : isLeadGen
+      ? `[LUDENTZ LP / リード獲得代行] ${company} / ${name} — ${oneLine(product)}`
+      : `[LUDENTZ LP${isSalesAx ? ' / セールスAX' : ''}] ${company} / ${name} — ${oneLine(intent)}`;
+
+  const rows = isLeadGenCheck
+    ? [['Email', email], ['Source', sourceLabel], ['Score', scoreLabel], ['Variant', variantLabel]]
+    : isLeadGen
+      ? [['Company', company], ['Name', name], ['Email', email], ['Source', sourceLabel], ['Variant', variantLabel]]
+      : [['Company', company], ['Name', name], ['Email', email], ['Phone', phone || '(none)'], ['Source', sourceLabel]];
+  const [bodyLabel, bodyValue] = usesProduct ? ['Product', product] : ['Intent', intent];
+
   const text = [
-    `Company: ${company}`,
-    `Name:   ${name}`,
-    `Email:  ${email}`,
-    `Phone:  ${phone || '(none)'}`,
-    `Source: ${isSalesAx ? 'セールスAX LP' : source || 'general'}`,
+    ...rows.map(([label, value]) => `${`${label}:`.padEnd(9)}${value}`),
     '',
-    'Intent:',
-    intent,
+    `${bodyLabel}:`,
+    bodyValue,
   ].join('\n');
   const html = `
     <table style="font-family: -apple-system, sans-serif; font-size: 14px; line-height: 1.6; color: #0A0A0A;">
-      <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Company</td><td>${escapeHtml(company)}</td></tr>
-      <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Name</td><td>${escapeHtml(name)}</td></tr>
-      <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Email</td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
-      <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Phone</td><td>${escapeHtml(phone || '(none)')}</td></tr>
-      <tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">Source</td><td>${escapeHtml(isSalesAx ? 'セールスAX LP' : source || 'general')}</td></tr>
-      <tr><td style="padding: 12px 12px 4px 0; color: #6B6B6B; vertical-align: top;">Intent</td><td style="padding-top: 12px; white-space: pre-wrap;">${escapeHtml(intent)}</td></tr>
+      ${rows
+        .map(([label, value]) => {
+          const cell = label === 'Email'
+            ? `<a href="mailto:${escapeHtml(value)}">${escapeHtml(value)}</a>`
+            : escapeHtml(value);
+          return `<tr><td style="padding: 4px 12px 4px 0; color: #6B6B6B;">${label}</td><td>${cell}</td></tr>`;
+        })
+        .join('\n      ')}
+      <tr><td style="padding: 12px 12px 4px 0; color: #6B6B6B; vertical-align: top;">${bodyLabel}</td><td style="padding-top: 12px; white-space: pre-wrap;">${escapeHtml(bodyValue)}</td></tr>
     </table>`;
 
   try {

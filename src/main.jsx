@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { hydrateRoot } from 'react-dom/client';
 import './styles/index.css';
+import './styles/lead-generation.css';
 import SitePage from './SitePage';
 import { findRoute } from './routes';
 import { initAnalytics } from './lib/analytics';

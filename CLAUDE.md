@@ -26,6 +26,12 @@ React 18 + Vite 6。SSRプレレンダリングで全ルートを静的HTML化�
 - 自動反映: GitHub Actions（`.github/workflows/refresh-note-feed.yml`、6時間ごと）がRSSを取得し、記事に変化があれば `note-feed.json` をmainにpush → Vercelが自動デプロイ。手動で即時反映したいときはActionsの workflow_dispatch 実行か、mainへの空コミットでよい
 - Vercel Cron（`/api/refresh-note`、毎日 21:00 UTC）は補助経路として残置。環境変数 `NOTE_DEPLOY_HOOK_URL` 未設定なら何もしない
 
+## リード獲得代行LP（/service/lead-generation）
+
+- ページ本体は `src/pages/LeadGenerationPage.jsx`、スタイルは `src/styles/lead-generation.css`（クラスはすべて `lg-` で始まる。`src/main.jsx` で読み込み）。原稿とデザインは小林作成のHTMLを移植したものなので、文言を変えるときは小林に確認する
+- フォームは2つとも `/api/send` に送る。`source` は `src/config/leadGeneration.js` の定数で区別する（申し込み＝`lead_generation`、紹介依存度チェック後の簡易版仮説＝`lead_generation_check`）。必須項目が他のフォームと違うので、項目を変えるときは `api/send.js` の検証も合わせて直す
+- `?v=a|b|c|d` でファーストビューの見出しが切り替わる（営業メールから送るリンク用）。GA4イベントは `cta_click` / `form_start` / `check_complete` / `generate_lead` で、すべて `variant` 付き
+
 ## デザイン
 
 - 新しいスタイルを発明せず、`src/styles/index.css` の既存トークン（`--paper` / `--ink-*` / `--font-ja-mincho` / `--font-mono` / `--border-subtle` 等）とコンポーネントを再利用する

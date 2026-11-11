@@ -35,9 +35,17 @@ export default function Pillars() {
       ja: 'セールスAX',
       tag: 'Active',
       href: '/service/sales-ax',
-      featured: true,
       body_en: 'Reduce the work after every sales meeting. We connect HubSpot updates, follow-up emails, tasks, and next-meeting preparation into one operating flow.',
       body_ja: '商談後のHubSpot更新、フォローメール、タスク、次回準備を一つの流れに。営業担当者の手間を減らし、判断と顧客対応に集中できる運用を設計します。',
+    },
+    {
+      n: '003',
+      en: <>Lead<br />Generation</>,
+      ja: 'リード獲得代行',
+      tag: 'Active',
+      href: '/service/lead-generation',
+      body_en: 'We design who to sell to, build the list, and reach out for you. You pay only when a qualified meeting happens.',
+      body_ja: '誰に売るかの設計から、リスト作成、アプローチまでを一貫して代行。条件に合う商談が生まれたときだけ費用が発生する、完全成果報酬です。',
     },
   ];
 

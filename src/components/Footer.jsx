@@ -13,6 +13,7 @@ export default function Footer() {
             <div className="h">Work</div>
             <a href="/service/ax-consulting">Marketing AX</a>
             <a href="/service/sales-ax">Sales AX</a>
+            <a href="/service/lead-generation">Lead Generation</a>
           </div>
           <div className="footer-col">
             <div className="h">Knowledge</div>

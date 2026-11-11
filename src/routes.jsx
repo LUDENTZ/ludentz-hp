@@ -9,6 +9,7 @@ import AdOperationsAxPage from './pages/AdOperationsAxPage';
 import ProspectingAxPage from './pages/ProspectingAxPage';
 import PublishingAxPage from './pages/PublishingAxPage';
 import SalesAxPage from './pages/SalesAxPage';
+import LeadGenerationPage from './pages/LeadGenerationPage';
 import PrivacyPage from './pages/PrivacyPage';
 
 export const SITE_URL = 'https://ludentz.net';
@@ -171,6 +172,22 @@ export const routes = [
       description:
         '商談後のHubSpot入力、フォローメール、タスク作成、次回準備を、既存のHubSpotとGoogle Workspace等を活かしてAIで支援。営業プロセスの設計から実装・定着まで伴走します。',
       canonical: 'https://ludentz.net/service/sales-ax',
+    },
+  },
+  {
+    path: '/service/lead-generation',
+    component: LeadGenerationPage,
+    file: 'service/lead-generation/index.html',
+    og: {
+      kicker: 'LEAD GENERATION — リード獲得代行',
+      lines: ['狙う相手の設計から、', '商談まで。完全成果報酬。'],
+      title: 'リード獲得代行｜LUDENTZ',
+      description: '狙う相手の設計から、商談まで。払うのは、成果が出たときだけ。',
+    },
+    seo: {
+      title: 'リード獲得代行｜誰に売るかの設計から商談まで、完全成果報酬｜LUDENTZ',
+      description:
+        '法人向けに技術やサービスを提供する会社へ。狙う相手の設計からリスト作成、アプローチまでを一貫して担い、商談が生まれたときだけ費用が発生する完全成果報酬のリード獲得代行。',
     },
   },
   {
