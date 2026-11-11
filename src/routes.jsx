@@ -6,6 +6,7 @@ import ComparisonArticlePage from './pages/ComparisonArticlePage';
 import ThreeLevelsArticlePage from './pages/ThreeLevelsArticlePage';
 import AxConsultingPage from './pages/AxConsultingPage';
 import AdOperationsAxPage from './pages/AdOperationsAxPage';
+import ProspectingAxPage from './pages/ProspectingAxPage';
 import PublishingAxPage from './pages/PublishingAxPage';
 import SalesAxPage from './pages/SalesAxPage';
 import LeadGenerationPage from './pages/LeadGenerationPage';
@@ -111,7 +112,7 @@ export const routes = [
     seo: {
       title: 'Marketing AX — LUDENTZ',
       description:
-        'マーケの業務プロセスを、AI前提に再設計。広告運用・情報発信の実務をAIエージェント化し、現場に定着するまで設計から実装まで伴走します。',
+        'マーケの業務プロセスを、AI前提に再設計。広告運用・新規開拓・情報発信の実務をAIエージェント化し、現場に定着するまで設計から実装まで伴走します。',
     },
   },
   {
@@ -126,6 +127,20 @@ export const routes = [
       title: '広告運用AX — LUDENTZ',
       description:
         '提案資料・レポーティング・入稿・運用改善まで、広告運用の実務を7領域でAIエージェント化。人はレビューと承認に集中できる体制へ変えていきます。',
+    },
+  },
+  {
+    path: '/service/prospecting-ax',
+    component: ProspectingAxPage,
+    file: 'service/prospecting-ax/index.html',
+    og: {
+      kicker: 'MARKETING AX — 新規開拓AX',
+      lines: ['新規開拓を、', '止まらない仕組みに。'],
+    },
+    seo: {
+      title: '新規開拓AX — LUDENTZ',
+      description:
+        'ターゲットリスト作成から文面生成、送信、返信対応まで。新規開拓を一本のパイプラインとして自動化し、人は商談に集中できる体制へ変えていきます。',
     },
   },
   {

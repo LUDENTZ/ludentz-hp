@@ -643,6 +643,13 @@ export default function LeadGenerationPage() {
               </table>
             </div>
             <p className="lg-note">※ Web広告の商談単価は、高単価IT商材のリード獲得単価の相場（平均約2.5万円）に、リードから商談への転換率を20〜30%と置いた試算です。</p>
+
+            <div className="lg-details" style={{ marginTop: 48 }}>
+              <details>
+                <summary><span className="lg-num">NOTE</span>新規開拓AXとの違い</summary>
+                <div className="lg-answer"><p>新規開拓AXは、リスト作成から送信・返信対応までの<strong>仕組みを御社の中に構築する</strong>伴走支援です。リード獲得代行は、その仕組みを<strong>LUDENTZが運用し、商談を成果報酬でお届けする</strong>サービスです。まずは代行で成果を確かめ、手応えが出たら社内に仕組みを移す、という進め方もできます。<a href="/service/prospecting-ax">新規開拓AXを見る →</a></p></div>
+              </details>
+            </div>
           </div>
         </section>
 

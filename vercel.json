@@ -7,9 +7,7 @@
     { "source": "/service/business-development", "destination": "/", "permanent": true },
     { "source": "/service/business-development/", "destination": "/", "permanent": true },
     { "source": "/service/business-growth", "destination": "/", "permanent": true },
-    { "source": "/service/business-growth/", "destination": "/", "permanent": true },
-    { "source": "/service/prospecting-ax", "destination": "/service/lead-generation", "permanent": true },
-    { "source": "/service/prospecting-ax/", "destination": "/service/lead-generation", "permanent": true }
+    { "source": "/service/business-growth/", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/:path*" },
